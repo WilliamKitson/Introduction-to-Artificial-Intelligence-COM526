@@ -7,9 +7,12 @@ class Cleaner:
         self.__direction = 0
 
     def cycle(self):
-        self.__cycle += 1
+        self.__increment_cycle()
         self.__process_turn()
         self.__process_move()
+
+    def __increment_cycle(self):
+        self.__cycle += 1
 
     def __process_turn(self):
         if self.__path_blocked():
