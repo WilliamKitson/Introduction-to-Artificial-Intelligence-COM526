@@ -7,6 +7,8 @@ class Cleaner:
         self.__direction = 0
 
     def cycle(self):
+        self.__cycle += 1
+
         match self.__forwards:
             case 0:
                 self.__battery -= 1

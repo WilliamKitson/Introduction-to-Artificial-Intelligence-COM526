@@ -3,6 +3,13 @@ from cleaner import  Cleaner
 def test_cycle_default_count():
     assert(Cleaner(0, 0).get_cycle() == 0)
 
+def test_cycle_cycling_count():
+    cleaner = Cleaner(0, 0)
+
+    for i in range(1, 10):
+        cleaner.cycle()
+        assert(cleaner.get_cycle() == i)
+
 def test_battery_default_charge():
     assert(Cleaner(0, 0).get_battery() == 100)
 
