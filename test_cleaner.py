@@ -92,3 +92,9 @@ def test_position_forwards_north():
 
 def test_render_default():
     assert(Cleaner(0, 0).get_render() == '^')
+
+def test_render_east():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+    cleaner.cycle()
+    assert (cleaner.get_render() == '>')

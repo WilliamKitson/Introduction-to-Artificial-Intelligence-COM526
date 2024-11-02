@@ -43,7 +43,12 @@ class Cleaner:
         return self.__position
 
     def get_render(self):
-        return '^'
+        match self.__direction:
+            case 0:
+                return "^"
+
+            case 1:
+                return ">"
 
     def set_forwards(self, forwards):
         self.__forwards = forwards
