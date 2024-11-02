@@ -105,3 +105,11 @@ def test_render_south():
     cleaner.cycle()
     cleaner.cycle()
     assert (cleaner.get_render() == 'v')
+
+def test_render_west():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    assert (cleaner.get_render() == '<')
