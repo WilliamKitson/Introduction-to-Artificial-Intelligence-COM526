@@ -142,3 +142,13 @@ def test_uncharged_turn():
 
     cleaner.cycle()
     assert (cleaner.get_render() == "^")
+
+def test_uncharged_forward():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(1)
+
+    while cleaner.get_battery() > 0:
+        cleaner.cycle()
+
+    cleaner.cycle()
+    assert (cleaner.get_position() == (50, 0))

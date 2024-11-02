@@ -41,6 +41,9 @@ class Cleaner:
             self.__direction = 0
 
     def __process_move(self):
+        if self.__battery_charged():
+            return
+
         if not self.__path_blocked():
             self.__process_battery(2)
             self.__move_north()
