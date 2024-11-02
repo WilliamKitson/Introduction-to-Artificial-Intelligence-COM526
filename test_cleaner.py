@@ -12,6 +12,15 @@ def test_battery_turn_left():
         cleaner.cycle()
         assert(cleaner.get_battery() == battery - i)
 
+def test_battery_forwards():
+    cleaner = Cleaner(0, 0)
+    battery = cleaner.get_battery()
+
+    for i in range(1, 10):
+        cleaner.set_forwards(1)
+        cleaner.cycle()
+        assert(cleaner.get_battery() == battery - (i * 2))
+
 def test_position_initialisation():
     for i in range(10):
         for j in range(10):
