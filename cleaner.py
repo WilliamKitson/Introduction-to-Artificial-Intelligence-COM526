@@ -22,7 +22,7 @@ class Cleaner:
                         self.__move_north()
 
                     case 1:
-                        self.__position = (self.get_position()[0], self.get_position()[1] + 1)
+                        self.__move_east()
 
                     case 2:
                         self.__position = (self.get_position()[0] - 1, self.get_position()[1])
@@ -40,6 +40,12 @@ class Cleaner:
         self.__position = (
             self.get_position()[0] + 1,
             self.get_position()[1]
+        )
+
+    def __move_east(self):
+        self.__position = (
+            self.get_position()[0],
+            self.get_position()[1] + 1
         )
 
     def get_cycle(self):
