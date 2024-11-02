@@ -8,18 +8,20 @@ class Cleaner:
 
     def cycle(self):
         self.__cycle += 1
+        self.__process_turn()
 
         match self.__forwards:
-            case 0:
-                self.__battery -= 1
-                self.__process_direction()
-
             case 1:
                 self.__battery -= 2
                 self.__move_north()
                 self.__move_east()
                 self.__move_south()
                 self.__move_west()
+
+    def __process_turn(self):
+        if self.__forwards == 0:
+            self.__battery -= 1
+            self.__process_direction()
 
     def __process_direction(self):
         self.__direction += 1
