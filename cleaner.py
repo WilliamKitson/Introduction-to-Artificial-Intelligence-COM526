@@ -15,7 +15,7 @@ class Cleaner:
         self.__cycle += 1
 
     def __process_turn(self):
-        if self.__battery_charged():
+        if self.__battery_empty():
             return
 
         if not self.__path_blocked():
@@ -24,7 +24,7 @@ class Cleaner:
         self.__process_battery(1)
         self.__process_direction()
 
-    def __battery_charged(self):
+    def __battery_empty(self):
         return self.__battery == 0
 
     def __path_blocked(self):
@@ -43,7 +43,7 @@ class Cleaner:
             self.__direction = 0
 
     def __process_move(self):
-        if self.__battery_charged():
+        if self.__battery_empty():
             return
 
         if self.__path_blocked():
