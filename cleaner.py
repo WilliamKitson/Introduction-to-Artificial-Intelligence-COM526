@@ -12,10 +12,7 @@ class Cleaner:
         match self.__forwards:
             case 0:
                 self.__battery -= 1
-                self.__direction += 1
-
-                if self.__direction == 4:
-                    self.__direction = 0
+                self.__cycle_direction()
 
             case 1:
                 self.__battery -= 2
@@ -32,6 +29,12 @@ class Cleaner:
 
                     case 3:
                         self.__position = (self.get_position()[0], self.get_position()[1] - 1)
+
+    def __cycle_direction(self):
+        self.__direction += 1
+
+        if self.__direction == 4:
+            self.__direction = 0
 
     def get_cycle(self):
         return self.__cycle
