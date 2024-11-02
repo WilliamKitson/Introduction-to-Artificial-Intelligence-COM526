@@ -9,14 +9,7 @@ class Cleaner:
     def cycle(self):
         self.__cycle += 1
         self.__process_turn()
-
-        match self.__forwards:
-            case 1:
-                self.__battery -= 2
-                self.__move_north()
-                self.__move_east()
-                self.__move_south()
-                self.__move_west()
+        self.__process_move()
 
     def __process_turn(self):
         if self.__forwards == 0:
@@ -28,6 +21,14 @@ class Cleaner:
 
         if self.__direction == 4:
             self.__direction = 0
+
+    def __process_move(self):
+        if self.__forwards == 1:
+            self.__battery -= 2
+            self.__move_north()
+            self.__move_east()
+            self.__move_south()
+            self.__move_west()
 
     def __move_north(self):
         if self.__direction == 0:
