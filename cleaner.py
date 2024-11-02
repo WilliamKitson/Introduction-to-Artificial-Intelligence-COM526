@@ -15,9 +15,15 @@ class Cleaner:
         self.__cycle += 1
 
     def __process_turn(self):
+        if self.__battery_charged():
+            return
+
         if self.__path_blocked():
             self.__process_battery(1)
             self.__process_direction()
+
+    def __battery_charged(self):
+        return self.__battery == 0
 
     def __path_blocked(self):
         return self.__forwards == 0

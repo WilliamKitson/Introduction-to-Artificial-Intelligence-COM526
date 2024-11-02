@@ -132,3 +132,13 @@ def test_render_north():
     cleaner.cycle()
     cleaner.cycle()
     assert (cleaner.get_render() == '^')
+
+def test_uncharged_turn():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+
+    while cleaner.get_battery() > 0:
+        cleaner.cycle()
+
+    cleaner.cycle()
+    assert (cleaner.get_render() == "^")
