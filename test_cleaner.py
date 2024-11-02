@@ -162,4 +162,9 @@ def test_recharge_uncharged():
 
     for i in (range(1, 100)):
         cleaner.recharge(1)
-        assert(cleaner.get_battery() == i)
+        assert (cleaner.get_battery() == i)
+
+def test_recharge_maximum():
+    cleaner = Cleaner(0, 0)
+    cleaner.recharge(1)
+    assert (cleaner.get_battery() == 100)

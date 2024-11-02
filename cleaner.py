@@ -98,6 +98,9 @@ class Cleaner:
     def recharge(self, cost):
         self.__battery += cost
 
+        if self.__battery > 100:
+            self.__battery = 100
+
     def get_cycle(self):
         return self.__cycle
 
