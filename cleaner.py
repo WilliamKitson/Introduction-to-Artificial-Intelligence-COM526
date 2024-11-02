@@ -18,11 +18,9 @@ class Cleaner:
                 self.__battery -= 2
                 self.__move_north()
                 self.__move_east()
+                self.__move_south()
 
                 match self.__direction:
-                    case 2:
-                        self.__position = (self.get_position()[0] - 1, self.get_position()[1])
-
                     case 3:
                         self.__position = (self.get_position()[0], self.get_position()[1] - 1)
 
@@ -44,6 +42,13 @@ class Cleaner:
             self.__position = (
                 self.get_position()[0],
                 self.get_position()[1] + 1
+            )
+
+    def __move_south(self):
+        if self.__direction == 2:
+            self.__position = (
+                self.get_position()[0] - 1,
+                self.get_position()[1]
             )
 
     def get_cycle(self):
