@@ -34,32 +34,44 @@ class Cleaner:
             self.__move_west()
 
     def __move_north(self):
-        if self.__direction == 0:
+        if self.__facing_north():
             self.__position = (
                 self.get_position()[0] + 1,
                 self.get_position()[1]
             )
 
+    def __facing_north(self):
+        return self.__direction == 0
+
     def __move_east(self):
-        if self.__direction == 1:
+        if self.__facing_east():
             self.__position = (
                 self.get_position()[0],
                 self.get_position()[1] + 1
             )
 
+    def __facing_east(self):
+        return self.__direction == 1
+
     def __move_south(self):
-        if self.__direction == 2:
+        if self.__facing_south():
             self.__position = (
                 self.get_position()[0] - 1,
                 self.get_position()[1]
             )
 
+    def __facing_south(self):
+        return self.__direction == 2
+
     def __move_west(self):
-        if self.__direction == 3:
+        if self.__facing_west():
             self.__position = (
                 self.get_position()[0],
                 self.get_position()[1] - 1
             )
+
+    def __facing_west(self):
+        return self.__direction == 3
 
     def get_cycle(self):
         return self.__cycle
