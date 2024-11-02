@@ -113,3 +113,12 @@ def test_render_west():
     cleaner.cycle()
     cleaner.cycle()
     assert (cleaner.get_render() == '<')
+
+def test_render_north():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    assert (cleaner.get_render() == '^')
