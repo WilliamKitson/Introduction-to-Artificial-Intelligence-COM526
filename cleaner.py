@@ -21,6 +21,9 @@ class Cleaner:
                     case 1:
                         self.__position = (self.get_position()[0], self.get_position()[1] + 1)
 
+                    case 2:
+                        self.__position = (self.get_position()[0] - 1, self.get_position()[1])
+
     def get_battery(self):
         return self.__battery
 

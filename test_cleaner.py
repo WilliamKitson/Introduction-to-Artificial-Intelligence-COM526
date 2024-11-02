@@ -43,3 +43,14 @@ def test_position_forwards_east():
         cleaner.set_forwards(1)
         cleaner.cycle()
         assert(cleaner.get_position() == (0, i))
+
+def test_position_forwards_south():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+    cleaner.cycle()
+    cleaner.cycle()
+
+    for i in range(1, 10):
+        cleaner.set_forwards(1)
+        cleaner.cycle()
+        assert(cleaner.get_position() == (-i, 0))
