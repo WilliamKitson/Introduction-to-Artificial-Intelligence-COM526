@@ -83,18 +83,17 @@ class Cleaner:
         return self.__position
 
     def get_render(self):
-        match self.__direction:
-            case 0:
-                return "^"
+        if self.__facing_north():
+            return "^"
 
-            case 1:
-                return ">"
+        if self.__facing_east():
+            return ">"
 
-            case 2:
-                return "v"
+        if self.__facing_south():
+            return "v"
 
-            case 3:
-                return "<"
+        if self.__facing_west():
+            return "<"
 
     def set_forwards(self, forwards):
         self.__forwards = forwards
