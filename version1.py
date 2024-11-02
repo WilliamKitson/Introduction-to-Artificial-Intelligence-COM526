@@ -1,6 +1,5 @@
 from cleaner import Cleaner
 import time
-import os
 
 class Version1:
     def __init__(self):
