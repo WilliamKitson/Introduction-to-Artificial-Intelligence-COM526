@@ -89,3 +89,6 @@ def test_position_forwards_north():
         cleaner.set_forwards(1)
         cleaner.cycle()
         assert(cleaner.get_position() == (i, 0))
+
+def test_render_default():
+    assert(Cleaner(0, 0).get_render() == '^')

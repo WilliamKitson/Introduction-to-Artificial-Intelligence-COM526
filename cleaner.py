@@ -42,5 +42,8 @@ class Cleaner:
     def get_position(self):
         return self.__position
 
+    def get_render(self):
+        return '^'
+
     def set_forwards(self, forwards):
         self.__forwards = forwards
