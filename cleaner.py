@@ -50,5 +50,8 @@ class Cleaner:
             case 1:
                 return ">"
 
+            case 2:
+                return "v"
+
     def set_forwards(self, forwards):
         self.__forwards = forwards
