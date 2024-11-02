@@ -152,3 +152,14 @@ def test_uncharged_forward():
 
     cleaner.cycle()
     assert (cleaner.get_position() == (50, 0))
+
+def test_recharge_uncharged():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_forwards(0)
+
+    while cleaner.get_battery() > 0:
+        cleaner.cycle()
+
+    for i in (range(1, 100)):
+        cleaner.recharge(1)
+        assert(cleaner.get_battery() == i)
