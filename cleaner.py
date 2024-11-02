@@ -19,10 +19,7 @@ class Cleaner:
                 self.__move_north()
                 self.__move_east()
                 self.__move_south()
-
-                match self.__direction:
-                    case 3:
-                        self.__position = (self.get_position()[0], self.get_position()[1] - 1)
+                self.__move_west()
 
     def __process_direction(self):
         self.__direction += 1
@@ -49,6 +46,13 @@ class Cleaner:
             self.__position = (
                 self.get_position()[0] - 1,
                 self.get_position()[1]
+            )
+
+    def __move_west(self):
+        if self.__direction == 3:
+            self.__position = (
+                self.get_position()[0],
+                self.get_position()[1] - 1
             )
 
     def get_cycle(self):
