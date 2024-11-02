@@ -31,6 +31,16 @@ def test_battery_forwards():
         cleaner.cycle()
         assert(cleaner.get_battery() == battery - (i * 2))
 
+def test_battery_minimum():
+    cleaner = Cleaner(0, 0)
+
+    while cleaner.get_battery() > 0:
+        cleaner.set_forwards(0)
+        cleaner.cycle()
+
+    cleaner.cycle()
+    assert(cleaner.get_battery() == 0)
+
 def test_position_initialisation():
     for i in range(10):
         for j in range(10):

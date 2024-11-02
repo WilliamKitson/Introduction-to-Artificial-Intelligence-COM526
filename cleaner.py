@@ -25,6 +25,9 @@ class Cleaner:
     def __process_battery(self, cost):
         self.__battery -= cost
 
+        if self.__battery < 0:
+            self.__battery = 0
+
     def __process_direction(self):
         self.__direction += 1
 
