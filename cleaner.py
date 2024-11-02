@@ -11,6 +11,9 @@ class Cleaner:
                 self.__battery -= 1
                 self.__direction += 1
 
+                if self.__direction == 4:
+                    self.__direction = 0
+
             case 1:
                 self.__battery -= 2
 
