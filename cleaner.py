@@ -18,9 +18,11 @@ class Cleaner:
         if self.__battery_charged():
             return
 
-        if self.__path_blocked():
-            self.__process_battery(1)
-            self.__process_direction()
+        if not self.__path_blocked():
+            return
+
+        self.__process_battery(1)
+        self.__process_direction()
 
     def __battery_charged(self):
         return self.__battery == 0
@@ -44,12 +46,14 @@ class Cleaner:
         if self.__battery_charged():
             return
 
-        if not self.__path_blocked():
-            self.__process_battery(2)
-            self.__move_north()
-            self.__move_east()
-            self.__move_south()
-            self.__move_west()
+        if self.__path_blocked():
+            return
+
+        self.__process_battery(2)
+        self.__move_north()
+        self.__move_east()
+        self.__move_south()
+        self.__move_west()
 
     def __move_north(self):
         if self.__facing_north():
