@@ -13,11 +13,14 @@ class Cleaner:
 
     def __process_turn(self):
         if self.__path_blocked():
-            self.__battery -= 1
+            self.__process_battery(1)
             self.__process_direction()
 
     def __path_blocked(self):
         return self.__forwards == 0
+
+    def __process_battery(self, cost):
+        self.__battery -= cost
 
     def __process_direction(self):
         self.__direction += 1
@@ -27,7 +30,7 @@ class Cleaner:
 
     def __process_move(self):
         if not self.__path_blocked():
-            self.__battery -= 2
+            self.__process_battery(2)
             self.__move_north()
             self.__move_east()
             self.__move_south()
