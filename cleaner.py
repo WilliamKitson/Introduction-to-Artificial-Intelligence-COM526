@@ -19,7 +19,7 @@ class Cleaner:
 
                 match self.__direction:
                     case 0:
-                        self.__position = (self.get_position()[0] + 1, self.get_position()[1])
+                        self.__move_north()
 
                     case 1:
                         self.__position = (self.get_position()[0], self.get_position()[1] + 1)
@@ -35,6 +35,12 @@ class Cleaner:
 
         if self.__direction == 4:
             self.__direction = 0
+
+    def __move_north(self):
+        self.__position = (
+            self.get_position()[0] + 1,
+            self.get_position()[1]
+        )
 
     def get_cycle(self):
         return self.__cycle
