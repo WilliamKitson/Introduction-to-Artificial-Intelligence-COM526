@@ -25,3 +25,11 @@ def test_position_initialisation():
     for i in range(10):
         for j in range(10):
             assert(Cleaner(i, j).get_position() == (i, j))
+
+def test_position_forwards_north():
+    cleaner = Cleaner(0, 0)
+
+    for i in range(1, 10):
+        cleaner.set_forwards(1)
+        cleaner.cycle()
+        assert(cleaner.get_position() == (i, 0))

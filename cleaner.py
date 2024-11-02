@@ -10,6 +10,7 @@ class Cleaner:
 
         if self.__forwards == 1:
             self.__battery -= 2
+            self.__position = (self.get_position()[0] + 1, self.get_position()[1])
 
     def get_battery(self):
         return self.__battery
