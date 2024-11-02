@@ -3,14 +3,23 @@ class Cleaner:
         self.__battery = 100
         self.__position = (x_position, y_position)
         self.__forwards = 0
+        self.__direction = 0
 
     def cycle(self):
-        if self.__forwards == 0:
-            self.__battery -= 1
+        match self.__forwards:
+            case 0:
+                self.__battery -= 1
+                self.__direction += 1
 
-        if self.__forwards == 1:
-            self.__battery -= 2
-            self.__position = (self.get_position()[0] + 1, self.get_position()[1])
+            case 1:
+                self.__battery -= 2
+
+                match self.__direction:
+                    case 0:
+                        self.__position = (self.get_position()[0] + 1, self.get_position()[1])
+
+                    case 1:
+                        self.__position = (self.get_position()[0], self.get_position()[1] + 1)
 
     def get_battery(self):
         return self.__battery
