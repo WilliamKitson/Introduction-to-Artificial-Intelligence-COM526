@@ -1,11 +1,15 @@
+from map import Map
 from cleaner import Cleaner
 import time
 
 class Version1:
-    def __init__(self):
+    def __init__(self, map_data):
+        self.__map = Map(map_data)
         self.__cleaner = Cleaner(0, 0)
 
     def execute(self):
+        print(f"map width: {self.__map.get_width()}, height: {self.__map.get_height()}")
+
         while self.__cleaner.get_battery():
             self.__cleaner.set_scan(0)
             self.__cleaner.cycle()
