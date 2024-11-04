@@ -97,6 +97,10 @@ class Cleaner:
 
     def clean(self, dirt):
         self.__process_battery(3)
+        return self.__process_clean(dirt)
+
+    @staticmethod
+    def __process_clean(dirt):
         dirt -= 5
 
         if dirt < 0:
