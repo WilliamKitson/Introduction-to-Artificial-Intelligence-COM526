@@ -1,20 +1,20 @@
 class Map:
     def __init__(self, data):
         substrings = str.splitlines(data)
-        width = len(substrings[0])
-        height = len(substrings)
 
-        self.__data = [["" for i in range(width)] for j in range(height)]
+        self.__width = len(substrings[0])
+        self.__height = len(substrings)
+        self.__data = [["" for i in range(self.__width)] for j in range(self.__height)]
 
-        for i in range(height):
-            for j in range(width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 self.__data[i][j] = substrings[i][j]
 
     def get_width(self):
-        return len(self.__data[0])
+        return self.__width
 
     def get_height(self):
-        return len(self.__data)
+        return self.__height
 
     def get_blocked(self, x, y):
         return self.__data[x][y] == "x"
