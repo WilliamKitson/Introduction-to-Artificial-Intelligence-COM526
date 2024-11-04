@@ -97,7 +97,13 @@ class Cleaner:
 
     def clean(self, dirt):
         self.__battery -= 3
-        return dirt - 5
+
+        dirt -= 5
+
+        if dirt < 0:
+            dirt = 0
+
+        return dirt
 
     def recharge(self, cost):
         self.__battery += cost

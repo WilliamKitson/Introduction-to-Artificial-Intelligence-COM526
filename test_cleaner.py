@@ -115,6 +115,9 @@ def test_clean_dirt():
     for i in range(cleaned_value, cleaned_value + 10):
         assert(cleaner.clean(i) == i - cleaned_value)
 
+def test_clean_minimum():
+    assert(Cleaner(0, 0).clean(1) == 0)
+
 def test_render_default():
     assert(Cleaner(0, 0).get_render() == '^')
 
