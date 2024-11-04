@@ -11,8 +11,14 @@ class Version1:
         print(f"map width: {self.__map.get_width()}, height: {self.__map.get_height()}")
 
         while self.__cleaner.get_battery():
-            self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan()[0], self.__cleaner.get_scan()[1]))
+            self.__sense()
             self.__cleaner.cycle()
 
             print(f"cycle {self.__cleaner.get_cycle()}: {self.__cleaner.get_render()} ({self.__cleaner.get_battery()}%)")
             time.sleep(1)
+
+    def __sense(self):
+        self.__cleaner.set_scan(self.__map.get_blocked(
+            self.__cleaner.get_scan()[0],
+            self.__cleaner.get_scan()[1]
+        ))
