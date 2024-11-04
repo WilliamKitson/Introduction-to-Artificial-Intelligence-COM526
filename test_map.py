@@ -22,6 +22,14 @@ def test_node_blocked():
         for j in range(0, height):
             assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == True)
 
+def test_node_open():
+    width = 10
+    height = 10
+
+    for i in range(0, width):
+        for j in range(0, height):
+            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == False)
+
 def generate_test_map(width, height, x, y, char):
     map_data = ""
 
