@@ -22,13 +22,21 @@ class Version1:
         render = ""
 
         for i in range(0, self.__map.get_height()):
-            for j in range(0, self.__map.get_width()):
-                if self.__cleaner.get_position() == (i, j):
-                    render += self.__cleaner.get_render()
-
-                else:
-                    render += self.__map.get_render(i, j)
-
+            render += self.__render_y(i)
             render += "\n"
 
         print(render)
+
+    def __render_y(self, x):
+        row = ""
+
+        for i in range(0, self.__map.get_width()):
+            row += self.__render_node(x, i)
+
+        return row
+
+    def __render_node(self, x, y):
+        if self.__cleaner.get_position() == (x, y):
+            return self.__cleaner.get_render()
+
+        return self.__map.get_render(x, y)
