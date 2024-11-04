@@ -125,10 +125,7 @@ class Cleaner:
 
     def get_scan(self):
         if self.__facing_north():
-            return (
-                self.__position[0] + 1,
-                self.__position[1]
-            )
+            return self.__get_scan_north()
 
         if self.__facing_east():
             return (
@@ -147,6 +144,12 @@ class Cleaner:
                 self.__position[0],
                 self.__position[1] - 1
             )
+
+    def __get_scan_north(self):
+        return (
+            self.__position[0] + 1,
+            self.__position[1]
+        )
 
     def set_scan(self, scan):
         self.__scan = scan
