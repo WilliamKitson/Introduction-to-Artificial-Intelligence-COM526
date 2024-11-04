@@ -3,7 +3,7 @@ class Cleaner:
         self.__cycle = 0
         self.__battery = 100
         self.__position = (x_position, y_position)
-        self.__forwards = 0
+        self.__scan = 0
         self.__direction = 0
 
     def cycle(self):
@@ -28,7 +28,7 @@ class Cleaner:
         return self.__battery == 0
 
     def __path_blocked(self):
-        return self.__forwards == 0
+        return self.__scan == 0
 
     def __process_battery(self, cost):
         self.__battery -= cost
@@ -123,5 +123,5 @@ class Cleaner:
         if self.__facing_west():
             return "<"
 
-    def set_forwards(self, forwards):
-        self.__forwards = forwards
+    def set_scan(self, scan):
+        self.__scan = scan
