@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="cleaner redefined">
-      <change beforePath="$PROJECT_DIR$/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/cleaner.py" afterDir="false" />
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="map_data defined">
+      <change afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,27 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_cleaner.test_battery_default_charge.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_cleaner.test_battery_turn_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in main.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_cleaner.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cleaner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.version1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_cleaner.test_battery_default_charge.executor": "Run",
+    "Python tests.Python tests for test_cleaner.test_battery_turn_left.executor": "Run",
+    "Python tests.Python tests in main.py.executor": "Run",
+    "Python tests.Python tests in test_cleaner.py.executor": "Run",
+    "Python tests.Python tests in test_map.py.executor": "Run",
+    "Python tests.Python tests in tests.py.executor": "Run",
+    "Python.cleaner.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.version1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,23 +93,7 @@
       <workItem from="1730567667001" duration="391000" />
       <workItem from="1730662338989" duration="209000" />
       <workItem from="1730713920715" duration="68000" />
-      <workItem from="1730714239815" duration="6316000" />
-    </task>
-    <task id="LOCAL-00009" summary="test_position_forwards_north defined">
-      <option name="closed" value="true" />
-      <created>1730547937604</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1730547937604</updated>
-    </task>
-    <task id="LOCAL-00010" summary="test_cycle_default_count defined">
-      <option name="closed" value="true" />
-      <created>1730548239443</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1730548239443</updated>
+      <workItem from="1730714239815" duration="7004000" />
     </task>
     <task id="LOCAL-00011" summary="test_cycle_cycling_count defined">
       <option name="closed" value="true" />
@@ -485,14 +471,29 @@
       <option name="project" value="LOCAL" />
       <updated>1730721954211</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="cleaner redefined">
+      <option name="closed" value="true" />
+      <created>1730722162962</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1730722162962</updated>
+    </task>
+    <task id="LOCAL-00059" summary="map_data defined">
+      <option name="closed" value="true" />
+      <created>1730722442834</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1730722442834</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test_render_default defined" />
     <MESSAGE value="test_render_east defined" />
     <MESSAGE value="test_render_south defined" />
     <MESSAGE value="test_render_west defined" />
@@ -517,12 +518,13 @@
     <MESSAGE value="test_clean_dirt defined" />
     <MESSAGE value="test_clean_minimum defined" />
     <MESSAGE value="cleaner redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaner redefined" />
+    <MESSAGE value="map_data defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="map_data defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1730721119203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1730714885053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730722057109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730722836746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1730719123284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
