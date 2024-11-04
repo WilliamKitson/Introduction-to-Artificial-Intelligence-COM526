@@ -1,9 +1,9 @@
 from cleaner import  Cleaner
 
-def test_cycle_default_count():
+def test_cycle_default():
     assert(Cleaner(0, 0).get_cycle() == 0)
 
-def test_cycle_cycling_count():
+def test_cycle_cycling():
     cleaner = Cleaner(0, 0)
 
     for i in range(1, 10):
