@@ -16,6 +16,12 @@ class Map:
     def get_height(self):
         return self.__height
 
+    def get_start(self):
+        for i in range(self.__width):
+            for j in range(self.__height):
+                if self.__data[i][j] == "^":
+                    return i, j
+
     def get_blocked(self, x, y):
         if self.__data[x][y] == "x":
             return 0

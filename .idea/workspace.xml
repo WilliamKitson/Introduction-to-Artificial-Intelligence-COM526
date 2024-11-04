@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="version1 redefined">
-      <change beforePath="$PROJECT_DIR$/test_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,29 +45,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_cleaner.test_battery_default_charge.executor": "Run",
-    "Python tests.Python tests for test_cleaner.test_battery_turn_left.executor": "Run",
-    "Python tests.Python tests in main.py.executor": "Run",
-    "Python tests.Python tests in test_cleaner.py.executor": "Run",
-    "Python tests.Python tests in test_map.py.executor": "Run",
-    "Python tests.Python tests in tests.py.executor": "Run",
-    "Python.cleaner.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.map.executor": "Run",
-    "Python.version1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_cleaner.test_battery_default_charge.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_cleaner.test_battery_turn_left.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in main.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_cleaner.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_map.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cleaner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.map.executor&quot;: &quot;Run&quot;,
+    &quot;Python.version1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\willi\PycharmProjects\4kitsw10_COM526_1\maps" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -94,78 +99,6 @@
       <workItem from="1730662338989" duration="209000" />
       <workItem from="1730713920715" duration="68000" />
       <workItem from="1730714239815" duration="15905000" />
-    </task>
-    <task id="LOCAL-00020" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730550116285</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1730550116285</updated>
-    </task>
-    <task id="LOCAL-00021" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730550282109</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1730550282109</updated>
-    </task>
-    <task id="LOCAL-00022" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730550350704</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1730550350704</updated>
-    </task>
-    <task id="LOCAL-00023" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730550427409</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1730550427409</updated>
-    </task>
-    <task id="LOCAL-00024" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730551127218</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1730551127218</updated>
-    </task>
-    <task id="LOCAL-00025" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730551220403</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1730551220403</updated>
-    </task>
-    <task id="LOCAL-00026" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730551336944</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1730551336944</updated>
-    </task>
-    <task id="LOCAL-00027" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730551639490</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1730551639490</updated>
-    </task>
-    <task id="LOCAL-00028" summary="cleaner redefined">
-      <option name="closed" value="true" />
-      <created>1730551721456</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1730551721456</updated>
     </task>
     <task id="LOCAL-00029" summary="main defined redefined">
       <option name="closed" value="true" />
@@ -487,14 +420,85 @@
       <option name="project" value="LOCAL" />
       <updated>1730731596195</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="main redefined">
+      <option name="closed" value="true" />
+      <created>1730735619644</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1730735619644</updated>
+    </task>
+    <task id="LOCAL-00070" summary="map redefined">
+      <option name="closed" value="true" />
+      <created>1730735906421</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1730735906421</updated>
+    </task>
+    <task id="LOCAL-00071" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730736574627</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1730736574627</updated>
+    </task>
+    <task id="LOCAL-00072" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730736691725</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1730736691725</updated>
+    </task>
+    <task id="LOCAL-00073" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730736853761</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1730736853761</updated>
+    </task>
+    <task id="LOCAL-00074" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730737289232</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1730737289232</updated>
+    </task>
+    <task id="LOCAL-00075" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730737438078</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1730737438078</updated>
+    </task>
+    <task id="LOCAL-00076" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730737572959</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1730737572959</updated>
+    </task>
+    <task id="LOCAL-00077" summary="version1 redefined">
+      <option name="closed" value="true" />
+      <created>1730737755293</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1730737755293</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test_uncharged_turn defined" />
     <MESSAGE value="test_uncharged_forward defined" />
     <MESSAGE value="cleaner defined" />
     <MESSAGE value="test_recharge_uncharged defined" />
@@ -516,16 +520,17 @@
     <MESSAGE value="test_map_height defined" />
     <MESSAGE value="Version1 redefined" />
     <MESSAGE value="test_node_blocked defined" />
-    <MESSAGE value="map redefined" />
     <MESSAGE value="test_node_open defined" />
+    <MESSAGE value="main redefined" />
+    <MESSAGE value="map redefined" />
     <MESSAGE value="version1 redefined" />
     <option name="LAST_COMMIT_MESSAGE" value="version1 redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1730728822096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1730730242836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1730714885053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730731790357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1730731218941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1730735254892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1730736660910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1730737617072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730737744084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1730737765077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
