@@ -168,3 +168,11 @@ def test_recharge_maximum():
     cleaner = Cleaner(0, 0)
     cleaner.recharge(1)
     assert (cleaner.get_battery() == 100)
+
+def test_scan_default():
+    cleaner = Cleaner(0, 0)
+
+    for i in range(1, 10):
+        cleaner.set_scan(1)
+        cleaner.cycle()
+        assert(cleaner.get_scan() == (i + 1, 0))
