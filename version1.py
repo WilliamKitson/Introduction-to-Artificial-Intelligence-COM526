@@ -4,7 +4,10 @@ from cleaner import Cleaner
 class Version1:
     def __init__(self, filepath):
         self.__map = Map(self.__load_map(filepath))
-        self.__cleaner = Cleaner(1, 1)
+        self.__cleaner = Cleaner(
+            self.__map.get_start()[0],
+            self.__map.get_start()[1]
+        )
 
     @staticmethod
     def __load_map(filepath):
