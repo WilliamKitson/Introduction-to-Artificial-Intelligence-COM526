@@ -19,7 +19,7 @@ class Version1:
         ))
 
     def __render(self):
-        print(self.__render_x())
+        print(self.__render_x(), self.__render_stats())
 
     def __render_x(self):
         render = ""
@@ -43,3 +43,6 @@ class Version1:
             return self.__cleaner.get_render()
 
         return self.__map.get_render(x, y)
+
+    def __render_stats(self):
+        return f"cycle: {self.__cleaner.get_cycle()}, battery: {self.__cleaner.get_battery()}\n"
