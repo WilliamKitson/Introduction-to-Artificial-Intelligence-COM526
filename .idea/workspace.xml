@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="cleaner get_forward renamed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/cleaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cleaner.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="test_scan_west defined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,15 +89,7 @@
       <workItem from="1730567667001" duration="391000" />
       <workItem from="1730662338989" duration="209000" />
       <workItem from="1730713920715" duration="68000" />
-      <workItem from="1730714239815" duration="1999000" />
-    </task>
-    <task id="LOCAL-00001" summary="test_battery_default_charge defined">
-      <option name="closed" value="true" />
-      <created>1730543351650</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1730543351650</updated>
+      <workItem from="1730714239815" duration="2825000" />
     </task>
     <task id="LOCAL-00002" summary="test_position_initialisation defined">
       <option name="closed" value="true" />
@@ -463,17 +451,45 @@
       <option name="project" value="LOCAL" />
       <updated>1730714935299</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="test_scan_default defined">
+      <option name="closed" value="true" />
+      <created>1730717479678</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1730717479678</updated>
+    </task>
+    <task id="LOCAL-00048" summary="test_scan_east defined">
+      <option name="closed" value="true" />
+      <created>1730717701286</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1730717701286</updated>
+    </task>
+    <task id="LOCAL-00049" summary="test_scan_south defined">
+      <option name="closed" value="true" />
+      <created>1730717832846</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1730717832846</updated>
+    </task>
+    <task id="LOCAL-00050" summary="test_scan_west defined">
+      <option name="closed" value="true" />
+      <created>1730718224275</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1730718224275</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test_battery_turn_left defined" />
-    <MESSAGE value="test_battery_forwards defined" />
-    <MESSAGE value="test_position_forwards_east defined" />
-    <MESSAGE value="test_position_forwards_south defined" />
     <MESSAGE value="test_position_forwards_west defined" />
     <MESSAGE value="test_position_forwards_north defined" />
     <MESSAGE value="test_cycle_default_count defined" />
@@ -495,12 +511,16 @@
     <MESSAGE value="version1 defined" />
     <MESSAGE value="cleaner tests renamed" />
     <MESSAGE value="cleaner get_forward renamed" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaner get_forward renamed" />
+    <MESSAGE value="test_scan_default defined" />
+    <MESSAGE value="test_scan_east defined" />
+    <MESSAGE value="test_scan_south defined" />
+    <MESSAGE value="test_scan_west defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_scan_west defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1730556267430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1730714885053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730717387363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1730713938968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1730718213092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1730717816032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
