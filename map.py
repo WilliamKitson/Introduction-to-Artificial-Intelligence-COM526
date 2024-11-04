@@ -17,7 +17,10 @@ class Map:
         return self.__height
 
     def get_blocked(self, x, y):
-        return self.__data[x][y] == "x"
+        if self.__data[x][y] == "x":
+            return 0
+
+        return 1
 
     def get_render(self, x, y):
         return self.__data[x][y]

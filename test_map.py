@@ -20,7 +20,7 @@ def test_node_blocked():
 
     for i in range(0, width):
         for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == True)
+            assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == 0)
 
 def generate_test_map(width, height, x, y, char):
     map_data = ""
@@ -43,7 +43,7 @@ def test_node_open():
 
     for i in range(0, width):
         for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == False)
+            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == 1)
 
 def test_render():
     map_data = ("qwertyuuiop\n"
