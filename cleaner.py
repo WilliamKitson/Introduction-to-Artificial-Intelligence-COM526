@@ -95,8 +95,9 @@ class Cleaner:
     def __facing_west(self):
         return self.__direction == 3
 
-    def clean(self):
+    def clean(self, dirt):
         self.__battery -= 3
+        return dirt - 5
 
     def recharge(self, cost):
         self.__battery += cost

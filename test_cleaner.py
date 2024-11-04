@@ -36,7 +36,7 @@ def test_battery_clean():
     battery = cleaner.get_battery()
 
     for i in range(1, 10):
-        cleaner.clean()
+        cleaner.clean(0)
         assert(cleaner.get_battery() == battery - (i * 3))
 
 def test_battery_minimum():
@@ -107,6 +107,13 @@ def test_move_north():
         cleaner.set_scan(1)
         cleaner.cycle()
         assert(cleaner.get_position() == (i, 0))
+
+def test_clean_dirt():
+    cleaner = Cleaner(0, 0)
+    cleaned_value = 5
+
+    for i in range(cleaned_value, cleaned_value + 10):
+        assert(cleaner.clean(i) == i - cleaned_value)
 
 def test_render_default():
     assert(Cleaner(0, 0).get_render() == '^')
