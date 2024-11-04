@@ -6,4 +6,9 @@ def load_map():
 
     return file_content
 
-Version1(load_map()).execute()
+Version1(
+    "xxxxxxxxxx\n"
+    "x        x\n"
+    "x        x\n"
+    "xxxxxxxxxx\n"
+).execute()
