@@ -52,4 +52,7 @@ class Version1:
         return self.__map.get_render(x, y)
 
     def __render_stats(self):
-        return f"cycle: {self.__cleaner.get_cycle()}, battery: {self.__cleaner.get_battery()}\n"
+        return (
+            f"cycle: {self.__cleaner.get_cycle()}\n"
+            f" battery: {self.__cleaner.get_battery()}\n"
+        )
