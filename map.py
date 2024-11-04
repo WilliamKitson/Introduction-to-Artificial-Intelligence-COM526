@@ -18,3 +18,6 @@ class Map:
 
     def get_blocked(self, x, y):
         return self.__data[x][y] == "x"
+
+    def get_render(self, x, y):
+        return self.__data[x][y]

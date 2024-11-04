@@ -22,14 +22,6 @@ def test_node_blocked():
         for j in range(0, height):
             assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == True)
 
-def test_node_open():
-    width = 10
-    height = 10
-
-    for i in range(0, width):
-        for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == False)
-
 def generate_test_map(width, height, x, y, char):
     map_data = ""
 
@@ -44,3 +36,27 @@ def generate_test_map(width, height, x, y, char):
         map_data += '\n'
 
     return map_data
+
+def test_node_open():
+    width = 10
+    height = 10
+
+    for i in range(0, width):
+        for j in range(0, height):
+            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == False)
+
+def test_render():
+    map_data = ("qwertyuuiop\n"
+                "asdfghjklzx\n"
+                "cvbnm123456\n")
+
+    render = Map(map_data)
+    index = 0
+
+    for i in range(0, render.get_height()):
+        for j in range(0, render.get_width()):
+            if map_data[index] == "\n":
+                index += 1
+
+            assert(render.get_render(i, j) == map_data[index])
+            index += 1

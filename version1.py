@@ -21,4 +21,16 @@ class Version1:
         ))
 
     def __render(self):
-        print(f"cycle {self.__cleaner.get_cycle()}: {self.__cleaner.get_render()} ({self.__cleaner.get_battery()}%)")
+        render = ""
+
+        for i in range(0, self.__map.get_height()):
+            for j in range(0, self.__map.get_width()):
+                if self.__cleaner.get_position() == (i, j):
+                    render += self.__cleaner.get_render()
+
+                else:
+                    render += self.__map.get_render(i, j)
+
+            render += "\n"
+
+        print(render)
