@@ -46,7 +46,7 @@ def test_position_initialisation():
         for j in range(10):
             assert(Cleaner(i, j).get_position() == (i, j))
 
-def test_position_forwards_default():
+def test_move_default():
     cleaner = Cleaner(0, 0)
 
     for i in range(1, 10):
@@ -54,7 +54,7 @@ def test_position_forwards_default():
         cleaner.cycle()
         assert(cleaner.get_position() == (i, 0))
 
-def test_position_forwards_east():
+def test_move_east():
     cleaner = Cleaner(0, 0)
     cleaner.set_forwards(0)
     cleaner.cycle()
@@ -64,7 +64,7 @@ def test_position_forwards_east():
         cleaner.cycle()
         assert(cleaner.get_position() == (0, i))
 
-def test_position_forwards_south():
+def test_move_south():
     cleaner = Cleaner(0, 0)
     cleaner.set_forwards(0)
     cleaner.cycle()
@@ -75,7 +75,7 @@ def test_position_forwards_south():
         cleaner.cycle()
         assert(cleaner.get_position() == (-i, 0))
 
-def test_position_forwards_west():
+def test_move_west():
     cleaner = Cleaner(0, 0)
     cleaner.set_forwards(0)
     cleaner.cycle()
@@ -87,7 +87,7 @@ def test_position_forwards_west():
         cleaner.cycle()
         assert(cleaner.get_position() == (0, -i))
 
-def test_position_forwards_north():
+def test_move_north():
     cleaner = Cleaner(0, 0)
     cleaner.set_forwards(0)
     cleaner.cycle()
