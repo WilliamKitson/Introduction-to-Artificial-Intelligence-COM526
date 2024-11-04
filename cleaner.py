@@ -128,27 +128,36 @@ class Cleaner:
             return self.__get_scan_north()
 
         if self.__facing_east():
-            return (
-                self.__position[0],
-                self.__position[1] + 1
-            )
+            return self.__get_scan_east()
 
         if self.__facing_south():
-            return (
-                self.__position[0] - 1,
-                self.__position[1]
-            )
+            return self.__get_scan_south()
 
         if self.__facing_west():
-            return (
-                self.__position[0],
-                self.__position[1] - 1
-            )
+            return self.__get_scan_west()
 
     def __get_scan_north(self):
         return (
             self.__position[0] + 1,
             self.__position[1]
+        )
+
+    def __get_scan_east(self):
+        return (
+            self.__position[0],
+            self.__position[1] + 1
+        )
+
+    def __get_scan_south(self):
+        return (
+            self.__position[0] - 1,
+            self.__position[1]
+        )
+
+    def __get_scan_west(self):
+        return (
+            self.__position[0],
+            self.__position[1] - 1
         )
 
     def set_scan(self, scan):
