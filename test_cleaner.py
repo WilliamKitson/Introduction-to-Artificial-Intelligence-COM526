@@ -119,7 +119,7 @@ def test_clean_minimum():
     assert(Cleaner(0, 0).clean(1) == 0)
 
 def test_render_default():
-    assert(Cleaner(0, 0).get_render() == '^')
+    assert(Cleaner(0, 0).get_render() == 'v')
 
 def test_render_east():
     cleaner = Cleaner(0, 0)
@@ -132,7 +132,7 @@ def test_render_south():
     cleaner.set_scan(0)
     cleaner.cycle()
     cleaner.cycle()
-    assert (cleaner.get_render() == 'v')
+    assert (cleaner.get_render() == '^')
 
 def test_render_west():
     cleaner = Cleaner(0, 0)
@@ -149,7 +149,7 @@ def test_render_north():
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
-    assert (cleaner.get_render() == '^')
+    assert (cleaner.get_render() == 'v')
 
 def test_uncharged_turn():
     cleaner = Cleaner(0, 0)
@@ -159,7 +159,7 @@ def test_uncharged_turn():
         cleaner.cycle()
 
     cleaner.cycle()
-    assert (cleaner.get_render() == "^")
+    assert (cleaner.get_render() == "v")
 
 def test_uncharged_forward():
     cleaner = Cleaner(0, 0)

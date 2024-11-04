@@ -125,13 +125,13 @@ class Cleaner:
 
     def get_render(self):
         if self.__facing_north():
-            return "^"
+            return "v"
 
         if self.__facing_east():
             return ">"
 
         if self.__facing_south():
-            return "v"
+            return "^"
 
         if self.__facing_west():
             return "<"
