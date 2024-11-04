@@ -96,12 +96,11 @@ class Cleaner:
         return self.__direction == 3
 
     def clean(self, dirt):
-        self.__battery -= 3
-
+        self.__process_battery(3)
         dirt -= 5
 
         if dirt < 0:
-            dirt = 0
+            return 0
 
         return dirt
 
