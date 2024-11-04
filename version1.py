@@ -1,6 +1,5 @@
 from map import Map
 from cleaner import Cleaner
-import time
 
 class Version1:
     def __init__(self, map_data):
@@ -9,10 +8,9 @@ class Version1:
 
     def execute(self):
         while self.__cleaner.get_battery():
+            self.__render()
             self.__sense()
             self.__cleaner.cycle()
-            self.__render()
-            time.sleep(1)
 
     def __sense(self):
         self.__cleaner.set_scan(self.__map.get_blocked(
