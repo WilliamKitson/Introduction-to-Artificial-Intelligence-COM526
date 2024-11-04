@@ -2,9 +2,16 @@ from map import Map
 from cleaner import Cleaner
 
 class Version1:
-    def __init__(self, map_data):
-        self.__map = Map(map_data)
+    def __init__(self, filepath):
+        self.__map = Map(self.__load_map(filepath))
         self.__cleaner = Cleaner(1, 1)
+
+    @staticmethod
+    def __load_map(filepath):
+        with open(filepath, 'r') as file:
+            file_content = file.read()
+
+        return file_content
 
     def execute(self):
         while self.__cleaner.get_battery():
