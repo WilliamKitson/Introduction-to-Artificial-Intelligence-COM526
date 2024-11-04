@@ -10,10 +10,10 @@ def test_cycle_cycling():
         cleaner.cycle()
         assert(cleaner.get_cycle() == i)
 
-def test_battery_default_charge():
+def test_battery_default():
     assert(Cleaner(0, 0).get_battery() == 100)
 
-def test_battery_turn_left():
+def test_battery_turn():
     cleaner = Cleaner(0, 0)
     battery = cleaner.get_battery()
 
@@ -22,7 +22,7 @@ def test_battery_turn_left():
         cleaner.cycle()
         assert(cleaner.get_battery() == battery - i)
 
-def test_battery_forwards():
+def test_battery_move():
     cleaner = Cleaner(0, 0)
     battery = cleaner.get_battery()
 
