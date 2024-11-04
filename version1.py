@@ -19,21 +19,24 @@ class Version1:
         ))
 
     def __render(self):
+        print(self.__render_x())
+
+    def __render_x(self):
         render = ""
 
         for i in range(0, self.__map.get_height()):
             render += self.__render_y(i)
             render += "\n"
 
-        print(render)
+        return render
 
     def __render_y(self, x):
-        row = ""
+        render = ""
 
         for i in range(0, self.__map.get_width()):
-            row += self.__render_node(x, i)
+            render += self.__render_node(x, i)
 
-        return row
+        return render
 
     def __render_node(self, x, y):
         if self.__cleaner.get_position() == (x, y):
