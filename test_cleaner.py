@@ -176,3 +176,13 @@ def test_scan_default():
         cleaner.set_scan(1)
         cleaner.cycle()
         assert(cleaner.get_scan() == (i + 1, 0))
+
+def test_scan_east():
+    cleaner = Cleaner(0, 0)
+    cleaner.set_scan(0)
+    cleaner.cycle()
+
+    for i in range(1, 10):
+        cleaner.set_scan(1)
+        cleaner.cycle()
+        assert(cleaner.get_scan() == (0, i + 1))
