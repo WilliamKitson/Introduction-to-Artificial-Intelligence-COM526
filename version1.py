@@ -6,11 +6,7 @@ class Version1:
     def __init__(self, filepath):
         self.__map = Map(self.__load_map(filepath))
         self.__cleaner = Cleaner(self.__map.get_start())
-
-        self.__charger = Charger(
-            1,
-            1
-        )
+        self.__charger = Charger((1, 1))
 
     @staticmethod
     def __load_map(filepath):

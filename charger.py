@@ -1,6 +1,6 @@
 class Charger:
-    def __init__(self, x_position, y_position):
-        self.__position = (x_position, y_position)
+    def __init__(self, position):
+        self.__position = position
         self.__direction = 0
 
     def turn(self):
