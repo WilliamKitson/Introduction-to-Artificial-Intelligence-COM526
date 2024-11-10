@@ -10,7 +10,7 @@ class Charger:
             self.__direction = 0
 
     def render(self):
-        if self.__direction == 0:
+        if self.__facing_north():
             return "u"
 
         if self.__direction == 1:
@@ -21,6 +21,9 @@ class Charger:
 
         if self.__direction == 3:
             return "r"
+
+    def __facing_north(self):
+        return self.__direction == 0
 
     def get_position(self):
         return self.__position
