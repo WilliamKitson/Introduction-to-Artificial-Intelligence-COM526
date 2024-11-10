@@ -76,7 +76,7 @@ def test_charge_zone_north():
         assert(charger.get_charge_zone() == (i + 1, -i))
 
 def test_charge_empty():
-    assert(Charger(0, 0).get_charge((1, 1)) == 0)
+    assert(Charger(0, 0).get_charge((0, 0)) == 0)
 
 def test_charge_cleaner():
     charger = Charger(0, 0)
