@@ -1,12 +1,19 @@
+from charger import Charger
 from map import Map
 from cleaner import Cleaner
 
 class Version1:
     def __init__(self, filepath):
         self.__map = Map(self.__load_map(filepath))
+
         self.__cleaner = Cleaner(
             self.__map.get_start()[0],
             self.__map.get_start()[1]
+        )
+
+        self.__charger = Charger(
+            1,
+            1
         )
 
     @staticmethod
@@ -51,6 +58,9 @@ class Version1:
     def __render_node(self, x, y):
         if self.__cleaner.get_position() == (x, y):
             return self.__cleaner.get_render()
+
+        if self.__charger.get_position() == (x, y):
+            return self.__charger.get_render()
 
         return self.__map.get_render(x, y)
 

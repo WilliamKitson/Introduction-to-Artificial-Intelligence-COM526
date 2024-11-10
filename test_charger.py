@@ -1,20 +1,20 @@
 from charger import Charger
 
 def test_render_default():
-    assert(Charger(0, 0).render() == "u")
+    assert(Charger(0, 0).get_render() == "u")
 
 def test_render_east():
     charger = Charger(0, 0)
     charger.turn()
 
-    assert(charger.render() == "l")
+    assert(charger.get_render() == "l")
 
 def test_render_south():
     charger = Charger(0, 0)
     charger.turn()
     charger.turn()
 
-    assert(charger.render() == "d")
+    assert(charger.get_render() == "d")
 
 def test_render_west():
     charger = Charger(0, 0)
@@ -22,7 +22,7 @@ def test_render_west():
     charger.turn()
     charger.turn()
 
-    assert(charger.render() == "r")
+    assert(charger.get_render() == "r")
 
 def test_render_north():
     charger = Charger(0, 0)
@@ -31,7 +31,7 @@ def test_render_north():
     charger.turn()
     charger.turn()
 
-    assert(charger.render() == "u")
+    assert(charger.get_render() == "u")
 
 def test_position():
     for i in range(0, 5):

@@ -9,19 +9,6 @@ class Charger:
         if self.__direction > 3:
             self.__direction = 0
 
-    def render(self):
-        if self.__facing_north():
-            return "u"
-
-        if self.__facing_east():
-            return "l"
-
-        if self.__facing_south():
-            return "d"
-
-        if self.__facing_west():
-            return "r"
-
     def __facing_north(self):
         return self.__direction == 0
 
@@ -55,3 +42,16 @@ class Charger:
             return 5
 
         return 0
+
+    def get_render(self):
+        if self.__facing_north():
+            return "u"
+
+        if self.__facing_east():
+            return "l"
+
+        if self.__facing_south():
+            return "d"
+
+        if self.__facing_west():
+            return "r"
