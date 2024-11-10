@@ -24,3 +24,6 @@ class Charger:
 
     def get_position(self):
         return self.__position
+
+    def get_charge(self):
+        return 5

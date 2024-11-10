@@ -36,3 +36,6 @@ def test_render_north():
 def test_position():
     for i in range(0, 5):
         assert(Charger(i, i + 1).get_position() == (i, i + 1))
+
+def test_charge():
+    assert(Charger(0, 0).get_charge() == 5)
