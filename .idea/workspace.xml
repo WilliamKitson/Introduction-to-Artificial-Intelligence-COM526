@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="test_charge defined">
-      <change beforePath="$PROJECT_DIR$/charger.py" beforeDir="false" afterPath="$PROJECT_DIR$/charger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_charger.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_charger.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="test_charge_zone_north defined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +52,7 @@
     "Python tests.Python tests in test_cleaner.py.executor": "Run",
     "Python tests.Python tests in test_map.py.executor": "Run",
     "Python tests.Python tests in tests.py.executor": "Run",
+    "Python.charger.executor": "Run",
     "Python.cleaner.executor": "Run",
     "Python.main.executor": "Run",
     "Python.map.executor": "Run",
@@ -107,47 +105,7 @@
       <workItem from="1730985289334" duration="85000" />
       <workItem from="1730985419633" duration="178000" />
       <workItem from="1730987760242" duration="200000" />
-      <workItem from="1731241496825" duration="4056000" />
-    </task>
-    <task id="LOCAL-00038" summary="cleaner defined">
-      <option name="closed" value="true" />
-      <created>1730555259171</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1730555259171</updated>
-    </task>
-    <task id="LOCAL-00039" summary="test_recharge_uncharged defined">
-      <option name="closed" value="true" />
-      <created>1730555514983</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1730555514983</updated>
-    </task>
-    <task id="LOCAL-00040" summary="test_recharge_maximum defined">
-      <option name="closed" value="true" />
-      <created>1730555675006</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1730555675006</updated>
-    </task>
-    <task id="LOCAL-00041" summary="version1 defined">
-      <option name="closed" value="true" />
-      <created>1730556283439</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1730556283439</updated>
-    </task>
-    <task id="LOCAL-00042" summary="version1 defined">
-      <option name="closed" value="true" />
-      <created>1730556320607</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1730556320607</updated>
+      <workItem from="1731241496825" duration="4968000" />
     </task>
     <task id="LOCAL-00043" summary="cleaner tests renamed">
       <option name="closed" value="true" />
@@ -501,18 +459,53 @@
       <option name="project" value="LOCAL" />
       <updated>1731245567966</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="test_charge_zone_default defined">
+      <option name="closed" value="true" />
+      <created>1731246109339</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1731246109339</updated>
+    </task>
+    <task id="LOCAL-00088" summary="test_charge_zone_east defined">
+      <option name="closed" value="true" />
+      <created>1731246253026</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1731246253026</updated>
+    </task>
+    <task id="LOCAL-00089" summary="test_charge_zone_south defined">
+      <option name="closed" value="true" />
+      <created>1731246530716</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1731246530716</updated>
+    </task>
+    <task id="LOCAL-00090" summary="test_charge_zone_west defined">
+      <option name="closed" value="true" />
+      <created>1731246666886</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1731246666886</updated>
+    </task>
+    <task id="LOCAL-00091" summary="test_charge_zone_north defined">
+      <option name="closed" value="true" />
+      <created>1731246754739</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1731246754739</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test_scan_east defined" />
-    <MESSAGE value="test_scan_south defined" />
-    <MESSAGE value="test_scan_west defined" />
-    <MESSAGE value="test_scan_north defined" />
-    <MESSAGE value="test_battery_clean defined" />
     <MESSAGE value="test_clean_dirt defined" />
     <MESSAGE value="test_clean_minimum defined" />
     <MESSAGE value="cleaner redefined" />
@@ -533,13 +526,19 @@
     <MESSAGE value="test_render_north defined" />
     <MESSAGE value="test_position defined" />
     <MESSAGE value="test_charge defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_charge defined" />
+    <MESSAGE value="test_charge_zone_default defined" />
+    <MESSAGE value="test_charge_zone_east defined" />
+    <MESSAGE value="test_charge_zone_south defined" />
+    <MESSAGE value="test_charge_zone_west defined" />
+    <MESSAGE value="test_charge_zone_north defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_charge_zone_north defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1730735254892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1730736660910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1730737617072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1731245831886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1731246741552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1731243582866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$charger.coverage" NAME="charger Coverage Results" MODIFIED="1731246049027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

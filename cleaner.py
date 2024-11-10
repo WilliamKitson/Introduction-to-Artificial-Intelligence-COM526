@@ -57,40 +57,28 @@ class Cleaner:
 
     def __move_north(self):
         if self.__facing_north():
-            self.__position = (
-                self.get_position()[0] + 1,
-                self.get_position()[1]
-            )
+            self.__position = tuple(map(sum, zip(self.__position, (1, 0))))
 
     def __facing_north(self):
         return self.__direction == 0
 
     def __move_east(self):
         if self.__facing_east():
-            self.__position = (
-                self.get_position()[0],
-                self.get_position()[1] + 1
-            )
+            self.__position = tuple(map(sum, zip(self.__position, (0, 1))))
 
     def __facing_east(self):
         return self.__direction == 1
 
     def __move_south(self):
         if self.__facing_south():
-            self.__position = (
-                self.get_position()[0] - 1,
-                self.get_position()[1]
-            )
+            self.__position = tuple(map(sum, zip(self.__position, (-1, 0))))
 
     def __facing_south(self):
         return self.__direction == 2
 
     def __move_west(self):
         if self.__facing_west():
-            self.__position = (
-                self.get_position()[0],
-                self.get_position()[1] - 1
-            )
+            self.__position = tuple(map(sum, zip(self.__position, (0, -1))))
 
     def __facing_west(self):
         return self.__direction == 3
@@ -150,28 +138,16 @@ class Cleaner:
             return self.__get_scan_west()
 
     def __get_scan_north(self):
-        return (
-            self.__position[0] + 1,
-            self.__position[1]
-        )
+        return tuple(map(sum, zip(self.__position, (1, 0))))
 
     def __get_scan_east(self):
-        return (
-            self.__position[0],
-            self.__position[1] + 1
-        )
+        return tuple(map(sum, zip(self.__position, (0, 1))))
 
     def __get_scan_south(self):
-        return (
-            self.__position[0] - 1,
-            self.__position[1]
-        )
+        return tuple(map(sum, zip(self.__position, (-1, 0))))
 
     def __get_scan_west(self):
-        return (
-            self.__position[0],
-            self.__position[1] - 1
-        )
+        return tuple(map(sum, zip(self.__position, (0, -1))))
 
     def set_scan(self, scan):
         self.__scan = scan
