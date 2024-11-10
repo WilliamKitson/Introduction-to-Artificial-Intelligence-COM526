@@ -32,5 +32,8 @@ class Charger:
         if self.__direction == 1:
             return tuple(map(sum, zip(self.__position, (0, 1))))
 
+        if self.__direction == 2:
+            return tuple(map(sum, zip(self.__position, (-1, 0))))
+
     def get_charge(self):
         return 5
