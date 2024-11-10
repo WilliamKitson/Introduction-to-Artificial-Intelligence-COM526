@@ -5,6 +5,9 @@ class Charger:
     def turn(self):
         self.__direction += 1
 
+        if self.__direction > 3:
+            self.__direction = 0
+
     def render(self):
         if self.__direction == 0:
             return "u"

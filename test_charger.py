@@ -23,3 +23,12 @@ def test_render_west():
     charger.turn()
 
     assert(charger.render() == "r")
+
+def test_render_north():
+    charger = Charger(0, 0)
+    charger.turn()
+    charger.turn()
+    charger.turn()
+    charger.turn()
+
+    assert(charger.render() == "u")
