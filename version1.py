@@ -16,9 +16,15 @@ class Version1:
 
     def __sense(self):
         self.__cleaner.set_scan(self.__map.get_blocked(
-            self.__cleaner.get_scan()[0],
-            self.__cleaner.get_scan()[1]
+            self.__get_scan_zone_x(),
+            self.__get_scan_zone_y()
         ))
+
+    def __get_scan_zone_x(self):
+        return self.__cleaner.get_scan()[0]
+
+    def __get_scan_zone_y(self):
+        return self.__cleaner.get_scan()[1]
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
