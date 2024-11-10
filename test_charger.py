@@ -39,3 +39,7 @@ def test_position():
 
 def test_charge():
     assert(Charger(0, 0).get_charge() == 5)
+
+def test_charge_zone_default():
+    for i in range(0, 5):
+        assert(Charger(i, -i).get_charge_zone() == (i + 1, -i))

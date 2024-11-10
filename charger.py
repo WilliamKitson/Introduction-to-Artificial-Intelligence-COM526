@@ -25,5 +25,8 @@ class Charger:
     def get_position(self):
         return self.__position
 
+    def get_charge_zone(self):
+        return tuple(map(sum, zip(self.__position, (1, 0))))
+
     def get_charge(self):
         return 5
