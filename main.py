@@ -1,2 +1,6 @@
 from version1 import Version1
-Version1("maps/simple_map.txt").execute()
+
+with open("maps/simple_map.txt", 'r') as file:
+    file_content = file.read()
+
+Version1(file_content).execute()

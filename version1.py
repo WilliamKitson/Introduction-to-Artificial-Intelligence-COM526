@@ -3,17 +3,10 @@ from cleaner import Cleaner
 from charger import Charger
 
 class Version1:
-    def __init__(self, filepath):
-        self.__map = Map(self.__load_map(filepath))
+    def __init__(self, map_data):
+        self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger((1, 1))
-
-    @staticmethod
-    def __load_map(filepath):
-        with open(filepath, 'r') as file:
-            file_content = file.read()
-
-        return file_content
 
     def execute(self):
         while self.__cleaner.get_battery():
