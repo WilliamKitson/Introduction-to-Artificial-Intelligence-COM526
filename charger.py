@@ -38,16 +38,16 @@ class Charger:
         return self.__position
 
     def get_charge_zone(self):
-        if self.__direction == 0:
+        if self.__facing_north():
             return tuple(map(sum, zip(self.__position, (1, 0))))
 
-        if self.__direction == 1:
+        if self.__facing_east():
             return tuple(map(sum, zip(self.__position, (0, 1))))
 
-        if self.__direction == 2:
+        if self.__facing_south():
             return tuple(map(sum, zip(self.__position, (-1, 0))))
 
-        if self.__direction == 3:
+        if self.__facing_west():
             return tuple(map(sum, zip(self.__position, (0, -1))))
 
     def get_charge(self, cleaner):
