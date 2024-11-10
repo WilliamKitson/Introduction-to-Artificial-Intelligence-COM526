@@ -13,7 +13,7 @@ class Charger:
         if self.__facing_north():
             return "u"
 
-        if self.__direction == 1:
+        if self.__facing_east():
             return "l"
 
         if self.__direction == 2:
@@ -24,6 +24,9 @@ class Charger:
 
     def __facing_north(self):
         return self.__direction == 0
+
+    def __facing_east(self):
+        return self.__direction == 1
 
     def get_position(self):
         return self.__position
