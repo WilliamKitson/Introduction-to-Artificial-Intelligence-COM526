@@ -39,4 +39,7 @@ class Charger:
             return tuple(map(sum, zip(self.__position, (0, -1))))
 
     def get_charge(self, cleaner):
-        return 5
+        if cleaner == self.get_charge_zone():
+            return 5
+
+        return 0
