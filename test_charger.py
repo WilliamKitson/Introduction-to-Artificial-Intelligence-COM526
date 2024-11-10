@@ -7,4 +7,11 @@ def test_render_east():
     charger = Charger(0, 0)
     charger.turn()
 
-    assert(charger.render() == "i")
+    assert(charger.render() == "l")
+
+def test_render_south():
+    charger = Charger(0, 0)
+    charger.turn()
+    charger.turn()
+
+    assert(charger.render() == "d")

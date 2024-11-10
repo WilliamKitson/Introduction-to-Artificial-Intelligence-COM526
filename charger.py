@@ -3,11 +3,14 @@ class Charger:
         self.__direction = 0
 
     def turn(self):
-        self.__direction = 1
+        self.__direction += 1
 
     def render(self):
         if self.__direction == 0:
             return "u"
 
         if self.__direction == 1:
-            return "i"
+            return "l"
+
+        if self.__direction == 2:
+            return "d"
