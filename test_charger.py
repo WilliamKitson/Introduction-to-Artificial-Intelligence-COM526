@@ -15,3 +15,11 @@ def test_render_south():
     charger.turn()
 
     assert(charger.render() == "d")
+
+def test_render_west():
+    charger = Charger(0, 0)
+    charger.turn()
+    charger.turn()
+    charger.turn()
+
+    assert(charger.render() == "r")

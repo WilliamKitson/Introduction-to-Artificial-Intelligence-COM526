@@ -14,3 +14,6 @@ class Charger:
 
         if self.__direction == 2:
             return "d"
+
+        if self.__direction == 3:
+            return "r"
