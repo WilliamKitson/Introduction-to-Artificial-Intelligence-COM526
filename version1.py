@@ -1,6 +1,6 @@
-from charger import Charger
 from map import Map
 from cleaner import Cleaner
+from charger import Charger
 
 class Version1:
     def __init__(self, filepath):
