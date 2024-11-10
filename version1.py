@@ -5,11 +5,7 @@ from charger import Charger
 class Version1:
     def __init__(self, filepath):
         self.__map = Map(self.__load_map(filepath))
-
-        self.__cleaner = Cleaner(
-            self.__map.get_start()[0],
-            self.__map.get_start()[1]
-        )
+        self.__cleaner = Cleaner(self.__map.get_start())
 
         self.__charger = Charger(
             1,

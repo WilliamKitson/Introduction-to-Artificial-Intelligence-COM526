@@ -1,8 +1,8 @@
 class Cleaner:
-    def __init__(self, x_position, y_position):
+    def __init__(self, position):
         self.__cycle = 0
         self.__battery = 100
-        self.__position = (x_position, y_position)
+        self.__position = position
         self.__scan = 0
         self.__direction = 0
 
