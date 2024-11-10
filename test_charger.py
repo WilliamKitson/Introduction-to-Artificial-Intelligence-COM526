@@ -67,3 +67,13 @@ def test_charge_zone_west():
         charger.turn()
 
         assert(charger.get_charge_zone() == (-i, i - 1))
+
+def test_charge_zone_north():
+    for i in range(0, 5):
+        charger = Charger(i, -i)
+        charger.turn()
+        charger.turn()
+        charger.turn()
+        charger.turn()
+
+        assert(charger.get_charge_zone() == (i + 1, -i))
