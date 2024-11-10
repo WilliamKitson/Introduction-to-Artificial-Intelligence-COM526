@@ -1,5 +1,6 @@
 class Charger:
     def __init__(self, x_position, y_position):
+        self.__position = (x_position, y_position)
         self.__direction = 0
 
     def turn(self):
@@ -20,3 +21,6 @@ class Charger:
 
         if self.__direction == 3:
             return "r"
+
+    def get_position(self):
+        return self.__position
