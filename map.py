@@ -7,7 +7,9 @@ class Map:
         self.__width = len(substrings[0])
         self.__height = len(substrings)
         self.__data = [["" for i in range(self.__width)] for j in range(self.__height)]
+        self.__randomise_dirt(substrings)
 
+    def __randomise_dirt(self, substrings):
         for i in range(self.__height):
             for j in range(self.__width):
                 character = substrings[i][j]
