@@ -10,7 +10,12 @@ class Map:
 
         for i in range(self.__height):
             for j in range(self.__width):
-                self.__data[i][j] = substrings[i][j]
+                character = substrings[i][j]
+
+                if substrings[i][j] == " ":
+                    character = str(random.randrange(0, 3))
+
+                self.__data[i][j] = character
 
     def get_width(self):
         return self.__width
@@ -40,7 +45,7 @@ class Map:
         return 1
 
     def get_dirt(self, position):
-        return random.randrange(0, 3)
+        return int(self.__data[position[0]][position[1]])
 
     def get_render(self, x, y):
         output = self.__data[x][y]

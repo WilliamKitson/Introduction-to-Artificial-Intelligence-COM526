@@ -59,23 +59,28 @@ def test_dirt_range():
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            assert(loaded_map.get_dirt((i, j)) in range(0, 3))
+            assert(loaded_map.get_dirt((j, i)) in range(0, 3))
 
 def test_dirt_random():
     map_data = ("     "
                 "     ")
 
-    assert(get_dirt_sum_total(map_data) != get_dirt_sum_total(map_data))
+    assert(get_dirt_sum_total(Map(map_data)) != get_dirt_sum_total(Map(map_data)))
 
-def get_dirt_sum_total(map_data):
-    loaded_map = Map(map_data)
+def get_dirt_sum_total(loaded_map):
     sum_total = 0
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            sum_total += loaded_map.get_dirt((i, j))
+            sum_total += loaded_map.get_dirt((j, i))
 
     return sum_total
+
+def test_dirt_consistent():
+    loaded_map = Map(("     "
+                      "     "))
+
+    assert(get_dirt_sum_total(loaded_map) == get_dirt_sum_total(loaded_map))
 
 def test_get_start():
     width = 10
