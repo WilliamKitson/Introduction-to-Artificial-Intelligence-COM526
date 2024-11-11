@@ -57,7 +57,7 @@ def test_get_start():
 def test_render():
     map_data = ("qwertyuuiop\n"
                 "asdfghjklzx\n"
-                "cvbnm123456\n")
+                "cbnm1234567\n")
 
     render = Map(map_data)
     index = 0
@@ -69,3 +69,6 @@ def test_render():
 
             assert(render.get_render(i, j) == map_data[index])
             index += 1
+
+def test_render_start():
+    assert(Map("v").get_render(0, 0) == " ")

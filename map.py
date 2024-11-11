@@ -29,4 +29,9 @@ class Map:
         return 1
 
     def get_render(self, x, y):
+        output = self.__data[x][y]
+
+        if output == "v":
+            return " "
+
         return self.__data[x][y]
