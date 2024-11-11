@@ -22,6 +22,12 @@ class Map:
                 if self.__data[i][j] == "^":
                     return i, j
 
+    def get_charger(self):
+        for i in range(self.__width):
+            for j in range(self.__height):
+                if self.__data[i][j] == "u":
+                    return i, j
+
     def get_blocked(self, x, y):
         if self.__data[x][y] == "x":
             return 0

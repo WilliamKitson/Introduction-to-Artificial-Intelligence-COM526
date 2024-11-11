@@ -54,6 +54,15 @@ def test_get_start():
             unit = Map(generate_test_map(width, height, i, j, "^"))
             assert(unit.get_start() == (i, j))
 
+def test_get_charger():
+    width = 10
+    height = 10
+
+    for i in range(0, width):
+        for j in range(0, height):
+            unit = Map(generate_test_map(width, height, i, j, "u"))
+            assert(unit.get_charger() == (i, j))
+
 def test_render():
     map_data = ("qwertyiopas\n"
                 "asdfghjklzx\n"
