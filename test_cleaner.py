@@ -60,7 +60,7 @@ def test_move_default():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_position() == (i, 0))
+        assert(cleaner.get_position() == (-i, 0))
 
 def test_move_east():
     cleaner = Cleaner((0, 0))
@@ -81,7 +81,7 @@ def test_move_south():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_position() == (-i, 0))
+        assert(cleaner.get_position() == (i, 0))
 
 def test_move_west():
     cleaner = Cleaner((0, 0))
@@ -106,7 +106,7 @@ def test_move_north():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_position() == (i, 0))
+        assert(cleaner.get_position() == (-i, 0))
 
 def test_clean_dirt():
     cleaner = Cleaner((0, 0))
@@ -119,7 +119,7 @@ def test_clean_minimum():
     assert(Cleaner((0, 0)).clean(1) == 0)
 
 def test_render_default():
-    assert(Cleaner((0, 0)).get_render() == 'v')
+    assert(Cleaner((0, 0)).get_render() == '^')
 
 def test_render_east():
     cleaner = Cleaner((0, 0))
@@ -132,7 +132,7 @@ def test_render_south():
     cleaner.set_scan(0)
     cleaner.cycle()
     cleaner.cycle()
-    assert (cleaner.get_render() == '^')
+    assert (cleaner.get_render() == 'v')
 
 def test_render_west():
     cleaner = Cleaner((0, 0))
@@ -149,7 +149,7 @@ def test_render_north():
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
-    assert (cleaner.get_render() == 'v')
+    assert (cleaner.get_render() == '^')
 
 def test_uncharged_turn():
     cleaner = Cleaner((0, 0))
@@ -159,7 +159,7 @@ def test_uncharged_turn():
         cleaner.cycle()
 
     cleaner.cycle()
-    assert (cleaner.get_render() == "v")
+    assert (cleaner.get_render() == "^")
 
 def test_uncharged_forward():
     cleaner = Cleaner((0, 0))
@@ -169,7 +169,7 @@ def test_uncharged_forward():
         cleaner.cycle()
 
     cleaner.cycle()
-    assert (cleaner.get_position() == (50, 0))
+    assert (cleaner.get_position() == (-50, 0))
 
 def test_recharge_uncharged():
     cleaner = Cleaner((0, 0))
@@ -193,7 +193,7 @@ def test_scan_default():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_scan_position() == (i + 1, 0))
+        assert(cleaner.get_scan_position() == (-i - 1, 0))
 
 def test_scan_east():
     cleaner = Cleaner((0, 0))
@@ -214,7 +214,7 @@ def test_scan_south():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_scan_position() == (-i - 1, 0))
+        assert(cleaner.get_scan_position() == (i + 1, 0))
 
 def test_scan_west():
     cleaner = Cleaner((0, 0))
@@ -239,4 +239,4 @@ def test_scan_north():
     for i in range(1, 10):
         cleaner.set_scan(1)
         cleaner.cycle()
-        assert(cleaner.get_scan_position() == (i + 1, 0))
+        assert(cleaner.get_scan_position() == (-i - 1, 0))

@@ -60,7 +60,7 @@ class Cleaner:
             self.__position = tuple(map(sum, zip(self.__position, (1, 0))))
 
     def __facing_north(self):
-        return self.__direction == 0
+        return self.__direction == 2
 
     def __move_east(self):
         if self.__facing_east():
@@ -74,7 +74,7 @@ class Cleaner:
             self.__position = tuple(map(sum, zip(self.__position, (-1, 0))))
 
     def __facing_south(self):
-        return self.__direction == 2
+        return self.__direction == 0
 
     def __move_west(self):
         if self.__facing_west():
