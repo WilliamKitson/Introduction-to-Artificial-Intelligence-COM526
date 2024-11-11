@@ -20,7 +20,7 @@ def test_blocked_wall():
 
     for i in range(0, width):
         for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == 0)
+            assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked((i, j)) == 0)
 
 def test_blocked_charger():
     width = 10
@@ -28,7 +28,7 @@ def test_blocked_charger():
 
     for i in range(0, width):
         for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, "u")).get_blocked(i, j) == 0)
+            assert(Map(generate_test_map(width, height, i, j, "u")).get_blocked((i, j)) == 0)
 
 def generate_test_map(width, height, x, y, char):
     map_data = ""
@@ -51,7 +51,7 @@ def test_node_open():
 
     for i in range(0, width):
         for j in range(0, height):
-            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked(i, j) == 1)
+            assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked((i, j)) == 1)
 
 def test_get_start():
     width = 10

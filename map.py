@@ -28,11 +28,11 @@ class Map:
                 if self.__data[i][j] == "u":
                     return i, j
 
-    def get_blocked(self, x, y):
-        if self.__data[x][y] == "x":
+    def get_blocked(self, position):
+        if self.__data[position[0]][position[1]] == "x":
             return 0
 
-        if self.__data[x][y] == "u":
+        if self.__data[position[0]][position[1]] == "u":
             return 0
 
         return 1
