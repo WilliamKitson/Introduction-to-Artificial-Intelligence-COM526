@@ -15,7 +15,7 @@ class Version1:
             self.__cleaner.cycle()
 
     def __sense(self):
-        self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan()))
+        self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan_position()))
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
