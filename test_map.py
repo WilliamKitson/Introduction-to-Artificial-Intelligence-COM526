@@ -55,7 +55,7 @@ def test_get_start():
             assert(unit.get_start() == (i, j))
 
 def test_render():
-    map_data = ("qwertyuuiop\n"
+    map_data = ("qwertyiopas\n"
                 "asdfghjklzx\n"
                 "cvbnm123456\n")
 
@@ -72,3 +72,6 @@ def test_render():
 
 def test_render_start():
     assert(Map("^").get_render(0, 0) == " ")
+
+def test_render_charger():
+    assert(Map("u").get_render(0, 0) == " ")

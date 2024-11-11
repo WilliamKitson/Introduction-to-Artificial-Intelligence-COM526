@@ -34,4 +34,7 @@ class Map:
         if output == "^":
             return " "
 
+        if output == "u":
+            return " "
+
         return self.__data[x][y]
