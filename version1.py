@@ -54,7 +54,10 @@ class Version1:
         )
 
     def __sense(self):
-        self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan_position()))
+        self.__cleaner.sense(
+            self.__map.get_dirt(self.__cleaner.get_position()),
+            self.__map.get_blocked(self.__cleaner.get_scan_position())
+        )
 
     def __cycle(self):
         self.__cleaner.cycle()

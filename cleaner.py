@@ -6,6 +6,9 @@ class Cleaner:
         self.__scan = 0
         self.__direction = 0
 
+    def sense(self, dirt, forwards_scan):
+        self.__scan = forwards_scan
+
     def cycle(self):
         self.__increment_cycle()
         self.__process_turn()
@@ -148,6 +151,3 @@ class Cleaner:
 
     def __get_scan_west(self):
         return tuple(map(sum, zip(self.__position, (0, -1))))
-
-    def set_scan(self, scan):
-        self.__scan = scan

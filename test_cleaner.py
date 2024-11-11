@@ -18,7 +18,7 @@ def test_battery_turn():
     battery = cleaner.get_battery()
 
     for i in range(1, 10):
-        cleaner.set_scan(0)
+        cleaner.sense(0, 0)
         cleaner.cycle()
         assert(cleaner.get_battery() == battery - i)
 
@@ -27,7 +27,7 @@ def test_battery_move():
     battery = cleaner.get_battery()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_battery() == battery - (i * 2))
 
@@ -43,7 +43,7 @@ def test_battery_minimum():
     cleaner = Cleaner((0, 0))
 
     while cleaner.get_battery() > 0:
-        cleaner.set_scan(0)
+        cleaner.sense(0, 0)
         cleaner.cycle()
 
     cleaner.cycle()
@@ -58,53 +58,53 @@ def test_move_default():
     cleaner = Cleaner((0, 0))
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_position() == (-i, 0))
 
 def test_move_east():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_position() == (0, i))
 
 def test_move_south():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_position() == (i, 0))
 
 def test_move_west():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_position() == (0, -i))
 
 def test_move_north():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_position() == (-i, 0))
 
@@ -123,20 +123,20 @@ def test_render_default():
 
 def test_render_east():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     assert (cleaner.get_render() == '>')
 
 def test_render_south():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     assert (cleaner.get_render() == 'v')
 
 def test_render_west():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
@@ -144,7 +144,7 @@ def test_render_west():
 
 def test_render_north():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
@@ -153,7 +153,7 @@ def test_render_north():
 
 def test_uncharged_turn():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
 
     while cleaner.get_battery() > 0:
         cleaner.cycle()
@@ -163,7 +163,7 @@ def test_uncharged_turn():
 
 def test_uncharged_forward():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(1)
+    cleaner.sense(0, 1)
 
     while cleaner.get_battery() > 0:
         cleaner.cycle()
@@ -173,7 +173,7 @@ def test_uncharged_forward():
 
 def test_recharge_uncharged():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
 
     while cleaner.get_battery() > 0:
         cleaner.cycle()
@@ -191,52 +191,52 @@ def test_scan_default():
     cleaner = Cleaner((0, 0))
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (-i - 1, 0))
 
 def test_scan_east():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (0, i + 1))
 
 def test_scan_south():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (i + 1, 0))
 
 def test_scan_west():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (0, -i - 1))
 
 def test_scan_north():
     cleaner = Cleaner((0, 0))
-    cleaner.set_scan(0)
+    cleaner.sense(0, 0)
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()
 
     for i in range(1, 10):
-        cleaner.set_scan(1)
+        cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (-i - 1, 0))
