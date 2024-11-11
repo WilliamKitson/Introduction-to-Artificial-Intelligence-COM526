@@ -31,7 +31,7 @@ class Map:
     def get_render(self, x, y):
         output = self.__data[x][y]
 
-        if output == "v":
+        if output == "^":
             return " "
 
         return self.__data[x][y]
