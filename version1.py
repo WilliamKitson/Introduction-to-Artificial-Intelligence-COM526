@@ -44,12 +44,13 @@ class Version1:
         if self.__charger.get_charge_zone() == (x, y):
             return "c"
 
-        return self.__map.get_render(x, y)
+        return self.__map.get_render((x, y))
 
     def __render_stats(self):
         return (
             f"cycle: {self.__cleaner.get_cycle()}\n"
-            f" battery: {self.__cleaner.get_battery()}\n"
+            f"battery: {self.__cleaner.get_battery()}\n"
+            f"dirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
         )
 
     def __sense(self):

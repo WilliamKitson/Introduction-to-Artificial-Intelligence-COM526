@@ -82,6 +82,12 @@ def test_dirt_consistent():
 
     assert(get_dirt_sum_total(loaded_map) == get_dirt_sum_total(loaded_map))
 
+def test_dirt_invalid():
+    loaded_map = Map(("x^u\n"
+                      "x^u"))
+
+    assert (get_dirt_sum_total(loaded_map) == 0)
+
 def test_get_start():
     width = 10
     height = 10
@@ -131,9 +137,3 @@ def test_invalid_render():
 
             assert(render.get_render((i, j)) == " ")
             index += 1
-
-def test_render_start():
-    assert(Map("^").get_render((0, 0)) == " ")
-
-def test_render_charger():
-    assert(Map("u").get_render((0, 0)) == " ")

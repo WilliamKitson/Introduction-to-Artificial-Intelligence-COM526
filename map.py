@@ -45,6 +45,9 @@ class Map:
         return 1
 
     def get_dirt(self, position):
+        if self.__data[position[0]][position[1]] in ["x", "^", "u"]:
+            return 0
+
         return int(self.__data[position[0]][position[1]])
 
     def get_render(self, position):
