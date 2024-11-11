@@ -88,14 +88,14 @@ def test_dirt_invalid():
 
     assert (get_dirt_sum_total(loaded_map) == 0)
 
-def test_dirt_clean():
+def test_dirt_set():
     loaded_map = Map(("     \n"
                       "     "))
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            loaded_map.clean_dirt((j, i), loaded_map.get_dirt((j, i)))
-            assert(loaded_map.get_dirt((j, i)) == 0)
+            loaded_map.set_dirt((j, i), i + j)
+            assert(loaded_map.get_dirt((j, i)) == i + j)
 
 def test_get_start():
     width = 10

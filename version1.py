@@ -61,4 +61,5 @@ class Version1:
 
     def __cycle(self):
         self.__cleaner.cycle()
+        self.__map.set_dirt(self.__cleaner.get_position(), self.__cleaner.get_cleaned())
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
