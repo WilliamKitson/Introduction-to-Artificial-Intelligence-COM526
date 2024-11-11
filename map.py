@@ -50,10 +50,7 @@ class Map:
     def get_render(self, x, y):
         output = self.__data[x][y]
 
-        if output == "^":
-            return " "
+        if output == "x":
+            return "x"
 
-        if output == "u":
-            return " "
-
-        return self.__data[x][y]
+        return " "

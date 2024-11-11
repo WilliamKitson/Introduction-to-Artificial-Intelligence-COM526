@@ -100,10 +100,10 @@ def test_get_charger():
             unit = Map(generate_test_map(width, height, i, j, "u"))
             assert(unit.get_charger() == (i, j))
 
-def test_render():
-    map_data = ("qwertyiopas\n"
-                "asdfghjklzx\n"
-                "cvbnm123456\n")
+def test_valid_render():
+    map_data = ("xxxxxxxxxx\n"
+                "xxxxxxxxxx\n"
+                "xxxxxxxxxx\n")
 
     render = Map(map_data)
     index = 0
@@ -113,7 +113,23 @@ def test_render():
             if map_data[index] == "\n":
                 index += 1
 
-            assert(render.get_render(i, j) == map_data[index])
+            assert(render.get_render(i, j) == "x")
+            index += 1
+
+def test_invalid_render():
+    map_data = ("123vu123vu\n"
+                "123vu123vu\n"
+                "123vu123vu\n")
+
+    render = Map(map_data)
+    index = 0
+
+    for i in range(0, render.get_height()):
+        for j in range(0, render.get_width()):
+            if map_data[index] == "\n":
+                index += 1
+
+            assert(render.get_render(i, j) == " ")
             index += 1
 
 def test_render_start():
