@@ -47,10 +47,10 @@ class Map:
     def get_dirt(self, position):
         return int(self.__data[position[0]][position[1]])
 
-    def get_render(self, x, y):
-        output = self.__data[x][y]
+    def get_render(self, position):
+        output = self.__data[position[0]][position[1]]
 
         if output == "x":
-            return "x"
+            return output
 
         return " "

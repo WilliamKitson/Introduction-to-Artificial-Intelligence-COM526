@@ -113,7 +113,7 @@ def test_valid_render():
             if map_data[index] == "\n":
                 index += 1
 
-            assert(render.get_render(i, j) == "x")
+            assert(render.get_render((i, j)) == "x")
             index += 1
 
 def test_invalid_render():
@@ -129,11 +129,11 @@ def test_invalid_render():
             if map_data[index] == "\n":
                 index += 1
 
-            assert(render.get_render(i, j) == " ")
+            assert(render.get_render((i, j)) == " ")
             index += 1
 
 def test_render_start():
-    assert(Map("^").get_render(0, 0) == " ")
+    assert(Map("^").get_render((0, 0)) == " ")
 
 def test_render_charger():
-    assert(Map("u").get_render(0, 0) == " ")
+    assert(Map("u").get_render((0, 0)) == " ")
