@@ -15,8 +15,7 @@ class Cleaner:
         self.__increment_cycle()
 
         if self.__dirt > 0:
-            self.__process_battery(3)
-            self.__dirt -= 1
+            self.__process_clean()
             return
 
         self.__process_turn()
@@ -24,6 +23,10 @@ class Cleaner:
 
     def __increment_cycle(self):
         self.__cycle += 1
+
+    def __process_clean(self):
+        self.__process_battery(3)
+        self.__dirt -= 1
 
     def __process_turn(self):
         if self.__battery_empty():
