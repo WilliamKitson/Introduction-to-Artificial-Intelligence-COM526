@@ -44,6 +44,9 @@ class Version1:
         if self.__charger.get_position() == (x, y):
             return self.__charger.get_render()
 
+        if self.__charger.get_charge_zone() == (x, y):
+            return "c"
+
         return self.__map.get_render(x, y)
 
     def __render_stats(self):
