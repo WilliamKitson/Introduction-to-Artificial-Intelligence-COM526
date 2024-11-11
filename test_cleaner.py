@@ -36,7 +36,8 @@ def test_battery_clean():
     battery = cleaner.get_battery()
 
     for i in range(1, 10):
-        cleaner.clean(0)
+        cleaner.sense(1, 0)
+        cleaner.cycle()
         assert(cleaner.get_battery() == battery - (i * 3))
 
 def test_battery_minimum():
@@ -113,10 +114,16 @@ def test_clean_dirt():
     cleaned_value = 1
 
     for i in range(cleaned_value, cleaned_value + 10):
-        assert(cleaner.clean(i) == i - cleaned_value)
+        cleaner.sense(i, 0)
+        cleaner.cycle()
+        assert(cleaner.get_cleaned() == i - cleaned_value)
 
 def test_clean_minimum():
-    assert(Cleaner((0, 0)).clean(1) == 0)
+    cleaner = Cleaner((0, 0))
+
+    cleaner.sense(0, 0)
+    cleaner.cycle()
+    assert(Cleaner((0, 0)).get_cleaned() == 0)
 
 def test_render_default():
     assert(Cleaner((0, 0)).get_render() == '^')

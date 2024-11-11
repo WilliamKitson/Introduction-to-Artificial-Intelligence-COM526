@@ -3,14 +3,22 @@ class Cleaner:
         self.__cycle = 0
         self.__battery = 100
         self.__position = position
+        self.__dirt = 0
         self.__scan = 0
         self.__direction = 0
 
     def sense(self, dirt, forwards_scan):
+        self.__dirt = dirt
         self.__scan = forwards_scan
 
     def cycle(self):
         self.__increment_cycle()
+
+        if self.__dirt > 0:
+            self.__process_battery(3)
+            self.__dirt -= 1
+            return
+
         self.__process_turn()
         self.__process_move()
 
@@ -86,19 +94,6 @@ class Cleaner:
     def __facing_west(self):
         return self.__direction == 3
 
-    def clean(self, dirt):
-        self.__process_battery(3)
-        return self.__process_clean(dirt)
-
-    @staticmethod
-    def __process_clean(dirt):
-        dirt -= 1
-
-        if dirt < 0:
-            return 0
-
-        return dirt
-
     def recharge(self, cost):
         self.__battery += cost
 
@@ -113,6 +108,9 @@ class Cleaner:
 
     def get_position(self):
         return self.__position
+
+    def get_cleaned(self):
+        return self.__dirt
 
     def get_render(self):
         if self.__facing_north():
