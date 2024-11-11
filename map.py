@@ -1,3 +1,5 @@
+import random
+
 class Map:
     def __init__(self, data):
         substrings = str.splitlines(data)
@@ -38,7 +40,7 @@ class Map:
         return 1
 
     def get_dirt(self, position):
-        return 2
+        return random.randrange(0, 3)
 
     def get_render(self, x, y):
         output = self.__data[x][y]
