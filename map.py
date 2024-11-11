@@ -17,14 +17,14 @@ class Map:
         return self.__height
 
     def get_start(self):
-        for i in range(self.__width):
-            for j in range(self.__height):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 if self.__data[i][j] == "^":
                     return i, j
 
     def get_charger(self):
-        for i in range(self.__width):
-            for j in range(self.__height):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 if self.__data[i][j] == "u":
                     return i, j
 

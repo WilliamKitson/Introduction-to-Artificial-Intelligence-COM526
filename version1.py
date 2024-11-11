@@ -6,7 +6,7 @@ class Version1:
     def __init__(self, map_data):
         self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
-        self.__charger = Charger((1, 1))
+        self.__charger = Charger(self.__map.get_charger())
 
     def execute(self):
         while self.__cleaner.get_battery():
