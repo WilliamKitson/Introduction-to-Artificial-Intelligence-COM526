@@ -26,13 +26,13 @@ class Charger:
 
     def get_charge_zone(self):
         if self.__facing_north():
-            return tuple(map(sum, zip(self.__position, (1, 0))))
+            return tuple(map(sum, zip(self.__position, (-1, 0))))
 
         if self.__facing_east():
             return tuple(map(sum, zip(self.__position, (0, 1))))
 
         if self.__facing_south():
-            return tuple(map(sum, zip(self.__position, (-1, 0))))
+            return tuple(map(sum, zip(self.__position, (1, 0))))
 
         if self.__facing_west():
             return tuple(map(sum, zip(self.__position, (0, -1))))

@@ -1,5 +1,5 @@
 xxxxxxxxxx
-x       ux
-x   ^    x
 x        x
+x   ^    x
+x       ux
 xxxxxxxxxx

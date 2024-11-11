@@ -39,7 +39,7 @@ def test_position():
 
 def test_charge_zone_default():
     for i in range(0, 5):
-        assert(Charger((i, -i)).get_charge_zone() == (i + 1, -i))
+        assert(Charger((i, -i)).get_charge_zone() == (i - 1, -i))
 
 def test_charge_zone_east():
     for i in range(0, 5):
@@ -54,7 +54,7 @@ def test_charge_zone_south():
         charger.turn()
         charger.turn()
 
-        assert(charger.get_charge_zone() == (i - 1, -i))
+        assert(charger.get_charge_zone() == (i + 1, -i))
 
 def test_charge_zone_west():
     for i in range(0, 5):
@@ -73,7 +73,7 @@ def test_charge_zone_north():
         charger.turn()
         charger.turn()
 
-        assert(charger.get_charge_zone() == (i + 1, -i))
+        assert(charger.get_charge_zone() == (i - 1, -i))
 
 def test_charge_empty():
     assert(Charger((0, 0)).get_charge((0, 0)) == 0)
