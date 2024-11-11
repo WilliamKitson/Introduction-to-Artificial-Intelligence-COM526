@@ -14,13 +14,21 @@ def test_map_height():
         map_data += '\n'
         assert(Map(map_data).get_height() == i)
 
-def test_node_blocked():
+def test_blocked_wall():
     width = 10
     height = 10
 
     for i in range(0, width):
         for j in range(0, height):
             assert(Map(generate_test_map(width, height, i, j, "x")).get_blocked(i, j) == 0)
+
+def test_blocked_charger():
+    width = 10
+    height = 10
+
+    for i in range(0, width):
+        for j in range(0, height):
+            assert(Map(generate_test_map(width, height, i, j, "u")).get_blocked(i, j) == 0)
 
 def generate_test_map(width, height, x, y, char):
     map_data = ""

@@ -32,6 +32,9 @@ class Map:
         if self.__data[x][y] == "x":
             return 0
 
+        if self.__data[x][y] == "u":
+            return 0
+
         return 1
 
     def get_render(self, x, y):
