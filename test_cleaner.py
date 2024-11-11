@@ -110,7 +110,7 @@ def test_move_north():
 
 def test_clean_dirt():
     cleaner = Cleaner((0, 0))
-    cleaned_value = 5
+    cleaned_value = 1
 
     for i in range(cleaned_value, cleaned_value + 10):
         assert(cleaner.clean(i) == i - cleaned_value)

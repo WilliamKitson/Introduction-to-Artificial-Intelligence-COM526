@@ -89,7 +89,7 @@ class Cleaner:
 
     @staticmethod
     def __process_clean(dirt):
-        dirt -= 5
+        dirt -= 1
 
         if dirt < 0:
             return 0
