@@ -12,10 +12,7 @@ class Version1:
         while self.__cleaner.get_battery():
             self.__render()
             self.__sense()
-            self.__cleaner.cycle()
-
-    def __sense(self):
-        self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan_position()))
+            self.__cycle()
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
@@ -54,3 +51,10 @@ class Version1:
             f"cycle: {self.__cleaner.get_cycle()}\n"
             f" battery: {self.__cleaner.get_battery()}\n"
         )
+
+    def __sense(self):
+        self.__cleaner.set_scan(self.__map.get_blocked(self.__cleaner.get_scan_position()))
+
+    def __cycle(self):
+        self.__cleaner.cycle()
+        self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
