@@ -53,6 +53,14 @@ def test_node_open():
         for j in range(0, height):
             assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked((i, j)) == 1)
 
+def test_dirt_range():
+    loaded_map = Map(("     "
+                      "     "))
+
+    for i in range(0, loaded_map.get_width()):
+        for j in range(0, loaded_map.get_height()):
+            assert(loaded_map.get_dirt((i, j)) in range(0, 3))
+
 def test_get_start():
     width = 10
     height = 10

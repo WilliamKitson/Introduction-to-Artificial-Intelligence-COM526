@@ -37,6 +37,9 @@ class Map:
 
         return 1
 
+    def get_dirt(self, position):
+        return 2
+
     def get_render(self, x, y):
         output = self.__data[x][y]
 
