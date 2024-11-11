@@ -38,10 +38,7 @@ class Map:
                     return i, j
 
     def get_blocked(self, position):
-        if self.__data[position[0]][position[1]] == "x":
-            return 0
-
-        if self.__data[position[0]][position[1]] == "u":
+        if self.__data[position[0]][position[1]] in ["x", "u"]:
             return 0
 
         return 1
