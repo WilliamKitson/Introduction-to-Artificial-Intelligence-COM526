@@ -54,7 +54,7 @@ def test_node_open():
             assert(Map(generate_test_map(width, height, i, j, " ")).get_blocked((i, j)) == 1)
 
 def test_dirt_range():
-    loaded_map = Map(("     "
+    loaded_map = Map(("     \n"
                       "     "))
 
     for i in range(0, loaded_map.get_width()):
@@ -62,7 +62,7 @@ def test_dirt_range():
             assert(loaded_map.get_dirt((j, i)) in range(0, 3))
 
 def test_dirt_random():
-    map_data = ("     "
+    map_data = ("     \n"
                 "     ")
 
     assert(get_dirt_sum_total(Map(map_data)) != get_dirt_sum_total(Map(map_data)))
@@ -77,7 +77,7 @@ def get_dirt_sum_total(loaded_map):
     return sum_total
 
 def test_dirt_consistent():
-    loaded_map = Map(("     "
+    loaded_map = Map(("     \n"
                       "     "))
 
     assert(get_dirt_sum_total(loaded_map) == get_dirt_sum_total(loaded_map))
