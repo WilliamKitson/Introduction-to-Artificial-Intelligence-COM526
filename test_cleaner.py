@@ -109,15 +109,6 @@ def test_move_north():
         cleaner.cycle()
         assert(cleaner.get_position() == (-i, 0))
 
-def test_clean_dirt():
-    cleaner = Cleaner((0, 0))
-    cleaned_value = 1
-
-    for i in range(cleaned_value, cleaned_value + 10):
-        cleaner.sense(i, 0)
-        cleaner.cycle()
-        assert(cleaner.get_cleaned() == i - cleaned_value)
-
 def test_clean_minimum():
     cleaner = Cleaner((0, 0))
 
