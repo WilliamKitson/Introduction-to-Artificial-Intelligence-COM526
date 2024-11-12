@@ -109,6 +109,9 @@ class Cleaner:
         return self.__position
 
     def get_cleaned(self):
+        if self.__dirt > 0:
+            return 1
+
         return 0
 
     def get_render(self):
