@@ -39,15 +39,15 @@ class Map:
         if dirt in ["x", "^", "u"]:
             return 0
 
-        return int(self.__data[position[1]][position[0]])
+        return int(dirt)
 
     def get_render(self, position):
-        output = self.__data[position[1]][position[0]]
+        render = self.__data[position[1]][position[0]]
 
-        if output == "x":
-            return output
+        if render == "x":
+            return render
 
         return " "
 
     def set_dirt(self, position, cleaned):
-        self.__data[position[1]][position[0]] = str(cleaned)
+        pass
