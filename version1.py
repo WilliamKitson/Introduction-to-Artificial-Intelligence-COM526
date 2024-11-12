@@ -48,9 +48,9 @@ class Version1:
 
     def __render_stats(self):
         return (
-            f"cycle: {self.__cleaner.get_cycle()}\n"
-            f"battery: {self.__cleaner.get_battery()}\n"
-            f"dirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
+            f"\ncycle: {self.__cleaner.get_cycle()}"
+            f"\nbattery: {self.__cleaner.get_battery()}"
+            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
         )
 
     def __sense(self):
