@@ -94,8 +94,9 @@ def test_dirt_set():
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            loaded_map.set_dirt((i, j), i + j)
-            assert(loaded_map.get_dirt((i, j)) == i + j)
+            cleaned = i + j
+            loaded_map.set_dirt((i, j), cleaned)
+            assert(loaded_map.get_dirt((i, j)) == cleaned)
 
 def test_get_start():
     width = 10

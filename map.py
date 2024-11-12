@@ -50,4 +50,14 @@ class Map:
         return " "
 
     def set_dirt(self, position, cleaned):
-        pass
+        row = self.__data[position[1]]
+        new_row = ""
+
+        for i in range(len(row)):
+            if i == position[0]:
+                new_row += str(cleaned)
+
+            else:
+                new_row += row[i]
+
+        self.__data[position[1]] = new_row
