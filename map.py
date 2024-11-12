@@ -19,16 +19,16 @@ class Map:
         return len(self.__data)
 
     def get_start(self):
+        return self.__get_character_coordinates("^")
+
+    def __get_character_coordinates(self, character):
         for y, row in enumerate(self.__data):
             for x, column in enumerate(row):
-                if column == '^':
+                if column == character:
                     return x, y
 
     def get_charger(self):
-        for y, row in enumerate(self.__data):
-            for x, column in enumerate(row):
-                if column == 'u':
-                    return x, y
+        return self.__get_character_coordinates("u")
 
     def get_blocked(self, position):
         return int(self.__data[position[1]][position[0]] not in ["x", "u"])
@@ -50,4 +50,4 @@ class Map:
         return " "
 
     def set_dirt(self, position, cleaned):
-        pass
+        self.__data[position[1]][position[0]] = str(cleaned)
