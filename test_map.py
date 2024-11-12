@@ -59,7 +59,7 @@ def test_dirt_range():
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            assert(loaded_map.get_dirt((i, j)) in range(0, 3))
+            assert(loaded_map.get_dirt((i, j)) in range(0, 9))
 
 def test_dirt_random():
     map_data = ("     \n"

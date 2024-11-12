@@ -8,7 +8,7 @@ class Map:
             randomised_row = ""
 
             for character in row:
-                randomised_row += character.replace(" ", str(random.randrange(0, 3)))
+                randomised_row += character.replace(" ", str(random.randrange(0, 9)))
 
             self.__data.append(randomised_row)
 
