@@ -15,8 +15,6 @@ class Version1:
             self.__render()
 
     def __sense(self):
-        print(self.__map.get_dirt(self.__cleaner.get_position()))
-
         self.__cleaner.sense(
             self.__map.get_dirt(self.__cleaner.get_position()),
             self.__map.get_blocked(self.__cleaner.get_scan_position())
