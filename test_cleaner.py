@@ -109,12 +109,10 @@ def test_move_north():
         cleaner.cycle()
         assert(cleaner.get_position() == (-i, 0))
 
-def test_clean_minimum():
+def test_clean_uncleaned():
     cleaner = Cleaner((0, 0))
-
-    cleaner.sense(0, 0)
-    cleaner.cycle()
-    assert(Cleaner((0, 0)).get_cleaned() == 0)
+    cleaner.sense(1, 0)
+    assert(cleaner.get_cleaned() == 1)
 
 def test_render_default():
     assert(Cleaner((0, 0)).get_render() == '^')

@@ -109,7 +109,7 @@ class Cleaner:
         return self.__position
 
     def get_cleaned(self):
-        return self.__dirt
+        return 0
 
     def get_render(self):
         if self.__facing_north():
