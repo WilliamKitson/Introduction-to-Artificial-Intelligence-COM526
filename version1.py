@@ -23,17 +23,15 @@ class Version1:
     def __cycle(self):
         self.__cleaner.cycle()
 
-        temp = int(self.__map.get_dirt(self.__cleaner.get_position()))
-
-        if temp > 0:
-            temp -= 1
-
         self.__map.set_dirt(
             self.__cleaner.get_position(),
-            temp
+            self.__calculate_cleaned_dirt()
         )
 
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
+
+    def __calculate_cleaned_dirt(self):
+        return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
