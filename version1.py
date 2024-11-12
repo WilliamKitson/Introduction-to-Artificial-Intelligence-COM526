@@ -10,9 +10,20 @@ class Version1:
 
     def execute(self):
         while self.__cleaner.get_battery():
-            self.__render()
             self.__sense()
             self.__cycle()
+            self.__render()
+
+    def __sense(self):
+        self.__cleaner.sense(
+            self.__map.get_dirt(self.__cleaner.get_position()),
+            self.__map.get_blocked(self.__cleaner.get_scan_position())
+        )
+
+    def __cycle(self):
+        self.__cleaner.cycle()
+        self.__map.set_dirt(self.__cleaner.get_position(), self.__cleaner.get_cleaned())
+        self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
@@ -50,16 +61,5 @@ class Version1:
         return (
             f"\ncycle: {self.__cleaner.get_cycle()}"
             f"\nbattery: {self.__cleaner.get_battery()}"
-            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
+            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
         )
-
-    def __sense(self):
-        self.__cleaner.sense(
-            self.__map.get_dirt(self.__cleaner.get_position()),
-            self.__map.get_blocked(self.__cleaner.get_scan_position())
-        )
-
-    def __cycle(self):
-        self.__cleaner.cycle()
-        self.__map.set_dirt(self.__cleaner.get_position(), self.__cleaner.get_cleaned())
-        self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
