@@ -19,9 +19,6 @@ class Map:
 
                 self.__data[i][j] = character
 
-    def set_dirt(self, position, cleaned):
-        self.__data[position[0]][position[1]] = str(cleaned)
-
     def get_width(self):
         return self.__width
 
@@ -59,3 +56,6 @@ class Map:
             return output
 
         return " "
+
+    def set_dirt(self, position, cleaned):
+        self.__data[position[0]][position[1]] = str(cleaned)
