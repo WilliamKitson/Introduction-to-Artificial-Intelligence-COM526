@@ -15,6 +15,8 @@ class Version1:
             self.__render()
 
     def __sense(self):
+        print(self.__map.get_dirt(self.__cleaner.get_position()))
+
         self.__cleaner.sense(
             self.__map.get_dirt(self.__cleaner.get_position()),
             self.__map.get_blocked(self.__cleaner.get_scan_position())
@@ -22,7 +24,17 @@ class Version1:
 
     def __cycle(self):
         self.__cleaner.cycle()
-        self.__map.set_dirt(self.__cleaner.get_position(), self.__cleaner.get_cleaned())
+
+        temp = int(self.__map.get_dirt(self.__cleaner.get_position()))
+
+        if temp > 0:
+            temp -= 1
+
+        self.__map.set_dirt(
+            self.__cleaner.get_position(),
+            temp
+        )
+
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
 
     def __render(self):
@@ -60,6 +72,7 @@ class Version1:
     def __render_stats(self):
         return (
             f"\ncycle: {self.__cleaner.get_cycle()}"
+            f"\nposition: {self.__cleaner.get_position()}"
             f"\nbattery: {self.__cleaner.get_battery()}"
             f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
         )
