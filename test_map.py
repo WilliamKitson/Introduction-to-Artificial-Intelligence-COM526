@@ -16,7 +16,7 @@ def test_map_height():
 
 def test_blocked_wall():
     width = 10
-    height = 10
+    height = 5
 
     for i in range(0, width):
         for j in range(0, height):
@@ -24,7 +24,7 @@ def test_blocked_wall():
 
 def test_blocked_charger():
     width = 10
-    height = 10
+    height = 5
 
     for i in range(0, width):
         for j in range(0, height):
@@ -33,8 +33,8 @@ def test_blocked_charger():
 def generate_test_map(width, height, x, y, char):
     map_data = ""
 
-    for i in range(width):
-        for j in range(height):
+    for j in range(height):
+        for i in range(width):
             if (i,j) == (x,y):
                 map_data += char
 
@@ -47,7 +47,7 @@ def generate_test_map(width, height, x, y, char):
 
 def test_node_open():
     width = 10
-    height = 10
+    height = 5
 
     for i in range(0, width):
         for j in range(0, height):
@@ -59,7 +59,7 @@ def test_dirt_range():
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            assert(loaded_map.get_dirt((j, i)) in range(0, 3))
+            assert(loaded_map.get_dirt((i, j)) in range(0, 3))
 
 def test_dirt_random():
     map_data = ("     \n"
@@ -72,7 +72,7 @@ def get_dirt_sum_total(loaded_map):
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            sum_total += loaded_map.get_dirt((j, i))
+            sum_total += loaded_map.get_dirt((i, j))
 
     return sum_total
 
@@ -94,12 +94,12 @@ def test_dirt_set():
 
     for i in range(0, loaded_map.get_width()):
         for j in range(0, loaded_map.get_height()):
-            loaded_map.set_dirt((j, i), i + j)
-            assert(loaded_map.get_dirt((j, i)) == i + j)
+            loaded_map.set_dirt((i, j), i + j)
+            assert(loaded_map.get_dirt((i, j)) == i + j)
 
 def test_get_start():
     width = 10
-    height = 10
+    height = 5
 
     for i in range(0, width):
         for j in range(0, height):
@@ -108,7 +108,7 @@ def test_get_start():
 
 def test_get_charger():
     width = 10
-    height = 10
+    height = 5
 
     for i in range(0, width):
         for j in range(0, height):
@@ -123,8 +123,8 @@ def test_valid_render():
     render = Map(map_data)
     index = 0
 
-    for i in range(0, render.get_height()):
-        for j in range(0, render.get_width()):
+    for i in range(0, render.get_width()):
+        for j in range(0, render.get_height()):
             if map_data[index] == "\n":
                 index += 1
 
@@ -139,8 +139,8 @@ def test_invalid_render():
     render = Map(map_data)
     index = 0
 
-    for i in range(0, render.get_height()):
-        for j in range(0, render.get_width()):
+    for i in range(0, render.get_width()):
+        for j in range(0, render.get_height()):
             if map_data[index] == "\n":
                 index += 1
 

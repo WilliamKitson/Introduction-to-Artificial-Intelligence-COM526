@@ -2,55 +2,47 @@ import random
 
 class Map:
     def __init__(self, data):
-        substrings = str.splitlines(data)
+        self.__data = []
 
-        self.__width = len(substrings[0])
-        self.__height = len(substrings)
-        self.__data = [["" for i in range(self.__width)] for j in range(self.__height)]
-        self.__randomise_dirt(substrings)
+        for row in iter(data.splitlines()):
+            randomised_row = ""
 
-    def __randomise_dirt(self, substrings):
-        for i in range(self.__height):
-            for j in range(self.__width):
-                character = substrings[i][j]
+            for character in row:
+                randomised_row += character.replace(" ", str(random.randrange(0, 3)))
 
-                if substrings[i][j] == " ":
-                    character = str(random.randrange(0, 3))
-
-                self.__data[i][j] = character
+            self.__data.append(randomised_row)
 
     def get_width(self):
-        return self.__width
+        return len(self.__data[0])
 
     def get_height(self):
-        return self.__height
+        return len(self.__data)
 
     def get_start(self):
-        for i in range(self.__height):
-            for j in range(self.__width):
-                if self.__data[i][j] == "^":
-                    return i, j
+        for y, row in enumerate(self.__data):
+            for x, column in enumerate(row):
+                if column == '^':
+                    return x, y
 
     def get_charger(self):
-        for i in range(self.__height):
-            for j in range(self.__width):
-                if self.__data[i][j] == "u":
-                    return i, j
+        for y, row in enumerate(self.__data):
+            for x, column in enumerate(row):
+                if column == 'u':
+                    return x, y
 
     def get_blocked(self, position):
-        if self.__data[position[0]][position[1]] in ["x", "u"]:
-            return 0
-
-        return 1
+        return int(self.__data[position[1]][position[0]] not in ["x", "u"])
 
     def get_dirt(self, position):
-        if self.__data[position[0]][position[1]] in ["x", "^", "u"]:
+        dirt = self.__data[position[1]][position[0]]
+
+        if dirt in ["x", "^", "u"]:
             return 0
 
-        return int(self.__data[position[0]][position[1]])
+        return int(self.__data[position[1]][position[0]])
 
     def get_render(self, position):
-        output = self.__data[position[0]][position[1]]
+        output = self.__data[position[1]][position[0]]
 
         if output == "x":
             return output
@@ -58,4 +50,4 @@ class Map:
         return " "
 
     def set_dirt(self, position, cleaned):
-        self.__data[position[0]][position[1]] = str(cleaned)
+        pass
