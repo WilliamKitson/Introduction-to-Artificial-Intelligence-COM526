@@ -20,7 +20,7 @@ class Version1:
     def __render_x(self):
         render = ""
 
-        for i in range(0, self.__map.get_height()):
+        for i in range(0, self.__map.get_width()):
             render += self.__render_y(i)
             render += "\n"
 
@@ -29,7 +29,7 @@ class Version1:
     def __render_y(self, x):
         render = ""
 
-        for i in range(0, self.__map.get_width()):
+        for i in range(0, self.__map.get_height()):
             render += self.__render_node(x, i)
 
         return render
