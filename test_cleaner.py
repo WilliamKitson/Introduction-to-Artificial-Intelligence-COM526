@@ -1,4 +1,4 @@
-from cleaner import  Cleaner
+from cleaner import Cleaner
 
 def test_cycle_default():
     assert(Cleaner((0, 0)).get_cycle() == 0)
