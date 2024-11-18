@@ -43,5 +43,8 @@ class Pathfinder:
 
     def __explore_node(self, position):
         node_index = self.__get_node_index_at(position)
-        node = self.__nodes[node_index]
-        self.__nodes[node_index] = (node[0], node[1], 1, node[3])
+        self.__nodes[node_index] = self.__get_node_explored(node_index)
+
+    def __get_node_explored(self, index):
+        node = self.__nodes[index]
+        return node[0], node[1], 1, node[3]
