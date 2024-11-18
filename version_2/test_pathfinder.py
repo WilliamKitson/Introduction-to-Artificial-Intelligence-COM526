@@ -8,6 +8,14 @@ def test_add_free():
             pathfinder.add_free((i, j))
             assert(pathfinder.get_node((i, j)) == " ")
 
+def test_add_blocked():
+    pathfinder = Pathfinder()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            pathfinder.add_blocked((i, j))
+            assert(pathfinder.get_node((i, j)) == "x")
+
 def test_scan_zone_north():
     for i in range(0, 10):
         for j in range(0, 10):

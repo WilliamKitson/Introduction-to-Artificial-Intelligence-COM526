@@ -6,6 +6,9 @@ class Pathfinder:
     def add_free(self, position):
         self.__nodes.append((position[0], position[1], " "))
 
+    def add_blocked(self, position):
+        self.__nodes.append((position[0], position[1], "x"))
+
     def get_node(self, position):
         for i in self.__nodes:
             if i[0] == position[0]:
