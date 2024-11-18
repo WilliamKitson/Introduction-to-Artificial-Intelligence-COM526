@@ -4,16 +4,19 @@ class Pathfinder:
         self.__position = (0, 0)
 
     def add_free(self, position):
-        self.__nodes.append((position[0], position[1], " "))
+        self.__nodes.append((position[0], position[1], 0, " "))
 
     def add_blocked(self, position):
-        self.__nodes.append((position[0], position[1], "x"))
+        self.__nodes.append((position[0], position[1], 0, "x"))
 
     def get_node(self, position):
         for i in self.__nodes:
             if i[0] == position[0]:
                 if i[1] == position[1]:
-                    return i[2]
+                    if i[2] == 0:
+                        return "?"
+
+                    return i[3]
 
     def get_scan_zone_north(self):
         return tuple(map(sum, zip(self.__position, (-1, 0))))
@@ -29,3 +32,8 @@ class Pathfinder:
 
     def set_position(self, position):
         self.__position = position
+
+        for i, node in enumerate(self.__nodes):
+            if node[0] == position[0]:
+                if node[1] == position[1]:
+                    self.__nodes[i] = (node[0], node[1], 1, node[3])
