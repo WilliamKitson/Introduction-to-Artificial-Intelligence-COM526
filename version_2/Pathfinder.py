@@ -10,13 +10,17 @@ class Pathfinder:
         self.__nodes.append((position[0], position[1], 0, "x"))
 
     def get_node(self, position):
-        for i in self.__nodes:
-            if i[0] == position[0]:
-                if i[1] == position[1]:
-                    if i[2] == 0:
-                        return "?"
+        node_at = self.__get_node_at(position)
 
-                    return i[3]
+        if node_at[2] == 0:
+            return "?"
+
+        return node_at[3]
+
+    def __get_node_at(self, position):
+        for node in self.__nodes:
+            if (node[0], node[1]) == position:
+                return node
 
     def get_scan_zone_north(self):
         return tuple(map(sum, zip(self.__position, (-1, 0))))
