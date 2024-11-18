@@ -1,6 +1,6 @@
-from version_1.version1 import Version1
+from version_1.demonstration import Demonstration
 
 with open("maps/COM526_map_simple.txt", 'r') as file:
     file_content = file.read()
 
-Version1(file_content).execute()
+Demonstration(file_content).execute()
