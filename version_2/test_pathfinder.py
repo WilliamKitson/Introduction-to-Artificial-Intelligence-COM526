@@ -1,20 +1,12 @@
 from version_2.Pathfinder import Pathfinder
 
-def test_add_node():
+def test_add_free():
     pathfinder = Pathfinder()
 
     for i in range(1, 10):
         for j in range(1, 10):
-            pathfinder.add_node((i, j, i + j))
-            assert(pathfinder.get_node((i, j)) == i + j)
-
-def test_unknown_node():
-    pathfinder = Pathfinder()
-
-    for i in range(1, 10):
-        for j in range(1, 10):
-            pathfinder.add_node((i, j, i + j))
-            assert(pathfinder.get_node((-i, -j)) == "?")
+            pathfinder.add_free((i, j))
+            assert(pathfinder.get_node((i, j)) == " ")
 
 def test_scan_zone_north():
     for i in range(0, 10):
