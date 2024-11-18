@@ -1,7 +1,7 @@
 class Pathfinder:
-    def __init__(self, start):
+    def __init__(self):
         self.__nodes = []
-        self.__position = start
+        self.__position = (0, 0)
 
     def add_node(self, node):
         self.__nodes.append(node)
@@ -14,3 +14,6 @@ class Pathfinder:
 
     def get_scan_zone_north(self):
         return tuple(map(sum, zip(self.__position, (-1, 0))))
+
+    def set_position(self, position):
+        self.__position = position
