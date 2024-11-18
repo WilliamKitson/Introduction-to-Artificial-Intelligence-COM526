@@ -1,4 +1,4 @@
-class Pathfinder:
+class LocalKnowledge:
     def __init__(self):
         self.__nodes = []
         self.__position = (0, 0)
