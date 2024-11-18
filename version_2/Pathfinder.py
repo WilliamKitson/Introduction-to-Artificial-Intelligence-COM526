@@ -10,18 +10,20 @@ class Pathfinder:
         self.__nodes.append((position[0], position[1], 0, "x"))
 
     def get_node(self, position):
-        return self.__get_node_value(self.__get_node_at(position))
+        return self.__get_node_value(self.__get_node_index_at(position))
 
-    def __get_node_value(self, node):
+    def __get_node_index_at(self, position):
+        for i, node in enumerate(self.__nodes):
+            if (node[0], node[1]) == position:
+                return i
+
+    def __get_node_value(self, index):
+        node = self.__nodes[index]
+
         if node[2] == 0:
             return "?"
 
         return node[3]
-
-    def __get_node_at(self, position):
-        for node in self.__nodes:
-            if (node[0], node[1]) == position:
-                return node
 
     def get_scan_zone_north(self):
         return tuple(map(sum, zip(self.__position, (-1, 0))))
@@ -40,6 +42,6 @@ class Pathfinder:
         self.__explore_node(position)
 
     def __explore_node(self, position):
-        for i, node in enumerate(self.__nodes):
-            if (node[0], node[1]) == position:
-                self.__nodes[i] = (node[0], node[1], 1, node[3])
+        node_index = self.__get_node_index_at(position)
+        node = self.__nodes[node_index]
+        self.__nodes[node_index] = (node[0], node[1], 1, node[3])
