@@ -1,4 +1,4 @@
-from version1 import Version1
+from version_1.version1 import Version1
 
 with open("maps/COM526_map_simple.txt", 'r') as file:
     file_content = file.read()

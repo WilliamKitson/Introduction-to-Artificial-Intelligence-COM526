@@ -1,6 +1,6 @@
-from map import Map
-from cleaner import Cleaner
-from charger import Charger
+from version_1.map import Map
+from version_1.cleaner import Cleaner
+from version_1.charger import Charger
 
 class Version1:
     def __init__(self, map_data):

@@ -1,4 +1,4 @@
-from map import Map
+from version_1.map import Map
 
 def test_map_width():
     map_data = ""

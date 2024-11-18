@@ -1,4 +1,4 @@
-from charger import Charger
+from version_1.charger import Charger
 
 def test_render_default():
     assert(Charger((0, 0)).get_render() == "u")
