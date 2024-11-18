@@ -1,6 +1,9 @@
 class Pathfinder:
     def __init__(self, start):
-        pass
+        self.__start = start
 
     def render(self, position):
-        return " "
+        if position == self.__start:
+            return " "
+
+        return "?"
