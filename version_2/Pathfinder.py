@@ -10,12 +10,13 @@ class Pathfinder:
         self.__nodes.append((position[0], position[1], 0, "x"))
 
     def get_node(self, position):
-        node_at = self.__get_node_at(position)
+        return self.__get_node_value(self.__get_node_at(position))
 
-        if node_at[2] == 0:
+    def __get_node_value(self, node):
+        if node[2] == 0:
             return "?"
 
-        return node_at[3]
+        return node[3]
 
     def __get_node_at(self, position):
         for node in self.__nodes:
