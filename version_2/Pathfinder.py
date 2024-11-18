@@ -12,6 +12,8 @@ class Pathfinder:
                 if i[1] == position[1]:
                     return i[2]
 
+        return "?"
+
     def get_scan_zone_north(self):
         return tuple(map(sum, zip(self.__position, (-1, 0))))
 
