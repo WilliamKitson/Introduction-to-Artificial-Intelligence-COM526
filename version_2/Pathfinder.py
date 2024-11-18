@@ -20,5 +20,8 @@ class Pathfinder:
     def get_scan_zone_east(self):
         return tuple(map(sum, zip(self.__position, (0, 1))))
 
+    def get_scan_zone_south(self):
+        return tuple(map(sum, zip(self.__position, (1, 0))))
+
     def set_position(self, position):
         self.__position = position

@@ -29,3 +29,10 @@ def test_scan_zone_east():
             pathfinder = Pathfinder()
             pathfinder.set_position((i, j))
             assert(pathfinder.get_scan_zone_east() == (i, j + 1))
+
+def test_scan_zone_south():
+    for i in range(0, 10):
+        for j in range(0, 10):
+            pathfinder = Pathfinder()
+            pathfinder.set_position((i, j))
+            assert(pathfinder.get_scan_zone_south() == (i + 1, j))
