@@ -37,8 +37,9 @@ class Pathfinder:
 
     def explore(self, position):
         self.__position = position
+        self.__explore_node(position)
 
+    def __explore_node(self, position):
         for i, node in enumerate(self.__nodes):
-            if node[0] == position[0]:
-                if node[1] == position[1]:
-                    self.__nodes[i] = (node[0], node[1], 1, node[3])
+            if (node[0], node[1]) == position:
+                self.__nodes[i] = (node[0], node[1], 1, node[3])
