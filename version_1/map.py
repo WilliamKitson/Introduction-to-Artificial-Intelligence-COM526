@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 import random
 
 class Map:

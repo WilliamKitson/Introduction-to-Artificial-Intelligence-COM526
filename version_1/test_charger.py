@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 from version_1.charger import Charger
 
 def test_render_default():

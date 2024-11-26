@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 from version_1.map import Map
 
 def test_map_width():

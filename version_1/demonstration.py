@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 from version_1.map import Map
 from version_1.cleaner import Cleaner
 from version_1.charger import Charger

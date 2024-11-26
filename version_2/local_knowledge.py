@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 class LocalKnowledge:
     def __init__(self):
         self.__nodes = []

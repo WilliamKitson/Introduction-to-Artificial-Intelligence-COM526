@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 class Cleaner:
     def __init__(self, position):
         self.__cycle = 0

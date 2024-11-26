@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 class Charger:
     def __init__(self, position):
         self.__position = position

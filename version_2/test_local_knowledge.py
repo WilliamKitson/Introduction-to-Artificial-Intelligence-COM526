@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 from version_2.local_knowledge import LocalKnowledge
 
 def test_explored_free():

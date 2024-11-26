@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. William E. Kitson
+
 from version_1.cleaner import Cleaner
 
 def test_cycle_default():
