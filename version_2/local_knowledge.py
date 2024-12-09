@@ -23,7 +23,7 @@ class LocalKnowledge:
             if (node[0], node[1]) == position:
                 return i
 
-        return 0
+        raise IndexError
 
     def __get_node_value(self, index):
         node = self.__nodes[index]
@@ -42,8 +42,12 @@ class LocalKnowledge:
         self.__explore_node(self.__get_scan_zone_west())
 
     def __explore_node(self, position):
-        node_index = self.__get_node_index_at(position)
-        self.__nodes[node_index] = self.__get_node_as_explored(node_index)
+        try:
+            node_index = self.__get_node_index_at(position)
+            self.__nodes[node_index] = self.__get_node_as_explored(node_index)
+
+        except IndexError:
+            return
 
     def __get_node_as_explored(self, index):
         node = self.__nodes[index]
