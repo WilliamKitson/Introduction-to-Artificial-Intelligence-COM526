@@ -43,12 +43,7 @@ class DemonstrationVersion2:
     def __cycle(self):
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
-
-        self.__map.set_dirt(
-            self.__cleaner.get_position(),
-            self.__calculate_cleaned_dirt()
-        )
-
+        self.__map.set_dirt(self.__cleaner.get_position(), self.__calculate_cleaned_dirt())
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
 
     def __calculate_cleaned_dirt(self):
