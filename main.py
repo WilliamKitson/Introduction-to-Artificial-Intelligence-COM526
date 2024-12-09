@@ -13,5 +13,5 @@ from version_3.fuzzy_fan import FuzzyFan
 
 fuzzy_fan = FuzzyFan()
 
-print(fuzzy_fan.fan_speed(60, 40))
+print(fuzzy_fan.fan_speed(0, 0))
 fuzzy_fan.render()
