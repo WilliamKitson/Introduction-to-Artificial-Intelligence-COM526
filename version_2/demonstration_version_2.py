@@ -11,6 +11,16 @@ class DemonstrationVersion2:
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
         self.__local_knowledge = LocalKnowledge()
+        self.__load_local_knowledge()
+
+    def __load_local_knowledge(self):
+        for x in range(0, self.__map.get_width()):
+            for y in range(0, self.__map.get_height()):
+                if self.__map.get_render((x, y)) == " ":
+                    self.__local_knowledge.add_free((x, y))
+
+                if self.__map.get_render((x, y)) == "x":
+                    self.__local_knowledge.add_blocked((x, y))
 
     def execute(self):
         while self.__cleaner.get_battery():
@@ -26,6 +36,7 @@ class DemonstrationVersion2:
 
     def __cycle(self):
         self.__cleaner.cycle()
+        self.__local_knowledge.explore(self.__cleaner.get_position())
 
         self.__map.set_dirt(
             self.__cleaner.get_position(),
