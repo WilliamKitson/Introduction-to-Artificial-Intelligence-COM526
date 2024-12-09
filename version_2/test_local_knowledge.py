@@ -52,3 +52,13 @@ def test_scan_zone_north():
             pathfinder.add_free(position_north)
             pathfinder.explore((i, j))
             assert(pathfinder.get_node(position_north) == " ")
+
+def test_scan_zone_east():
+    for i in range(0, 10):
+        for j in range(0, 10):
+            pathfinder = LocalKnowledge()
+            position_east = tuple(map(sum, zip((i, j), (0, 1))))
+
+            pathfinder.add_free(position_east)
+            pathfinder.explore((i, j))
+            assert(pathfinder.get_node(position_east) == " ")
