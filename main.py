@@ -10,9 +10,16 @@ with open("maps/COM526_map_simple.txt", 'r') as file:
 #DemonstrationVersion2(file_content).execute()
 
 from version_3.fuzzy_fan import FuzzyFan
+from version_3.fuzzy_battery import FuzzyBattery
 
 fuzzy_fan = FuzzyFan()
-fuzzy_fan.calculate(100, 60)
+fuzzy_fan.calculate(10, 60)
 
 print(fuzzy_fan.get_fan_speed())
-#fuzzy_fan.render()
+fuzzy_fan.render()
+
+fuzzy_battery = FuzzyBattery()
+fuzzy_battery.calculate(fuzzy_fan.get_fan_speed())
+
+print(fuzzy_battery.get_battery_drain())
+fuzzy_battery.render()
