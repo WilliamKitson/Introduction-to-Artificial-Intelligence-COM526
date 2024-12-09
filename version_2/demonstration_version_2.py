@@ -3,12 +3,14 @@
 from version_2.map import Map
 from version_2.cleaner import Cleaner
 from version_2.charger import Charger
+from version_2.local_knowledge import LocalKnowledge
 
 class DemonstrationVersion2:
     def __init__(self, map_data):
         self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
+        self.__local_knowledge = LocalKnowledge()
 
     def execute(self):
         while self.__cleaner.get_battery():
@@ -65,7 +67,7 @@ class DemonstrationVersion2:
         if self.__charger.get_charge_zone() == (x, y):
             return "c"
 
-        return self.__map.get_render((x, y))
+        return self.__local_knowledge.get_node((x, y))
 
     def __render_stats(self):
         return (

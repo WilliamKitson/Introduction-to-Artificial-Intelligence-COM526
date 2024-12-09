@@ -12,12 +12,18 @@ class LocalKnowledge:
         self.__nodes.append((position[0], position[1], 0, "x"))
 
     def get_node(self, position):
-        return self.__get_node_value(self.__get_node_index_at(position))
+        try:
+            return self.__get_node_value(self.__get_node_index_at(position))
+
+        except IndexError:
+            return "?"
 
     def __get_node_index_at(self, position):
         for i, node in enumerate(self.__nodes):
             if (node[0], node[1]) == position:
                 return i
+
+        return 0
 
     def __get_node_value(self, index):
         node = self.__nodes[index]

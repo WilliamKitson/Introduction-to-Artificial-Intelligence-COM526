@@ -2,6 +2,13 @@
 
 from version_2.local_knowledge import LocalKnowledge
 
+def test_empty_node():
+    pathfinder = LocalKnowledge()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            assert(pathfinder.get_node((i, j)) == "?")
+
 def test_explored_free():
     pathfinder = LocalKnowledge()
 
