@@ -15,12 +15,18 @@ class DemonstrationVersion2:
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
-            for y in range(0, self.__map.get_height()):
-                if self.__map.get_render((x, y)) == " ":
-                    self.__local_knowledge.add_free((x, y))
+            self.__load_local_knowledge_y(x)
 
-                if self.__map.get_render((x, y)) == "x":
-                    self.__local_knowledge.add_blocked((x, y))
+    def __load_local_knowledge_y(self, x):
+        for y in range(0, self.__map.get_height()):
+            self.__load_local_knowledge_node((x, y))
+
+    def __load_local_knowledge_node(self, position):
+        if self.__map.get_render(position) in (" ", "^"):
+            self.__local_knowledge.add_free(position)
+
+        if self.__map.get_render(position) in ("x", "u"):
+            self.__local_knowledge.add_blocked(position)
 
     def execute(self):
         while self.__cleaner.get_battery():
