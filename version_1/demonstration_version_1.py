@@ -4,7 +4,7 @@ from version_1.map import Map
 from version_1.cleaner import Cleaner
 from version_1.charger import Charger
 
-class Demonstration:
+class DemonstrationVersion1:
     def __init__(self, map_data):
         self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
