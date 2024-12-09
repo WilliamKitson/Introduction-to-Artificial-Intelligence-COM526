@@ -34,13 +34,28 @@ class FuzzyFan:
         self.__fan_speed['fast'] = fuzz.smf(self.__fan_speed.universe, 50, 100)
 
     def __initialise_fan_speed_control(self):
+        low_speed = ctrl.Rule(
+            self.__battery['low'] or self.__dirt["thin"],
+            self.__fan_speed['slow']
+        )
+
+        medium_speed = ctrl.Rule(
+            self.__battery['medium'] & self.__dirt["medium"],
+            self.__fan_speed['medium']
+        )
+
+        high_speed = ctrl.Rule(
+            self.__battery['high'] & self.__dirt["thick"],
+            self.__fan_speed['fast']
+        )
+
         return ctrl.ControlSystem([
-            ctrl.Rule(self.__battery['low'] & self.__dirt["thin"], self.__fan_speed['slow']),
-            ctrl.Rule(self.__battery['high'] & self.__dirt["thick"], self.__fan_speed['fast']),
+            low_speed,
+            medium_speed,
+            high_speed
         ])
 
     def fan_speed(self, battery, dirt):
-
         self.__fan_speed_sim.input['battery'] = battery
         self.__fan_speed_sim.input['dirt'] = dirt
         self.__fan_speed_sim.compute()
