@@ -33,21 +33,13 @@ class LocalKnowledge:
 
         return node[3]
 
-    def get_scan_zone_north(self):
-        return tuple(map(sum, zip(self.__position, (-1, 0))))
-
-    def get_scan_zone_east(self):
-        return tuple(map(sum, zip(self.__position, (0, 1))))
-
-    def get_scan_zone_south(self):
-        return tuple(map(sum, zip(self.__position, (1, 0))))
-
-    def get_scan_zone_west(self):
-        return tuple(map(sum, zip(self.__position, (0, -1))))
-
     def explore(self, position):
         self.__position = position
         self.__explore_node(position)
+        self.__explore_node(self.__get_scan_zone_north())
+        self.__explore_node(self.__get_scan_zone_east())
+        self.__explore_node(self.__get_scan_zone_south())
+        self.__explore_node(self.__get_scan_zone_west())
 
     def __explore_node(self, position):
         node_index = self.__get_node_index_at(position)
@@ -56,3 +48,15 @@ class LocalKnowledge:
     def __get_node_as_explored(self, index):
         node = self.__nodes[index]
         return node[0], node[1], 1, node[3]
+
+    def __get_scan_zone_north(self):
+        return tuple(map(sum, zip(self.__position, (-1, 0))))
+
+    def __get_scan_zone_east(self):
+        return tuple(map(sum, zip(self.__position, (0, 1))))
+
+    def __get_scan_zone_south(self):
+        return tuple(map(sum, zip(self.__position, (1, 0))))
+
+    def __get_scan_zone_west(self):
+        return tuple(map(sum, zip(self.__position, (0, -1))))
