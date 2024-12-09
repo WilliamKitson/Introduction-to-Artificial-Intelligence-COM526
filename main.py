@@ -12,6 +12,7 @@ with open("maps/COM526_map_simple.txt", 'r') as file:
 from version_3.fuzzy_fan import FuzzyFan
 
 fuzzy_fan = FuzzyFan()
+fuzzy_fan.calculate(100, 60)
 
-print(fuzzy_fan.fan_speed(0, 0))
-fuzzy_fan.render()
+print(fuzzy_fan.get_fan_speed())
+#fuzzy_fan.render()

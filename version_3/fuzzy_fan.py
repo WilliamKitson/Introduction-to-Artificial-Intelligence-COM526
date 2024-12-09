@@ -49,11 +49,12 @@ class FuzzyFan:
             high_speed
         ])
 
-    def fan_speed(self, battery, dirt):
+    def calculate(self, battery, dirt):
         self.__fan_speed_sim.input["battery"] = battery
         self.__fan_speed_sim.input["dirt"] = dirt
         self.__fan_speed_sim.compute()
 
+    def get_fan_speed(self):
         return self.__fan_speed_sim.output["fan speed"]
 
     def render(self):
