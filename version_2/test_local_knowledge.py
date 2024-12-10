@@ -43,6 +43,15 @@ def test_unexplored_blocked():
             pathfinder.add_blocked((i, j))
             assert(pathfinder.get_node((i, j)) == "?")
 
+def test_explored_charger():
+    pathfinder = LocalKnowledge()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            pathfinder.add_charger((i, j))
+            pathfinder.explore((i, j))
+            assert(pathfinder.get_node((i, j)) == "u")
+
 def test_scan_zone_north():
     for i in range(0, 10):
         for j in range(0, 10):
@@ -82,3 +91,4 @@ def test_scan_zone_west():
             pathfinder.add_free(position_west)
             pathfinder.explore((i, j))
             assert(pathfinder.get_node(position_west) == " ")
+

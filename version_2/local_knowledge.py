@@ -11,6 +11,9 @@ class LocalKnowledge:
     def add_blocked(self, position):
         self.__nodes.append((position[0], position[1], 0, "x"))
 
+    def add_charger(self, position):
+        self.__nodes.append((position[0], position[1], 0, "u"))
+
     def get_node(self, position):
         try:
             return self.__get_node_value(self.__get_node_index_at(position))
