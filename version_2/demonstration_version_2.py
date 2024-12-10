@@ -43,10 +43,25 @@ class DemonstrationVersion2:
         )
 
     def __cycle(self):
+        if self.__cleaner.get_battery() < 33:
+            self.__hunt_charger()
+
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
         self.__map.set_dirt(self.__cleaner.get_position(), self.__calculate_cleaned_dirt())
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
+
+    def __hunt_charger(self):
+        if not self.__local_knowledge.charger_located():
+            return
+
+        self.__pathfinder.calculate(
+            self.__local_knowledge.get_map(),
+            self.__cleaner.get_position(),
+            self.__local_knowledge.get_charger()
+        )
+
+        self.__cleaner.set_path(self.__pathfinder.get_path())
 
     def __calculate_cleaned_dirt(self):
         return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
