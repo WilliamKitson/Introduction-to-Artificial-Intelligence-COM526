@@ -55,6 +55,9 @@ class DemonstrationVersion2:
         if not self.__local_knowledge.charger_located():
             return
 
+        if self.__cleaner.__has_path():
+            return
+
         self.__pathfinder.calculate(
             self.__local_knowledge.get_map(),
             self.__cleaner.get_position(),
