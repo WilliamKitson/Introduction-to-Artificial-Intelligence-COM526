@@ -68,7 +68,7 @@ class DemonstrationVersion2:
         self.__cleaner.set_path(self.__pathfinder.get_path())
 
     def __hunt_charger_impossible(self):
-        if self.__local_knowledge.charger_unlocated():
+        if not self.__local_knowledge.charger_located():
             return False
 
         if self.__cleaner.has_path():

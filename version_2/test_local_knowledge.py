@@ -106,3 +106,10 @@ def test_get_charger():
             local_knowledge = LocalKnowledge()
             local_knowledge.add_charger((i, j))
             assert (local_knowledge.get_charger() == (i, j))
+
+def test_charger_located():
+    local_knowledge = LocalKnowledge()
+    local_knowledge.add_charger((0, 0))
+    local_knowledge.explore((0, 0))
+
+    assert(local_knowledge.charger_located() == True)
