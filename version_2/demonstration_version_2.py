@@ -4,6 +4,7 @@ from version_2.map import Map
 from version_2.cleaner import Cleaner
 from version_2.charger import Charger
 from version_2.local_knowledge import LocalKnowledge
+from version_2.pathfinder import Pathfinder
 
 class DemonstrationVersion2:
     def __init__(self, map_data):
@@ -12,6 +13,7 @@ class DemonstrationVersion2:
         self.__charger = Charger(self.__map.get_charger())
         self.__local_knowledge = LocalKnowledge()
         self.__load_local_knowledge()
+        self.__pathfinder = Pathfinder()
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
