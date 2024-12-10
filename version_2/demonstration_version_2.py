@@ -88,5 +88,6 @@ class DemonstrationVersion2:
             f"\ncycle: {self.__cleaner.get_cycle()}"
             f"\nposition: {self.__cleaner.get_position()}"
             f"\nbattery: {self.__cleaner.get_battery()}"
-            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
+            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
+            f"\nlast path: {self.__pathfinder.get_path()}\n"
         )

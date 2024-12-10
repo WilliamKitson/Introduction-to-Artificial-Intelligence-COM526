@@ -1,4 +1,4 @@
-from node import Node
+from version_2.node import Node
 
 class Pathfinder:
     def __init__(self):
@@ -87,5 +87,5 @@ class Pathfinder:
                 # Add the child to the open list
                 open_list.append(child)
 
-    def __get_path(self):
+    def get_path(self):
         return self.__path[::-1]
