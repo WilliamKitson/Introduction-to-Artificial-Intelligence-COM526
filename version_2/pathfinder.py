@@ -2,7 +2,7 @@ from node import Node
 
 class Pathfinder:
     def __init__(self):
-        pass
+        self.__path = []
 
     def calculate(self, maze, start, end):
         # Create start and end node
@@ -36,12 +36,11 @@ class Pathfinder:
 
             # Found the goal
             if current_node == end_node:
-                path = []
+                self.__path = []
                 current = current_node
                 while current is not None:
-                    path.append(current.position)
+                    self.__path.append(current.position)
                     current = current.parent
-                return path[::-1]  # Return reversed path
 
             # Generate children
             children = []
@@ -87,3 +86,6 @@ class Pathfinder:
 
                 # Add the child to the open list
                 open_list.append(child)
+
+    def __get_path(self):
+        return self.__path[::-1]
