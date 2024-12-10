@@ -27,8 +27,11 @@ class DemonstrationVersion2:
         if self.__map.get_render(position) in (" ", "^"):
             self.__local_knowledge.add_free(position)
 
-        if self.__map.get_render(position) in ("x", "u"):
+        if self.__map.get_render(position) in "x":
             self.__local_knowledge.add_blocked(position)
+
+        if self.__map.get_render(position) in "u":
+            self.__local_knowledge.add_charger(position)
 
     def execute(self):
         while self.__cleaner.get_battery():
@@ -44,7 +47,8 @@ class DemonstrationVersion2:
 
     def __cycle(self):
         if self.__cleaner.get_battery() < 33:
-            self.__hunt_charger()
+            #self.__hunt_charger()
+            pass
 
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
