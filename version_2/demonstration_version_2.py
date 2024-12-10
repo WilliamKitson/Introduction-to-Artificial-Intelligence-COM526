@@ -60,7 +60,7 @@ class DemonstrationVersion2:
             return
 
         self.__pathfinder.calculate(
-            self.__local_knowledge.get_map(),
+            self.__generate_pathfinder_map(),
             self.__cleaner.get_position(),
             self.__local_knowledge.get_charger()
         )
@@ -75,6 +75,19 @@ class DemonstrationVersion2:
             return False
 
         return True
+
+    def __generate_pathfinder_map(self):
+        pathfinder_map = []
+
+        for i in range(0, self.__map.get_width()):
+            map_row = []
+
+            for j in range(0, self.__map.get_height()):
+                map_row.append(int(self.__local_knowledge.get_node((i, j)) in " "))
+
+            pathfinder_map.append(map_row)
+
+        return pathfinder_map
 
     def __calculate_cleaned_dirt(self):
         return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
