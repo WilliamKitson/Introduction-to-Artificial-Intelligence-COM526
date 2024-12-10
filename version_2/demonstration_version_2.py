@@ -52,10 +52,7 @@ class DemonstrationVersion2:
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
 
     def __hunt_charger(self):
-        if not self.__local_knowledge.charger_located():
-            return
-
-        if self.__cleaner.__has_path():
+        if self.__hunt_charger_impossible():
             return
 
         self.__pathfinder.calculate(
@@ -65,6 +62,15 @@ class DemonstrationVersion2:
         )
 
         self.__cleaner.set_path(self.__pathfinder.get_path())
+
+    def __hunt_charger_impossible(self):
+        if self.__local_knowledge.charger_unlocated():
+            return False
+
+        if self.__cleaner.has_path():
+            return False
+
+        return True
 
     def __calculate_cleaned_dirt(self):
         return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
