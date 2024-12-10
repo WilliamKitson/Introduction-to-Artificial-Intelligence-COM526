@@ -248,3 +248,7 @@ def test_has_path():
     cleaner = Cleaner((0, 0))
     cleaner.set_path([(0,0), (0,1)])
     assert(cleaner.has_path() == True)
+
+def test_has_no_path():
+    cleaner = Cleaner((0, 0))
+    assert(cleaner.has_path() == False)

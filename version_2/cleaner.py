@@ -8,6 +8,7 @@ class Cleaner:
         self.__dirt = 0
         self.__scan = 0
         self.__direction = 0
+        self.__path = None
 
     def sense(self, dirt, forwards_scan):
         self.__dirt = dirt
@@ -102,7 +103,7 @@ class Cleaner:
             self.__battery = 100
 
     def set_path(self, path):
-        pass
+        self.__path = path
 
     def get_cycle(self):
         return self.__cycle
@@ -155,4 +156,4 @@ class Cleaner:
         return tuple(map(sum, zip(self.__position, (0, -1))))
 
     def has_path(self):
-        return True
+        return self.__path is not None
