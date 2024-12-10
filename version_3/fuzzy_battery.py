@@ -21,7 +21,7 @@ class FuzzyBattery:
         self.__battery_drain["fast"] = fuzz.smf(self.__battery_drain.universe, 6, 10)
 
     def __initialise_fan_speed(self):
-        self.__fan_speed["slow"] = fuzz.zmf(self.__fan_speed.universe, 1, 50)
+        self.__fan_speed["slow"] = fuzz.zmf(self.__fan_speed.universe, 0, 50)
         self.__fan_speed["medium"] = fuzz.trapmf(self.__fan_speed.universe, [25, 50, 50, 75])
         self.__fan_speed["fast"] = fuzz.smf(self.__fan_speed.universe, 50, 100)
 

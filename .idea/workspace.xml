@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="fuzzy_battery.py defined" />
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="fuzzy_battery.py redefined">
+      <change beforePath="$PROJECT_DIR$/version_3/fuzzy_cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_3/fuzzy_cleaning.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,14 +153,6 @@
       <workItem from="1733747331659" duration="7690000" />
       <workItem from="1733756327327" duration="5909000" />
       <workItem from="1733762290438" duration="359000" />
-    </task>
-    <task id="LOCAL-00136" summary="version1 redefined">
-      <option name="closed" value="true" />
-      <created>1731423508454</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1731423508454</updated>
     </task>
     <task id="LOCAL-00137" summary="map redefined">
       <option name="closed" value="true" />
@@ -544,14 +538,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733765369289</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="fuzzy_battery.py redefined">
+      <option name="closed" value="true" />
+      <created>1733766019096</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1733766019096</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pathfinder test_render_unexplored defined" />
     <MESSAGE value="pathfinder test_add_node defined" />
     <MESSAGE value="pathfinder test_scan_zone_north defined" />
     <MESSAGE value="pathfinder dead tests removed" />
@@ -576,10 +577,11 @@
     <MESSAGE value="fuzzy_fan.py defined" />
     <MESSAGE value="fuzzy_fan.py redefined" />
     <MESSAGE value="fuzzy_battery.py defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuzzy_battery.py defined" />
+    <MESSAGE value="fuzzy_battery.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuzzy_battery.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1733765347242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1733766002179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1731425158477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1731422210968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1733754034461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
