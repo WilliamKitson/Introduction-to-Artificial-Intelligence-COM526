@@ -243,3 +243,8 @@ def test_scan_north():
         cleaner.sense(0, 1)
         cleaner.cycle()
         assert(cleaner.get_scan_position() == (-i - 1, 0))
+
+def test_has_path():
+    cleaner = Cleaner((0, 0))
+    cleaner.set_path([(0,0), (0,1)])
+    assert(cleaner.has_path() == True)

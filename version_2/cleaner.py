@@ -101,6 +101,9 @@ class Cleaner:
         if self.__battery > 100:
             self.__battery = 100
 
+    def set_path(self, path):
+        pass
+
     def get_cycle(self):
         return self.__cycle
 
@@ -150,3 +153,6 @@ class Cleaner:
 
     def __get_scan_west(self):
         return tuple(map(sum, zip(self.__position, (0, -1))))
+
+    def has_path(self):
+        return True
