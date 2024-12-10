@@ -47,8 +47,7 @@ class DemonstrationVersion2:
 
     def __cycle(self):
         if self.__cleaner.get_battery() < 33:
-            #self.__hunt_charger()
-            pass
+            self.__hunt_charger()
 
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
