@@ -42,7 +42,7 @@ class LocalKnowledge:
                 return i[0], i[1]
 
     def charger_located(self):
-        return True
+        return self.get_node(self.get_charger()) == "u"
 
     def explore(self, position):
         self.__position = position
