@@ -14,7 +14,7 @@ from version_3.fuzzy_battery import FuzzyBattery
 from version_3.fuzzy_cleaning import FuzzyCleaning
 
 fuzzy_fan = FuzzyFan()
-fuzzy_fan.calculate(10, 60)
+fuzzy_fan.calculate(100, 100)
 
 print(fuzzy_fan.get_fan_speed())
 fuzzy_fan.render()
