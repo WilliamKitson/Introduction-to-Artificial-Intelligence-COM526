@@ -36,6 +36,11 @@ class LocalKnowledge:
 
         return node[3]
 
+    def get_charger(self):
+        for i in self.__nodes:
+            if i[3] == "u":
+                return i[0], i[1]
+
     def explore(self, position):
         self.__position = position
         self.__explore_node(position)

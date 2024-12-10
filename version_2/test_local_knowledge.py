@@ -100,3 +100,9 @@ def test_scan_zone_west():
             pathfinder.explore((i, j))
             assert(pathfinder.get_node(position_west) == " ")
 
+def test_get_charger():
+    for i in range(1, 10):
+        for j in range(1, 10):
+            pathfinder = LocalKnowledge()
+            pathfinder.add_charger((i, j))
+            assert (pathfinder.get_charger() == (i, j))
