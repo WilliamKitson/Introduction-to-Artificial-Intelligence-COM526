@@ -62,4 +62,4 @@ class Pathfinder:
         return abs(x1 - x2) + abs(y1 - y2)
 
     def get_path(self):
-        return
+        return self.__path
