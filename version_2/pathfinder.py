@@ -6,10 +6,10 @@ class Pathfinder:
 
     def calculate(self, maze, start, end):
         print(maze)
-        self.__path = self.calc_path(start, end, maze)
+        self.__path = self.__calc_path(start, end, maze)
 
     # MANHATTAN DISTANCE FUNCTIONS
-    def calc_path(self, start, goal, maze):
+    def __calc_path(self, start, goal, maze):
         p_queue = []
         heapq.heappush(p_queue, (0, start))
 
@@ -25,19 +25,19 @@ class Pathfinder:
         while len(p_queue) != 0:
             current_cell = heapq.heappop(p_queue)[1]
             if current_cell == goal:
-                return self.get_final_path(predecessors, start, goal)
+                return self.__get_final_path(predecessors, start, goal)
             for direction in ["up", "right", "down", "left"]:
                 row_offset, col_offset = directions[direction]
                 neighbour = (current_cell[0] + row_offset, current_cell[1] + col_offset)
 
-                if self.viable_move(neighbour[0], neighbour[1], maze) and neighbour not in g_values:
+                if self.__viable_move(neighbour[0], neighbour[1], maze) and neighbour not in g_values:
                     cost = g_values[current_cell] + 1
                     g_values[neighbour] = cost
-                    f_value = cost + self.calc_distance(goal, neighbour)
+                    f_value = cost + self.__calc_distance(goal, neighbour)
                     heapq.heappush(p_queue, (f_value, neighbour))
                     predecessors[neighbour] = current_cell
 
-    def get_final_path(self, predecessors, start, goal):
+    def __get_final_path(self, predecessors, start, goal):
         current = goal
         path = []
         while current != start:
@@ -47,10 +47,10 @@ class Pathfinder:
         path.reverse()
         return path
 
-    def viable_move(self, x, y, maze):
+    def __viable_move(self, x, y, maze):
         pass
 
-    def calc_distance(self, point1: tuple[int, int], point2: tuple[int, int]):
+    def __calc_distance(self, point1: tuple[int, int], point2: tuple[int, int]):
         x1, y1 = point1
         x2, y2 = point2
         return abs(x1 - x2) + abs(y1 - y2)
