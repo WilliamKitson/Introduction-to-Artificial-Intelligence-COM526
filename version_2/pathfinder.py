@@ -8,7 +8,6 @@ class Pathfinder:
         print(maze)
         self.__path = self.__calc_path(start, end, maze)
 
-    # MANHATTAN DISTANCE FUNCTIONS
     def __calc_path(self, start, goal, maze):
         p_queue = []
         heapq.heappush(p_queue, (0, start))
@@ -48,7 +47,15 @@ class Pathfinder:
         return path
 
     def __viable_move(self, x, y, maze):
-        pass
+        node_at = maze[x][y]
+
+        if node_at is None:
+            return False
+
+        if node_at == 0:
+            return False
+
+        return True
 
     def __calc_distance(self, point1: tuple[int, int], point2: tuple[int, int]):
         x1, y1 = point1
