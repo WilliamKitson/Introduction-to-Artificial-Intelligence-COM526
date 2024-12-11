@@ -6,9 +6,10 @@ class Pathfinder:
 
     def calculate(self, maze, start, end):
         print(maze)
+        self.__path = self.calc_path(start, end, maze)
 
     # MANHATTAN DISTANCE FUNCTIONS
-    def calc_path(self, start, goal, avoid):
+    def calc_path(self, start, goal, maze):
         p_queue = []
         heapq.heappush(p_queue, (0, start))
 
@@ -29,7 +30,7 @@ class Pathfinder:
                 row_offset, col_offset = directions[direction]
                 neighbour = (current_cell[0] + row_offset, current_cell[1] + col_offset)
 
-                if self.viable_move(neighbour[0], neighbour[1], avoid) and neighbour not in g_values:
+                if self.viable_move(neighbour[0], neighbour[1], maze) and neighbour not in g_values:
                     cost = g_values[current_cell] + 1
                     g_values[neighbour] = cost
                     f_value = cost + self.calc_distance(goal, neighbour)
@@ -46,14 +47,7 @@ class Pathfinder:
         path.reverse()
         return path
 
-    def viable_move(self, x, y, types):
-        # You will need to do this one
-        # Do not move in to a cell containing an obstacle (represented by 'x')
-        # Do not move in to a cell containing a flame
-        # Do not move in to a cell containing a water station
-        # Do not move in to a cell containing a robot.
-        # In fact, the only valid cells are blank ones
-        # Also, do not go out of bounds.
+    def viable_move(self, x, y, maze):
         pass
 
     def calc_distance(self, point1: tuple[int, int], point2: tuple[int, int]):
