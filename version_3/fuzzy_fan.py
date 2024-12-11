@@ -39,6 +39,11 @@ class FuzzyFan:
             self.__fan_speed["slow"]
         )
 
+        medium_speed = ctrl.Rule(
+            self.__battery["medium"] or self.__dirt["medium"],
+            self.__fan_speed["slow"]
+        )
+
         high_speed = ctrl.Rule(
             self.__battery["high"] & self.__dirt["thick"],
             self.__fan_speed["fast"]
@@ -46,6 +51,7 @@ class FuzzyFan:
 
         return ctrl.ControlSystem([
             low_speed,
+            medium_speed,
             high_speed
         ])
 
