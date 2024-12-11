@@ -1,91 +1,65 @@
-from version_2.node import Node
+import heapq
 
 class Pathfinder:
     def __init__(self):
         self.__path = []
 
     def calculate(self, maze, start, end):
-        # Create start and end node
-        start_node = Node(None, start)
-        start_node.g = start_node.h = start_node.f = 0
+        pass
 
-        end_node = Node(None, end)
-        end_node.g = end_node.h = end_node.f = 0
+    # MANHATTAN DISTANCE FUNCTIONS
+    def calc_path(self, start, goal, avoid):
+        p_queue = []
+        heapq.heappush(p_queue, (0, start))
 
-        # Initialize both open and closed list
-        open_list = []
-        closed_list = []
+        directions = {
+            "right": (0, 1),
+            "left": (0, -1),
+            "up": (-1, 0),
+            "down": (1, 0)
+        }
+        predecessors = {start: None}
+        g_values = {start: 0}
 
-        # Add the start node
-        open_list.append(start_node)
+        while len(p_queue) != 0:
+            current_cell = heapq.heappop(p_queue)[1]
+            if current_cell == goal:
+                return self.get_final_path(predecessors, start, goal)
+            for direction in ["up", "right", "down", "left"]:
+                row_offset, col_offset = directions[direction]
+                neighbour = (current_cell[0] + row_offset, current_cell[1] + col_offset)
 
-        # Loop until you find the end
-        while len(open_list) > 0:
+                if self.viable_move(neighbour[0], neighbour[1], avoid) and neighbour not in g_values:
+                    cost = g_values[current_cell] + 1
+                    g_values[neighbour] = cost
+                    f_value = cost + self.calc_distance(goal, neighbour)
+                    heapq.heappush(p_queue, (f_value, neighbour))
+                    predecessors[neighbour] = current_cell
 
-            # Get the current node
-            current_node = open_list[0]
-            current_index = 0
-            for index, item in enumerate(open_list):
-                if item.f < current_node.f:
-                    current_node = item
-                    current_index = index
+    def get_final_path(self, predecessors, start, goal):
+        current = goal
+        path = []
+        while current != start:
+            path.append(current)
+            current = predecessors[current]
+        path.append(start)
+        path.reverse()
+        return path
 
-            # Pop current off open list, add to closed list
-            open_list.pop(current_index)
-            closed_list.append(current_node)
+    def viable_move(self, x, y, types):
+        # You will need to do this one
+        # Do not move in to a cell containing an obstacle (represented by 'x')
+        # Do not move in to a cell containing a flame
+        # Do not move in to a cell containing a water station
+        # Do not move in to a cell containing a robot.
+        # In fact, the only valid cells are blank ones
+        # Also, do not go out of bounds.
+        pass
 
-            # Found the goal
-            if current_node == end_node:
-                self.__path = []
-                current = current_node
-                while current is not None:
-                    self.__path.append(current.position)
-                    current = current.parent
-
-            # Generate children
-            children = []
-            for new_position in [(0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (-1, 1), (1, -1),
-                                 (1, 1)]:  # Adjacent squares
-
-                # Get node position
-                node_position = (current_node.position[0] + new_position[0], current_node.position[1] + new_position[1])
-
-                # Make sure within range
-                if node_position[0] > (len(maze) - 1) or node_position[0] < 0 or node_position[1] > (
-                        len(maze[len(maze) - 1]) - 1) or node_position[1] < 0:
-                    continue
-
-                # Make sure walkable terrain
-                if maze[node_position[0]][node_position[1]] != 0:
-                    continue
-
-                # Create new node
-                new_node = Node(current_node, node_position)
-
-                # Append
-                children.append(new_node)
-
-            # Loop through children
-            for child in children:
-
-                # Child is on the closed list
-                for closed_child in closed_list:
-                    if child == closed_child:
-                        continue
-
-                # Create the f, g, and h values
-                child.g = current_node.g + 1
-                child.h = ((child.position[0] - end_node.position[0]) ** 2) + (
-                            (child.position[1] - end_node.position[1]) ** 2)
-                child.f = child.g + child.h
-
-                # Child is already in the open list
-                for open_node in open_list:
-                    if child == open_node and child.g > open_node.g:
-                        continue
-
-                # Add the child to the open list
-                open_list.append(child)
+    def calc_distance(self, point1: tuple[int, int], point2: tuple[int, int]):
+        x1, y1 = point1
+        x2, y2 = point2
+        return abs(x1 - x2) + abs(y1 - y2)
 
     def get_path(self):
-        return self.__path[::-1]
+        return
