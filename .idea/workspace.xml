@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="pathfinder redefined">
-      <change beforePath="$PROJECT_DIR$/version_2/pathfinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_2/pathfinder.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="pathfinder redefined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,14 +154,6 @@
       <workItem from="1733756327327" duration="5909000" />
       <workItem from="1733762290438" duration="359000" />
       <workItem from="1733828612252" duration="2490000" />
-    </task>
-    <task id="LOCAL-00141" summary="version1 redefined">
-      <option name="closed" value="true" />
-      <created>1731429647391</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1731429647391</updated>
     </task>
     <task id="LOCAL-00142" summary="test_clean_uncleaned defined">
       <option name="closed" value="true" />
@@ -549,7 +539,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733911576837</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="pathfinder redefined">
+      <option name="closed" value="true" />
+      <created>1733911951503</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1733911951503</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

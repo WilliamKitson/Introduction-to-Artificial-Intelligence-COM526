@@ -5,7 +5,7 @@ class Pathfinder:
         self.__path = []
 
     def calculate(self, maze, start, end):
-        pass
+        print(maze)
 
     # MANHATTAN DISTANCE FUNCTIONS
     def calc_path(self, start, goal, avoid):
