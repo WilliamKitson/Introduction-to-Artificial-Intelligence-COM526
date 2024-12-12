@@ -61,7 +61,7 @@ class DemonstrationVersion2:
         self.__pathfinder.calculate(
             self.__generate_pathfinder_map(),
             self.__cleaner.get_position(),
-            self.__local_knowledge.get_charger()
+            (1,1)
         )
 
         self.__cleaner.set_path(self.__pathfinder.get_path())
