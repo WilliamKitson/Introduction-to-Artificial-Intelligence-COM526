@@ -78,10 +78,9 @@ class FuzzyFan:
     def test(self):
         for i in range(0, 100):
             for j in range(0, 9):
-                fuzzy_fan = FuzzyFan()
-                fuzzy_fan.calculate(i, j)
+                self.calculate(i, j)
 
                 print(
-                    f"fan speed: {fuzzy_fan.get_fan_speed()}\n"
+                    f"fan speed: {self.get_fan_speed()}\n"
                     f"battery input: {i}, dirt input: {j}\n"
                 )
