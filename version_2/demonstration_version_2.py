@@ -30,7 +30,7 @@ class DemonstrationVersion2:
         if self.__map.get_render(position) in "x":
             self.__local_knowledge.add_blocked(position)
 
-        if self.__map.get_render(position) in "u":
+        if self.__map.get_charger() == position:
             self.__local_knowledge.add_charger(position)
 
     def execute(self):
@@ -58,10 +58,12 @@ class DemonstrationVersion2:
         if self.__hunt_charger_impossible():
             return
 
+        print(self.__local_knowledge.get_charger())
+
         self.__pathfinder.calculate(
             self.__generate_pathfinder_map(),
             self.__cleaner.get_position(),
-            (1,1)
+            self.__local_knowledge.get_charger()
         )
 
         self.__cleaner.set_path(self.__pathfinder.get_path())
