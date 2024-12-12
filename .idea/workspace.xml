@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="fuzzy_fan.py redefined">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_3/fuzzy_fan.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_3/fuzzy_fan.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="fuzzy_fan.py redefined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,31 +157,7 @@
       <workItem from="1733828612252" duration="2490000" />
       <workItem from="1733921262759" duration="2411000" />
       <workItem from="1733949346962" duration="14000" />
-      <workItem from="1734004211697" duration="991000" />
-    </task>
-    <task id="LOCAL-00147" summary="version1 renamed">
-      <option name="closed" value="true" />
-      <created>1731940535755</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1731940535755</updated>
-    </task>
-    <task id="LOCAL-00148" summary="pathfinder test_render_default defined">
-      <option name="closed" value="true" />
-      <created>1731940985667</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1731940985667</updated>
-    </task>
-    <task id="LOCAL-00149" summary="pathfinder test_render_unexplored defined">
-      <option name="closed" value="true" />
-      <created>1731941154804</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1731941154804</updated>
+      <workItem from="1734004211697" duration="3201000" />
     </task>
     <task id="LOCAL-00150" summary="pathfinder test_add_node defined">
       <option name="closed" value="true" />
@@ -555,7 +527,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733927988689</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="fuzzy_fan.py redefined">
+      <option name="closed" value="true" />
+      <created>1734007147593</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007147593</updated>
+    </task>
+    <task id="LOCAL-00197" summary="fuzzy_fan.py redefined">
+      <option name="closed" value="true" />
+      <created>1734007185669</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007185669</updated>
+    </task>
+    <task id="LOCAL-00198" summary="fuzzy_fan.py redefined">
+      <option name="closed" value="true" />
+      <created>1734007257649</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007257649</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,11 +590,11 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1733844998381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_cleaning.coverage" NAME="fuzzy_cleaning Coverage Results" MODIFIED="1733830248524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$Pathfinder.coverage" NAME="Pathfinder Coverage Results" MODIFIED="1731949178042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734004889637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734007237308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1731425158477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$pathfinder.coverage" NAME="pathfinder Coverage Results" MODIFIED="1733910226082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$temp.coverage" NAME="temp Coverage Results" MODIFIED="1733926324793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_fan.coverage" NAME="fuzzy_fan Coverage Results" MODIFIED="1733763570171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_fan.coverage" NAME="fuzzy_fan Coverage Results" MODIFIED="1734005818934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$charger.coverage" NAME="charger Coverage Results" MODIFIED="1731247862507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$demonstration_version_2.coverage" NAME="demonstration_version_2 Coverage Results" MODIFIED="1733910341902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1731939884362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_1" />
