@@ -13,20 +13,5 @@ from version_3.fuzzy_fan import FuzzyFan
 from version_3.fuzzy_battery import FuzzyBattery
 from version_3.fuzzy_cleaning import FuzzyCleaning
 
-for i in range(0, 100):
-    for j in range(0, 100):
-        fuzzy_fan = FuzzyFan()
-        fuzzy_fan.calculate(i, j)
-
-        fuzzy_battery = FuzzyBattery()
-        fuzzy_battery.calculate(fuzzy_fan.get_fan_speed())
-
-        fuzzy_cleaning = FuzzyCleaning()
-        fuzzy_cleaning.calculate(fuzzy_fan.get_fan_speed())
-
-        print(
-            f"fan speed: {fuzzy_fan.get_fan_speed()}\n"
-            f"battery drain: {fuzzy_battery.get_battery_drain()}\n"
-            f"cleaning rate: {fuzzy_cleaning.get_cleaning_rate()}\n"
-            f"battery input: {i}, dirt input: {j}\n"
-        )
+fuzzy_fan = FuzzyFan()
+fuzzy_fan.test()
