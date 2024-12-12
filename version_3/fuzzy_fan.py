@@ -76,8 +76,8 @@ class FuzzyFan:
         self.__fan_speed.view(sim=self.__fan_speed_sim)
 
     def test(self):
-        for i in range(0, 100):
-            for j in range(0, 9):
+        for i in range(0, 101):
+            for j in range(0, 10):
                 self.calculate(i, j)
 
                 print(
