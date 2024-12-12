@@ -5,7 +5,6 @@ class Pathfinder:
         self.__path = []
 
     def calculate(self, maze, start, end):
-        print(maze)
         self.__path = self.__calc_path(start, end, maze)
 
     def __calc_path(self, start, goal, maze):
