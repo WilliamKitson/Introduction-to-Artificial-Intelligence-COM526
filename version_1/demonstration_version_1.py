@@ -15,6 +15,7 @@ class DemonstrationVersion1:
             self.__sense()
             self.__cycle()
             self.__render()
+            input("press enter to continue\n")
 
     def __sense(self):
         self.__cleaner.sense(
@@ -72,5 +73,5 @@ class DemonstrationVersion1:
             f"\ncycle: {self.__cleaner.get_cycle()}"
             f"\nposition: {self.__cleaner.get_position()}"
             f"\nbattery: {self.__cleaner.get_battery()}"
-            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}\n"
+            f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
         )
