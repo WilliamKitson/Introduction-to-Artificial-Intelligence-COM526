@@ -18,3 +18,6 @@ fuzzy_fan = FuzzyFan()
 
 fuzzy_battery = FuzzyBattery()
 fuzzy_battery.test()
+
+fuzzy_cleaning = FuzzyCleaning()
+fuzzy_cleaning.test()

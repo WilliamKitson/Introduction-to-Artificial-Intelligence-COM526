@@ -58,3 +58,12 @@ class FuzzyCleaning:
         self.__cleaning_rate.view()
         self.__fan_speed.view()
         self.__cleaning_rate.view(sim=self.__cleaning_rate_sim)
+
+    def test(self):
+        for i in range(0, 101):
+            self.calculate(i)
+
+            print(
+                f"cleaning rate: {self.get_cleaning_rate()}\n"
+                f"fan speed input: {i}\n"
+            )

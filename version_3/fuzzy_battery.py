@@ -64,6 +64,6 @@ class FuzzyBattery:
             self.calculate(i)
 
             print(
-                f"fan speed: {self.get_battery_drain()}\n"
+                f"battery drain: {self.get_battery_drain()}\n"
                 f"fan speed input: {i}\n"
             )
