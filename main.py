@@ -14,4 +14,7 @@ from version_3.fuzzy_battery import FuzzyBattery
 from version_3.fuzzy_cleaning import FuzzyCleaning
 
 fuzzy_fan = FuzzyFan()
-fuzzy_fan.test()
+#fuzzy_fan.test()
+
+fuzzy_battery = FuzzyBattery()
+fuzzy_battery.test()

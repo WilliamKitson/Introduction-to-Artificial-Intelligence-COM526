@@ -58,3 +58,12 @@ class FuzzyBattery:
         self.__battery_drain.view()
         self.__fan_speed.view()
         self.__battery_drain.view(sim=self.__battery_drain_sim)
+
+    def test(self):
+        for i in range(0, 101):
+            self.calculate(i)
+
+            print(
+                f"fan speed: {self.get_battery_drain()}\n"
+                f"fan speed input: {i}\n"
+            )
