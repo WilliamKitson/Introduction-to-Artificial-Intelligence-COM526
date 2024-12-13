@@ -38,23 +38,39 @@ class Cleaner:
         if len(self.__path) <= 0:
             return
 
-        if self.__facing_south():
-            if self.__path[0] != self.__get_scan_south():
-                self.__process_turn()
-
-        if self.__facing_east():
-            if self.__path[0] != self.__get_scan_east():
-                self.__process_turn()
-
-        if self.__facing_north():
-            if self.__path[0] != self.__get_scan_north():
-                self.__process_turn()
-
-        if self.__facing_west():
-            if self.__path[0] != self.__get_scan_west():
-                self.__process_turn()
-
+        self.__process_path_south()
+        self.__process_path_east()
+        self.__process_path_north()
+        self.__process_path_west()
         self.__process_move()
+
+    def __process_path_south(self):
+        if not self.__facing_south():
+            return
+
+        if self.__path[0] != self.__get_scan_south():
+            self.__process_turn()
+
+    def __process_path_east(self):
+        if not self.__facing_east():
+            return
+
+        if self.__path[0] != self.__get_scan_east():
+            self.__process_turn()
+
+    def __process_path_north(self):
+        if not self.__facing_north():
+            return
+
+        if self.__path[0] != self.__get_scan_north():
+            self.__process_turn()
+
+    def __process_path_west(self):
+        if not self.__facing_west():
+            return
+
+        if self.__path[0] != self.__get_scan_west():
+            self.__process_turn()
 
     def __process_turn(self):
         if self.__battery_empty():
