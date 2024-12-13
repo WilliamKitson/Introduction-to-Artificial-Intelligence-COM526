@@ -269,3 +269,13 @@ def test_path_direction_south():
     cleaner.cycle()
     cleaner.cycle()
     assert(cleaner.get_render() == "v")
+
+def test_path_direction_west():
+    cleaner = Cleaner((0,0))
+    cleaner.sense(0, 0)
+    cleaner.set_path([(0,0), (0,-1)])
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    assert(cleaner.get_render() == "<")
