@@ -252,3 +252,18 @@ def test_has_path():
 def test_has_no_path():
     cleaner = Cleaner((0, 0))
     assert(cleaner.has_path() == False)
+
+def test_follow_path():
+    path = []
+
+    for i in range(0, 10):
+        for j in range(0, 10):
+            path.append((i, j))
+
+    cleaner = Cleaner((0, 0))
+    cleaner.set_path(path)
+
+    for i in range(0, 10):
+        for j in range(0, 10):
+            cleaner.cycle()
+            assert(cleaner.get_position() == (i, j))
