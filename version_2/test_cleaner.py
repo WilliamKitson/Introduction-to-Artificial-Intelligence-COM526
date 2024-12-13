@@ -255,7 +255,7 @@ def test_has_no_path():
 
 def test_path_direction_east():
     cleaner = Cleaner((0,0))
-    cleaner.sense(0, 0)
+    cleaner.sense(0, 1)
     cleaner.set_path([(0,0), (0,1)])
     cleaner.cycle()
     cleaner.cycle()
@@ -263,7 +263,7 @@ def test_path_direction_east():
 
 def test_path_direction_south():
     cleaner = Cleaner((0,0))
-    cleaner.sense(0, 0)
+    cleaner.sense(0, 1)
     cleaner.set_path([(0,0), (1,0)])
     cleaner.cycle()
     cleaner.cycle()
@@ -272,7 +272,7 @@ def test_path_direction_south():
 
 def test_path_direction_west():
     cleaner = Cleaner((0,0))
-    cleaner.sense(0, 0)
+    cleaner.sense(0, 1)
     cleaner.set_path([(0,0), (0,-1)])
     cleaner.cycle()
     cleaner.cycle()
@@ -282,11 +282,11 @@ def test_path_direction_west():
 
 def test_path_direction_north():
     cleaner = Cleaner((0,0))
-    cleaner.sense(0, 1)
+    cleaner.sense(0, 0)
     cleaner.cycle()
 
-    cleaner.sense(0, 0)
-    cleaner.set_path([(1,0), (0,0)])
+    cleaner.sense(0, 1)
+    cleaner.set_path([(0,0), (-1,0)])
     cleaner.cycle()
     cleaner.cycle()
     cleaner.cycle()

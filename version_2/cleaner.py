@@ -56,7 +56,8 @@ class Cleaner:
             return
 
         if not self.__path_blocked():
-            return
+            if len(self.__path) <= 0:
+                return
 
         self.__process_battery(1)
         self.__process_direction()
