@@ -36,7 +36,12 @@ class Map:
         return int(self.__data[position[1]][position[0]] not in ["x", "u"])
 
     def get_dirt(self, position):
-        return 0
+        dirt = self.__data[position[1]][position[0]]
+
+        if dirt in ["x", "^", "u"]:
+            return 0
+
+        return int(dirt)
 
     def get_render(self, position):
         render = self.__data[position[1]][position[0]]
