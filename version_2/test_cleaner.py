@@ -253,8 +253,9 @@ def test_has_no_path():
     cleaner = Cleaner((0, 0))
     assert(cleaner.has_path() == False)
 
-def test_path_direction():
-    cleaner = Cleaner((0, 0))
+def test_path_direction_east():
+    cleaner = Cleaner((0,0))
+    cleaner.sense(0, 0)
     cleaner.set_path([(0,0), (0,1)])
     cleaner.cycle()
     assert(cleaner.get_render() == ">")
