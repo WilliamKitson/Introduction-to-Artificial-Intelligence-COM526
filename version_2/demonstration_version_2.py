@@ -68,8 +68,6 @@ class DemonstrationVersion2:
         if self.__hunt_charger_impossible():
             return
 
-        print(self.__local_knowledge.get_charger())
-
         self.__pathfinder.calculate(
             self.__generate_pathfinder_map(),
             self.__cleaner.get_position(),
