@@ -35,6 +35,9 @@ class Cleaner:
         if self.__position == self.__path[0]:
             self.__path.pop(0)
 
+        if len(self.__path) <= 0:
+            return
+
         if self.__facing_south():
             if self.__path[0] != self.__get_scan_south():
                 self.__process_turn()
@@ -50,6 +53,8 @@ class Cleaner:
         if self.__facing_west():
             if self.__path[0] != self.__get_scan_west():
                 self.__process_turn()
+
+        self.__process_move()
 
     def __process_turn(self):
         if self.__battery_empty():
