@@ -38,6 +38,7 @@ class DemonstrationVersion2:
             self.__sense()
             self.__cycle()
             self.__render()
+            input("press enter to continue\n")
 
     def __execute_condition(self):
         if self.__cleaner.get_battery() <= 0:

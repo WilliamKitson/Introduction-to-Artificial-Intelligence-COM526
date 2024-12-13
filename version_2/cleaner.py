@@ -18,8 +18,7 @@ class Cleaner:
         self.__increment_cycle()
 
         if len(self.__path) > 0:
-            self.__position = self.__path[0]
-            self.__path.pop(0)
+            self.__process_path()
             return
 
         if self.__dirt > 0:
@@ -31,6 +30,25 @@ class Cleaner:
 
     def __increment_cycle(self):
         self.__cycle += 1
+
+    def __process_path(self):
+        if self.__position == self.__path[0]:
+            self.__path.pop(0)
+
+        if self.__facing_south():
+            if self.__path[0] != self.__get_scan_north():
+                self.__process_turn()
+                return
+
+
+
+
+
+
+
+
+
+
 
     def __process_turn(self):
         if self.__battery_empty():
