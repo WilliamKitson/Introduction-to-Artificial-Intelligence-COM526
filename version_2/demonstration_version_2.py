@@ -34,10 +34,19 @@ class DemonstrationVersion2:
             self.__local_knowledge.add_charger(position)
 
     def execute(self):
-        while self.__cleaner.get_battery():
+        while self.__execute_condition():
             self.__sense()
             self.__cycle()
             self.__render()
+
+    def __execute_condition(self):
+        if self.__cleaner.get_battery() <= 0:
+            return False
+
+        if self.__cleaner.get_cycle() > 250:
+            return False
+
+        return True
 
     def __sense(self):
         self.__cleaner.sense(

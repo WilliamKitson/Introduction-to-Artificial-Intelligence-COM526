@@ -7,6 +7,9 @@ class Pathfinder:
     def calculate(self, maze, start, end):
         self.__path = self.__calc_path(start, end, maze)
 
+        if self.__path is None:
+            self.__path = []
+
     def __calc_path(self, start, goal, maze):
         p_queue = []
         heapq.heappush(p_queue, (0, start))
