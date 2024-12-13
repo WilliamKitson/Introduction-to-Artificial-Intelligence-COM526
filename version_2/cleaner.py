@@ -35,7 +35,13 @@ class Cleaner:
         if self.__position == self.__path[0]:
             self.__path.pop(0)
 
-        self.__process_turn()
+        if self.__facing_south():
+            if self.__path[0] != self.__get_scan_south():
+                self.__process_turn()
+
+        if self.__facing_east():
+            if self.__path[0] != self.__get_scan_east():
+                self.__process_turn()
 
 
 
