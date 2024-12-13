@@ -279,3 +279,16 @@ def test_path_direction_west():
     cleaner.cycle()
     cleaner.cycle()
     assert(cleaner.get_render() == "<")
+
+def test_path_direction_north():
+    cleaner = Cleaner((0,0))
+    cleaner.sense(0, 1)
+    cleaner.cycle()
+
+    cleaner.sense(0, 0)
+    cleaner.set_path([(1,0), (0,0)])
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    cleaner.cycle()
+    assert(cleaner.get_render() == "^")
