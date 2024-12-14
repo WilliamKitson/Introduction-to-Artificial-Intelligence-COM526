@@ -315,7 +315,6 @@ def test_battery_unchargable():
 
     assert(cleaner.get_battery() == 76)
 
-# test that cleaner will not move while charging until 100%
 def test_charging_immobile():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
@@ -329,3 +328,19 @@ def test_charging_immobile():
     for i in range(1, 50):
         cleaner.cycle()
         assert(cleaner.get_position() == pre_charge_position)
+
+def test_charging_mobile():
+    cleaner = Cleaner((0, 0))
+    cleaner.sense(0, 1)
+
+    while cleaner.get_battery() > 50:
+        cleaner.cycle()
+
+    cleaner.recharge(50)
+    cleaner.cycle()
+
+    cleaner_position = cleaner.get_position()
+
+    for i in range(1, 10):
+        cleaner.cycle()
+        assert(cleaner.get_position() == tuple(map(sum, zip(cleaner_position, (-i, 0)))))

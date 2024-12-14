@@ -28,6 +28,9 @@ class Cleaner:
             if self.__battery > 100:
                 self.__battery = 100
 
+            if self.__battery == 100:
+                self.__recharging = False
+
             return
 
         if len(self.__path) > 0:
