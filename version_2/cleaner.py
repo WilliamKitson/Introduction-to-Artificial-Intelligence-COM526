@@ -20,17 +20,7 @@ class Cleaner:
         self.__increment_cycle()
 
         if self.__recharging:
-            if self.__battery > 75:
-                return
-
-            self.__battery += self.__recharge_rate
-
-            if self.__battery > 100:
-                self.__battery = 100
-
-            if self.__battery == 100:
-                self.__recharging = False
-
+            self.__process_recharge()
             return
 
         if len(self.__path) > 0:
@@ -46,6 +36,18 @@ class Cleaner:
 
     def __increment_cycle(self):
         self.__cycle += 1
+
+    def __process_recharge(self):
+        if self.__battery > 75:
+            return
+
+        self.__battery += self.__recharge_rate
+
+        if self.__battery > 100:
+            self.__battery = 100
+
+        if self.__battery == 100:
+            self.__recharging = False
 
     def __process_path(self):
         if self.__position == self.__path[0]:
