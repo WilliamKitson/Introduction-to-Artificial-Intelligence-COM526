@@ -344,3 +344,19 @@ def test_charging_mobile():
     for i in range(1, 10):
         cleaner.cycle()
         assert(cleaner.get_position() == tuple(map(sum, zip(cleaner_position, (-i, 0)))))
+
+def test_charge_minimum():
+    cleaner = Cleaner((0, 0))
+    cleaner.sense(0, 1)
+
+    while cleaner.get_battery() > 50:
+        cleaner.cycle()
+
+    cleaner_position = cleaner.get_position()
+
+    cleaner.recharge(0)
+    cleaner.cycle()
+
+    for i in range(1, 10):
+        cleaner.cycle()
+        assert(cleaner.get_position() == tuple(map(sum, zip(cleaner_position, (-i, 0)))))
