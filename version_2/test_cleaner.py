@@ -174,17 +174,6 @@ def test_uncharged_forward():
     cleaner.cycle()
     assert (cleaner.get_position() == (-50, 0))
 
-def test_recharge_uncharged():
-    cleaner = Cleaner((0, 0))
-    cleaner.sense(0, 0)
-
-    while cleaner.get_battery() > 0:
-        cleaner.cycle()
-
-    for i in (range(1, 100)):
-        cleaner.recharge(1)
-        assert (cleaner.get_battery() == i)
-
 def test_recharge_maximum():
     cleaner = Cleaner((0, 0))
     cleaner.recharge(1)
@@ -300,3 +289,26 @@ def test_path_move_east():
     cleaner.cycle()
     cleaner.cycle()
     assert(cleaner.get_position() == (0,1))
+
+def test_battery_rechargable():
+    cleaner = Cleaner((0, 0))
+    cleaner.sense(0, 0)
+
+    while cleaner.get_battery() > 0:
+        cleaner.cycle()
+
+    for i in (range(1, 75)):
+        cleaner.recharge(1)
+        assert (cleaner.get_battery() == i)
+
+def test_battery_unchargable():
+    cleaner = Cleaner((0, 0))
+    cleaner.sense(0, 0)
+
+    while cleaner.get_battery() > 76:
+        cleaner.cycle()
+
+    cleaner.recharge(25)
+    assert(cleaner.get_battery() == 76)
+
+# test that cleaner will not move while charging until 100%

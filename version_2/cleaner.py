@@ -143,6 +143,9 @@ class Cleaner:
         return self.__direction == 3
 
     def recharge(self, cost):
+        if self.__battery > 75:
+            return
+
         self.__battery += cost
 
         if self.__battery > 100:
