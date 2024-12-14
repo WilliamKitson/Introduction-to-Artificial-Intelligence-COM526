@@ -177,6 +177,7 @@ def test_uncharged_forward():
 def test_recharge_maximum():
     cleaner = Cleaner((0, 0))
     cleaner.recharge(1)
+    cleaner.cycle()
     assert (cleaner.get_battery() == 100)
 
 def test_scan_default():
@@ -299,6 +300,7 @@ def test_battery_rechargable():
 
     for i in (range(1, 75)):
         cleaner.recharge(1)
+        cleaner.cycle()
         assert (cleaner.get_battery() == i)
 
 def test_battery_unchargable():
@@ -309,6 +311,21 @@ def test_battery_unchargable():
         cleaner.cycle()
 
     cleaner.recharge(25)
+    cleaner.cycle()
+
     assert(cleaner.get_battery() == 76)
 
 # test that cleaner will not move while charging until 100%
+def test_charging_immobile():
+    cleaner = Cleaner((0, 0))
+    cleaner.sense(0, 1)
+
+    while cleaner.get_battery() > 50:
+        cleaner.cycle()
+
+    cleaner.recharge(1)
+    pre_charge_position = cleaner.get_position()
+
+    for i in range(1, 50):
+        cleaner.cycle()
+        assert(cleaner.get_position() == pre_charge_position)

@@ -9,6 +9,8 @@ class Cleaner:
         self.__scan = 0
         self.__direction = 0
         self.__path = []
+        self.__recharging = False
+        self.__recharge_rate = 0
 
     def sense(self, dirt, forwards_scan):
         self.__dirt = dirt
@@ -16,6 +18,17 @@ class Cleaner:
 
     def cycle(self):
         self.__increment_cycle()
+
+        if self.__recharging:
+            if self.__battery > 75:
+                return
+
+            self.__battery += self.__recharge_rate
+
+            if self.__battery > 100:
+                self.__battery = 100
+
+            return
 
         if len(self.__path) > 0:
             self.__process_path()
@@ -142,14 +155,9 @@ class Cleaner:
     def __facing_west(self):
         return self.__direction == 3
 
-    def recharge(self, cost):
-        if self.__battery > 75:
-            return
-
-        self.__battery += cost
-
-        if self.__battery > 100:
-            self.__battery = 100
+    def recharge(self, recharge_rate):
+        self.__recharging = True
+        self.__recharge_rate = recharge_rate
 
     def set_path(self, path):
         self.__path = path
