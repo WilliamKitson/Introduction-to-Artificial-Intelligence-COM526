@@ -40,9 +40,6 @@ class Cleaner:
         self.__cycle += 1
 
     def __process_recharge(self):
-        if self.__battery > 75:
-            return
-
         if self.__recharge_rate <= 0:
             self.__recharging = False
             return
