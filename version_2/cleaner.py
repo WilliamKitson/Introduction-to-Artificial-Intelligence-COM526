@@ -21,6 +21,8 @@ class Cleaner:
 
         if self.__recharging:
             self.__process_recharge()
+
+        if self.__recharging:
             return
 
         if len(self.__path) > 0:

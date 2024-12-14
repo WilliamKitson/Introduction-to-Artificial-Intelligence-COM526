@@ -353,9 +353,7 @@ def test_charge_minimum():
         cleaner.cycle()
 
     cleaner_position = cleaner.get_position()
-
     cleaner.recharge(0)
-    cleaner.cycle()
 
     for i in range(1, 10):
         cleaner.cycle()
