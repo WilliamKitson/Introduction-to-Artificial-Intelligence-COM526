@@ -14,6 +14,13 @@ class LocalKnowledge:
     def add_charger(self, position):
         self.__nodes.append((position[0], position[1], 0, "u"))
 
+    def update_free(self, position, dirt):
+        free_node_index = self.__get_node_index_at(position)
+        free_node = self.__nodes[free_node_index]
+
+        updated_node = (free_node[0], free_node[1], free_node[2], str(dirt))
+        self.__nodes[free_node_index] = updated_node
+
     def get_node(self, position):
         try:
             return self.__get_node_value(self.__get_node_index_at(position))

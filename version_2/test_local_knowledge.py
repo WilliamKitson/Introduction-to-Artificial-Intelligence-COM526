@@ -120,5 +120,18 @@ def test_charger_undiscovered():
 
     assert(local_knowledge.charger_located() == False)
 
+def test_update_free():
+    local_knowledge = LocalKnowledge()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            local_knowledge.add_free((i, j), 0)
+            local_knowledge.explore((i, j))
+            local_knowledge.update_free((i, j), (i + j))
+
+            assert(local_knowledge.get_node((i, j)) == str(i + j))
+
+# test you cannot update non free nodes
+
 # test node queue prioretises the highest dirt value
 # test node queue prioretises unexplored when no dirt is detcted
