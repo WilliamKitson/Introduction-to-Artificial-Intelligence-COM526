@@ -65,6 +65,7 @@ class DemonstrationVersion2:
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
         self.__apply_cleaning()
+        self.__hunt_dirt()
         self.__cleaner.recharge(self.__charger.get_charge(self.__cleaner.get_position()))
 
     def __hunt_charger(self):
@@ -116,6 +117,19 @@ class DemonstrationVersion2:
 
     def __calculate_cleaned_dirt(self):
         return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
+
+    def __hunt_dirt(self):
+        if self.__pathfinder.get_path():
+            return
+
+        if self.__map.get_dirt(self.__cleaner.get_position()):
+            return
+
+        self.__pathfinder.calculate(
+            self.__generate_pathfinder_map(),
+            self.__cleaner.get_position(),
+            self.__local_knowledge.get_priority()
+        )
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
