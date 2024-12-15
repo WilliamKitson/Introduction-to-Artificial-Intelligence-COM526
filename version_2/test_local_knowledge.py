@@ -153,5 +153,15 @@ def test_update_charger():
 
             assert(local_knowledge.get_node((i, j)) == "u")
 
-# test node queue prioretises the highest dirt value
+def test_prioritise_dirt():
+    local_knowledge = LocalKnowledge()
+
+    for i in range(1, 9):
+        local_knowledge.add_free((i, i), (9 - i))
+        local_knowledge.explore((i, i))
+
+    for i in range(1, 9):
+        assert(local_knowledge.get_priority() == (i, i))
+        local_knowledge.update_free((i, i), 0)
+
 # test node queue prioretises unexplored when no dirt is detcted

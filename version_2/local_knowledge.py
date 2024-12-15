@@ -51,6 +51,22 @@ class LocalKnowledge:
             if i[3] == "u":
                 return i[0], i[1]
 
+    def get_priority(self):
+        free_nodes = []
+
+        for i in self.__nodes:
+            if i[3] not in ("x", "u"):
+                free_nodes.append(i)
+
+        dirtiest_free = (0, 0, 0, "0")
+
+        for i in free_nodes:
+            if int(i[3]) > int(dirtiest_free[3]):
+                dirtiest_free = i
+
+        return dirtiest_free[0], dirtiest_free[1]
+
+
     def charger_located(self):
         return self.get_node(self.get_charger()) == "u"
 
