@@ -96,7 +96,7 @@ class DemonstrationVersion2:
             map_row = []
 
             for j in range(0, self.__map.get_height()):
-                map_row.append(int(self.__local_knowledge.get_node((i, j)) in " "))
+                map_row.append(int(self.__local_knowledge.get_node((i, j)) not in ("x", "u", "?")))
 
             pathfinder_map.append(map_row)
 
