@@ -15,7 +15,7 @@ class LocalKnowledge:
         self.__nodes.append((position[0], position[1], 0, "u"))
 
     def update_free(self, position, dirt):
-        if self.get_node(position) in "x":
+        if self.get_node(position) in ("x", "u"):
             return
 
         free_node_index = self.__get_node_index_at(position)
