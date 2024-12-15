@@ -163,5 +163,3 @@ def test_prioritise_dirt():
     for i in range(1, 9):
         assert(local_knowledge.get_priority() == (i, i))
         local_knowledge.update_free((i, i), 0)
-
-# test node queue prioretises unexplored when no dirt is detcted

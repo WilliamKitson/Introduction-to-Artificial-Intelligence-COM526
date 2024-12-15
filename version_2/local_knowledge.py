@@ -66,7 +66,6 @@ class LocalKnowledge:
 
         return dirtiest_free[0], dirtiest_free[1]
 
-
     def charger_located(self):
         return self.get_node(self.get_charger()) == "u"
 
