@@ -5,8 +5,8 @@ class LocalKnowledge:
         self.__nodes = []
         self.__position = (0, 0)
 
-    def add_free(self, position):
-        self.__nodes.append((position[0], position[1], 0, " "))
+    def add_free(self, position, dirt):
+        self.__nodes.append((position[0], position[1], 0, str(dirt)))
 
     def add_blocked(self, position):
         self.__nodes.append((position[0], position[1], 0, "x"))

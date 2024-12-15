@@ -14,16 +14,16 @@ def test_explored_free():
 
     for i in range(1, 10):
         for j in range(1, 10):
-            local_knowledge.add_free((i, j))
+            local_knowledge.add_free((i, j), (i + j))
             local_knowledge.explore((i, j))
-            assert(local_knowledge.get_node((i, j)) == " ")
+            assert(local_knowledge.get_node((i, j)) == str(i + j))
 
 def test_unexplored_free():
     local_knowledge = LocalKnowledge()
 
     for i in range(1, 10):
         for j in range(1, 10):
-            local_knowledge.add_free((i, j))
+            local_knowledge.add_free((i, j), (i + j))
             assert(local_knowledge.get_node((i, j)) == "?")
 
 def test_explored_blocked():
@@ -66,9 +66,9 @@ def test_scan_zone_north():
             local_knowledge = LocalKnowledge()
             position_north = tuple(map(sum, zip((i, j), (-1, 0))))
 
-            local_knowledge.add_free(position_north)
+            local_knowledge.add_free(position_north, (i + j))
             local_knowledge.explore((i, j))
-            assert(local_knowledge.get_node(position_north) == " ")
+            assert(local_knowledge.get_node(position_north) == str(i + j))
 
 def test_scan_zone_east():
     for i in range(0, 10):
@@ -76,9 +76,9 @@ def test_scan_zone_east():
             local_knowledge = LocalKnowledge()
             position_east = tuple(map(sum, zip((i, j), (0, 1))))
 
-            local_knowledge.add_free(position_east)
+            local_knowledge.add_free(position_east, (i + j))
             local_knowledge.explore((i, j))
-            assert(local_knowledge.get_node(position_east) == " ")
+            assert(local_knowledge.get_node(position_east) == str(i + j))
 
 def test_scan_zone_south():
     for i in range(0, 10):
@@ -86,9 +86,9 @@ def test_scan_zone_south():
             local_knowledge = LocalKnowledge()
             position_south = tuple(map(sum, zip((i, j), (1, 0))))
 
-            local_knowledge.add_free(position_south)
+            local_knowledge.add_free(position_south, (i + j))
             local_knowledge.explore((i, j))
-            assert(local_knowledge.get_node(position_south) == " ")
+            assert(local_knowledge.get_node(position_south) == str(i + j))
 
 def test_scan_zone_west():
     for i in range(0, 10):
@@ -96,9 +96,9 @@ def test_scan_zone_west():
             local_knowledge = LocalKnowledge()
             position_west = tuple(map(sum, zip((i, j), (0, -1))))
 
-            local_knowledge.add_free(position_west)
+            local_knowledge.add_free(position_west, (i + j))
             local_knowledge.explore((i, j))
-            assert(local_knowledge.get_node(position_west) == " ")
+            assert(local_knowledge.get_node(position_west) == str(i + j))
 
 def test_get_charger():
     for i in range(1, 10):
@@ -119,3 +119,6 @@ def test_charger_undiscovered():
     local_knowledge.add_charger((0, 0))
 
     assert(local_knowledge.charger_located() == False)
+
+# test node queue prioretises the highest dirt value
+# test node queue prioretises unexplored when no dirt is detcted

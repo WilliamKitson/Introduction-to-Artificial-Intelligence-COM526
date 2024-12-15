@@ -24,8 +24,11 @@ class DemonstrationVersion2:
             self.__load_local_knowledge_node((x, y))
 
     def __load_local_knowledge_node(self, position):
-        if self.__map.get_render(position) in (" ", "^"):
-            self.__local_knowledge.add_free(position)
+        if self.__map.get_render(position) in "^":
+            self.__local_knowledge.add_free(position, "0")
+
+        if self.__map.get_render(position) in " ":
+            self.__local_knowledge.add_free(position, self.__map.get_dirt(position))
 
         if self.__map.get_render(position) in "x":
             self.__local_knowledge.add_blocked(position)
