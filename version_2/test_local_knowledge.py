@@ -153,6 +153,5 @@ def test_update_charger():
 
             assert(local_knowledge.get_node((i, j)) == "u")
 
-# test update charger
 # test node queue prioretises the highest dirt value
 # test node queue prioretises unexplored when no dirt is detcted
