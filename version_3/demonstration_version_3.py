@@ -189,7 +189,10 @@ class DemonstrationVersion3:
             f"\nposition: {self.__cleaner.get_position()}"
             f"\nbattery: {self.__cleaner.get_battery()}"
             f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
-            f"\nlast path: {self.__pathfinder.get_path()}\n"
+            f"\nlast path: {self.__pathfinder.get_path()}"
+            f"\nfan speed: {self.__fuzzy_fan.get_fan_speed()}"
+            f"\nbattery drain: {self.__fuzzy_battery.get_battery_drain()}"
+            f"\ncleaning rate: {self.__fuzzy_cleaning.get_cleaning_rate()}\n"
         )
 
     def test_fuzzy_logic(self):
