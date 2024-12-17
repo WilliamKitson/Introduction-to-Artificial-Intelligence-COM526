@@ -15,43 +15,6 @@ def test_cycle_cycling():
 def test_battery_default():
     assert(Cleaner((0, 0)).get_battery() == 100)
 
-def test_battery_turn():
-    cleaner = Cleaner((0, 0))
-    battery = cleaner.get_battery()
-
-    for i in range(1, 10):
-        cleaner.sense(0, 0)
-        cleaner.cycle()
-        assert(cleaner.get_battery() == battery - i)
-
-def test_battery_move():
-    cleaner = Cleaner((0, 0))
-    battery = cleaner.get_battery()
-
-    for i in range(1, 10):
-        cleaner.sense(0, 1)
-        cleaner.cycle()
-        assert(cleaner.get_battery() == battery - (i * 2))
-
-def test_battery_clean():
-    cleaner = Cleaner((0, 0))
-    battery = cleaner.get_battery()
-
-    for i in range(1, 10):
-        cleaner.sense(1, 0)
-        cleaner.cycle()
-        assert(cleaner.get_battery() == battery - (i * 3))
-
-def test_battery_minimum():
-    cleaner = Cleaner((0, 0))
-
-    while cleaner.get_battery() > 0:
-        cleaner.sense(0, 0)
-        cleaner.cycle()
-
-    cleaner.cycle()
-    assert(cleaner.get_battery() == 0)
-
 def test_position_initialisation():
     for i in range(10):
         for j in range(10):
@@ -158,8 +121,7 @@ def test_uncharged_turn():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 0)
 
-    while cleaner.get_battery() > 0:
-        cleaner.cycle()
+    cleaner.decrement_battery(100)
 
     cleaner.cycle()
     assert (cleaner.get_render() == "^")
@@ -168,11 +130,10 @@ def test_uncharged_forward():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
 
-    while cleaner.get_battery() > 0:
-        cleaner.cycle()
-
+    cleaner.decrement_battery(100)
     cleaner.cycle()
-    assert (cleaner.get_position() == (-50, 0))
+
+    assert (cleaner.get_position() == (0, 0))
 
 def test_recharge_maximum():
     cleaner = Cleaner((0, 0))
@@ -295,8 +256,7 @@ def test_battery_rechargable():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 0)
 
-    while cleaner.get_battery() > 0:
-        cleaner.cycle()
+    cleaner.decrement_battery(100)
 
     for i in (range(1, 75)):
         cleaner.recharge(1)
@@ -307,8 +267,7 @@ def test_battery_unchargable():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 0)
 
-    while cleaner.get_battery() > 75:
-        cleaner.cycle()
+    cleaner.decrement_battery(25)
 
     cleaner.recharge(25)
     cleaner.cycle()
@@ -319,8 +278,7 @@ def test_charging_immobile():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
 
-    while cleaner.get_battery() > 50:
-        cleaner.cycle()
+    cleaner.decrement_battery(100)
 
     cleaner.recharge(1)
     pre_charge_position = cleaner.get_position()
@@ -333,8 +291,7 @@ def test_charging_mobile():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
 
-    while cleaner.get_battery() > 50:
-        cleaner.cycle()
+    cleaner.decrement_battery(50)
 
     cleaner.recharge(50)
     cleaner.cycle()
@@ -349,8 +306,7 @@ def test_charge_minimum():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
 
-    while cleaner.get_battery() > 50:
-        cleaner.cycle()
+    cleaner.decrement_battery(50)
 
     cleaner_position = cleaner.get_position()
     cleaner.recharge(0)

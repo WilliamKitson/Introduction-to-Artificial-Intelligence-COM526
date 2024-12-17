@@ -30,7 +30,6 @@ class Cleaner:
             return
 
         if self.__dirt > 0:
-            self.__process_battery(3)
             return
 
         self.__process_turn()
@@ -104,7 +103,6 @@ class Cleaner:
             if len(self.__path) <= 0:
                 return
 
-        self.__process_battery(1)
         self.__process_direction()
 
     def __battery_empty(self):
@@ -112,12 +110,6 @@ class Cleaner:
 
     def __path_blocked(self):
         return self.__scan == 0
-
-    def __process_battery(self, cost):
-        self.__battery -= cost
-
-        if self.__battery < 0:
-            self.__battery = 0
 
     def __process_direction(self):
         self.__direction += 1
@@ -132,7 +124,6 @@ class Cleaner:
         if self.__path_blocked():
             return
 
-        self.__process_battery(2)
         self.__move_north()
         self.__move_east()
         self.__move_south()
