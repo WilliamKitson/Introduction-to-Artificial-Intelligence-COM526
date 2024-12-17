@@ -6,7 +6,7 @@ from skfuzzy import control as ctrl
 
 class FuzzyCleaning:
     def __init__(self):
-        self.__cleaning_rate = ctrl.Consequent(np.arange(0, 20, 1), "cleaning rate")
+        self.__cleaning_rate = ctrl.Consequent(np.arange(0, 9, 1), "cleaning rate")
         self.__initialise_cleaning_rate()
 
         self.__fan_speed = ctrl.Antecedent(np.arange(0, 100, 1), "fan speed")
@@ -16,9 +16,9 @@ class FuzzyCleaning:
         self.__cleaning_rate_sim = ctrl.ControlSystemSimulation(self.__cleaning_rate_control)
 
     def __initialise_cleaning_rate(self):
-        self.__cleaning_rate["low"] = fuzz.zmf(self.__cleaning_rate.universe, 0, 8)
-        self.__cleaning_rate["medium"] = fuzz.trapmf(self.__cleaning_rate.universe, [4, 8, 12, 16])
-        self.__cleaning_rate["high"] = fuzz.smf(self.__cleaning_rate.universe, 12, 20)
+        self.__cleaning_rate["low"] = fuzz.zmf(self.__cleaning_rate.universe, 0, 3)
+        self.__cleaning_rate["medium"] = fuzz.trapmf(self.__cleaning_rate.universe, [2, 3, 6, 7])
+        self.__cleaning_rate["high"] = fuzz.smf(self.__cleaning_rate.universe, 6, 9)
 
     def __initialise_fan_speed(self):
         self.__fan_speed["slow"] = fuzz.zmf(self.__fan_speed.universe, 0, 50)

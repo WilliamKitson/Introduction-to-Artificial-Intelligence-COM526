@@ -111,18 +111,30 @@ class DemonstrationVersion3:
     def __apply_cleaning(self):
         position = self.__cleaner.get_position()
 
+        self.__fuzzy_fan.calculate(
+            self.__cleaner.get_battery(),
+            self.__map.get_dirt(position)
+        )
+
+        self.__fuzzy_battery.calculate(
+            self.__fuzzy_fan.get_fan_speed()
+        )
+
+        self.__fuzzy_cleaning.calculate(
+            self.__fuzzy_fan.get_fan_speed()
+        )
+
+        dirt = int(self.__map.get_dirt(self.__cleaner.get_position())) - int(self.__fuzzy_cleaning.get_cleaning_rate())
+
         self.__map.set_dirt(
             position,
-            self.__calculate_cleaned_dirt()
+            dirt
         )
 
         self.__local_knowledge.update_free(
             self.__cleaner.get_position(),
             self.__map.get_dirt(position)
         )
-
-    def __calculate_cleaned_dirt(self):
-        return int(self.__map.get_dirt(self.__cleaner.get_position())) - self.__cleaner.get_cleaned()
 
     def __hunt_dirt(self):
         if self.__pathfinder.get_path():
