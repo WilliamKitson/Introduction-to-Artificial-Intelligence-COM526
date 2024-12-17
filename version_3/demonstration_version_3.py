@@ -128,20 +128,24 @@ class DemonstrationVersion3:
             self.__fuzzy_fan.get_fan_speed()
         )
 
-        dirt = int(self.__map.get_dirt(self.__cleaner.get_position())) - int(self.__fuzzy_cleaning.get_cleaning_rate())
-
-        if dirt < 0:
-            dirt = 0
-
         self.__map.set_dirt(
             position,
-            dirt
+            self.__calculate_cleaned()
         )
 
         self.__local_knowledge.update_free(
             self.__cleaner.get_position(),
             self.__map.get_dirt(position)
         )
+
+    def __calculate_cleaned(self):
+        dirt = int(self.__map.get_dirt(self.__cleaner.get_position()))
+        dirt -= int(self.__fuzzy_cleaning.get_cleaning_rate())
+
+        if dirt < 0:
+            dirt = 0
+
+        return dirt
 
     def __hunt_dirt(self):
         if self.__pathfinder.get_path():
