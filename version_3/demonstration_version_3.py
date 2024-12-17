@@ -34,7 +34,7 @@ class DemonstrationVersion3:
             self.__local_knowledge.add_free(position, "0")
 
         if self.__map.get_render(position) in " ":
-            self.__local_knowledge.add_free(position, self.__map.get_dirt(position))
+            self.__local_knowledge.add_free(position, int(self.__map.get_dirt(position)))
 
         if self.__map.get_render(position) in "x":
             self.__local_knowledge.add_blocked(position)
@@ -139,8 +139,8 @@ class DemonstrationVersion3:
         )
 
     def __calculate_cleaned(self):
-        dirt = int(self.__map.get_dirt(self.__cleaner.get_position()))
-        dirt -= int(self.__fuzzy_cleaning.get_cleaning_rate())
+        dirt = self.__map.get_dirt(self.__cleaner.get_position())
+        dirt -= float(self.__fuzzy_cleaning.get_cleaning_rate())
 
         if dirt < 0:
             dirt = 0

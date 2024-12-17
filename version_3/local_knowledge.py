@@ -61,7 +61,7 @@ class LocalKnowledge:
         dirtiest_free = free_nodes[0]
 
         for i in free_nodes:
-            if int(i[3]) > int(dirtiest_free[3]):
+            if float(i[3]) > float(dirtiest_free[3]):
                 dirtiest_free = i
 
         return dirtiest_free[0], dirtiest_free[1]

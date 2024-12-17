@@ -42,7 +42,7 @@ class Map:
             return 0
 
         try:
-            return int(dirt)
+            return float(dirt)
 
         except ValueError:
             return 0
