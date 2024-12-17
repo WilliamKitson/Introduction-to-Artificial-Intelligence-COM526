@@ -218,6 +218,9 @@ class Cleaner:
         return len(self.__path) > 0
 
     def decrement_battery(self, battery):
+        if self.__recharging:
+            return
+
         self.__battery -= battery
 
         if self.__battery < 0:
