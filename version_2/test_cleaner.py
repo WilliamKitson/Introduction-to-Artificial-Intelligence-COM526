@@ -307,13 +307,13 @@ def test_battery_unchargable():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 0)
 
-    while cleaner.get_battery() > 76:
+    while cleaner.get_battery() > 75:
         cleaner.cycle()
 
     cleaner.recharge(25)
     cleaner.cycle()
 
-    assert(cleaner.get_battery() == 76)
+    assert(cleaner.get_battery() == 75)
 
 def test_charging_immobile():
     cleaner = Cleaner((0, 0))
