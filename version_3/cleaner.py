@@ -228,3 +228,6 @@ class Cleaner:
 
     def decrement_battery(self, battery):
         self.__battery -= battery
+
+        if self.__battery < 0:
+            self.__battery = 0

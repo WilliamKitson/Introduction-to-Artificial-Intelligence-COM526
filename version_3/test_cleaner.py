@@ -365,3 +365,8 @@ def test_decrement_battery():
         cleaner.decrement_battery(i)
 
         assert(cleaner.get_battery() == 100 - i)
+
+def test_decrement_minimum():
+    cleaner = Cleaner((0, 0))
+    cleaner.decrement_battery(101)
+    assert(cleaner.get_battery() == 0)
