@@ -44,6 +44,9 @@ class Cleaner:
             self.__recharging = False
             return
 
+        if self.__battery >= 75:
+            return
+
         self.__battery += self.__recharge_rate
 
         if self.__battery > 100:
