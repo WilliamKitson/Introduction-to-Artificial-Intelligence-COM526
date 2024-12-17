@@ -192,7 +192,10 @@ class DemonstrationVersion3:
         if self.__charger.get_charge_zone() == (x, y):
             return "c"
 
-        return self.__local_knowledge.get_node((x, y))
+        if self.__local_knowledge.get_node((x,y)) in ("?", "x"):
+            return self.__local_knowledge.get_node((x,y))
+
+        return str(int(float(self.__local_knowledge.get_node((x, y)))))
 
     def __render_stats(self):
         return (
