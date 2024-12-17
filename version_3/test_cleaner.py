@@ -358,3 +358,10 @@ def test_charge_minimum():
     for i in range(1, 10):
         cleaner.cycle()
         assert(cleaner.get_position() == tuple(map(sum, zip(cleaner_position, (-i, 0)))))
+
+def test_decrement_battery():
+    for i in range(1, 100):
+        cleaner = Cleaner((0, 0))
+        cleaner.decrement_battery(i)
+
+        assert(cleaner.get_battery() == 100 - i)

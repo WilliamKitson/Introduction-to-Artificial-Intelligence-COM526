@@ -225,3 +225,6 @@ class Cleaner:
 
     def has_path(self):
         return len(self.__path) > 0
+
+    def decrement_battery(self, battery):
+        self.__battery -= battery
