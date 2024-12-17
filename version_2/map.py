@@ -41,7 +41,11 @@ class Map:
         if dirt in ["x", "^", "u"]:
             return 0
 
-        return int(dirt)
+        try:
+            return int(dirt)
+
+        except ValueError:
+            return 0
 
     def get_render(self, position):
         render = self.__data[position[1]][position[0]]
