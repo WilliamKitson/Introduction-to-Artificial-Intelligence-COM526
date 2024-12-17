@@ -120,6 +120,10 @@ class DemonstrationVersion3:
             self.__fuzzy_fan.get_fan_speed()
         )
 
+        self.__cleaner.decrement_battery(
+            self.__fuzzy_battery.get_battery_drain()
+        )
+
         self.__fuzzy_cleaning.calculate(
             self.__fuzzy_fan.get_fan_speed()
         )
