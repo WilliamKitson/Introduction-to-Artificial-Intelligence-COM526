@@ -5,6 +5,9 @@ from version_3.cleaner import Cleaner
 from version_3.charger import Charger
 from version_3.local_knowledge import LocalKnowledge
 from version_3.pathfinder import Pathfinder
+from version_3.fuzzy_fan import FuzzyFan
+from version_3.fuzzy_battery import FuzzyBattery
+from version_3.fuzzy_cleaning import FuzzyCleaning
 
 class DemonstrationVersion3:
     def __init__(self, map_data):
@@ -14,6 +17,9 @@ class DemonstrationVersion3:
         self.__local_knowledge = LocalKnowledge()
         self.__load_local_knowledge()
         self.__pathfinder = Pathfinder()
+        self.__fuzzy_fan = FuzzyFan()
+        self.__fuzzy_battery = FuzzyBattery()
+        self.__fuzzy_cleaning = FuzzyCleaning()
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
@@ -173,3 +179,8 @@ class DemonstrationVersion3:
             f"\ndirt: {self.__map.get_dirt(self.__cleaner.get_position())}"
             f"\nlast path: {self.__pathfinder.get_path()}\n"
         )
+
+    def test_fuzzy_logic(self):
+        self.__fuzzy_fan.test()
+        self.__fuzzy_battery.test()
+        self.__fuzzy_cleaning.test()
