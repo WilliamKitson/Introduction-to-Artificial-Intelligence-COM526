@@ -62,7 +62,7 @@ class DemonstrationVersion2:
         if self.__cleaner.get_battery() < 33:
             self.__hunt_charger()
 
-        #self.__hunt_dirt()
+        self.__hunt_dirt()
         self.__cleaner.cycle()
         self.__local_knowledge.explore(self.__cleaner.get_position())
         self.__apply_cleaning()
@@ -130,6 +130,8 @@ class DemonstrationVersion2:
             self.__cleaner.get_position(),
             self.__local_knowledge.get_priority()
         )
+
+        self.__cleaner.set_path(self.__pathfinder.get_path())
 
     def __render(self):
         print(self.__render_x(), self.__render_stats())
