@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="map.py redefined" />
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="demonstration_version_2.py redefined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,15 +164,7 @@
       <workItem from="1734116488311" duration="73000" />
       <workItem from="1734181054124" duration="8624000" />
       <workItem from="1734267637349" duration="9958000" />
-      <workItem from="1734440820007" duration="2162000" />
-    </task>
-    <task id="LOCAL-00190" summary="pathfinder redefined">
-      <option name="closed" value="true" />
-      <created>1733911951503</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1733911951503</updated>
+      <workItem from="1734440820007" duration="3127000" />
     </task>
     <task id="LOCAL-00191" summary="pathfinder redefined">
       <option name="closed" value="true" />
@@ -558,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734444661671</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="demonstration_version_2.py redefined">
+      <option name="closed" value="true" />
+      <created>1734445400119</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1734445400119</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,20 +599,11 @@
     <MESSAGE value="charger redefined" />
     <MESSAGE value="local_knowledge.py redefined" />
     <MESSAGE value="main redefined" />
-    <MESSAGE value="demonstration_version_2.py redefined" />
     <MESSAGE value="map.py redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="map.py redefined" />
+    <MESSAGE value="demonstration_version_2.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="demonstration_version_2.py redefined" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/version_2/cleaner.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="self._Cleaner__recharging" language="Python" />
@@ -624,7 +615,7 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734187475824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_cleaning.coverage" NAME="fuzzy_cleaning Coverage Results" MODIFIED="1733830248524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$Pathfinder.coverage" NAME="Pathfinder Coverage Results" MODIFIED="1731949178042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734444567517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734445316433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$pathfinder.coverage" NAME="pathfinder Coverage Results" MODIFIED="1734014334276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1734103750196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$temp.coverage" NAME="temp Coverage Results" MODIFIED="1733926324793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
