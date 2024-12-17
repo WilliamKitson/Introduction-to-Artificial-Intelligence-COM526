@@ -130,6 +130,9 @@ class DemonstrationVersion3:
 
         dirt = int(self.__map.get_dirt(self.__cleaner.get_position())) - int(self.__fuzzy_cleaning.get_cleaning_rate())
 
+        if dirt < 0:
+            dirt = 0
+
         self.__map.set_dirt(
             position,
             dirt
