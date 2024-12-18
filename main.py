@@ -8,5 +8,5 @@ with open("maps/COM526_map_simple.txt", 'r') as file:
     file_content = file.read()
 
 #DemonstrationVersion1(file_content).execute()
-#DemonstrationVersion2(file_content).execute()
+DemonstrationVersion2(file_content).execute()
 DemonstrationVersion3(file_content).execute()
