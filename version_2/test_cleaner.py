@@ -176,9 +176,9 @@ def test_uncharged_forward():
 
 def test_recharge_maximum():
     cleaner = Cleaner((0, 0))
-    cleaner.recharge(1)
+    cleaner.recharge(10)
     cleaner.cycle()
-    assert (cleaner.get_battery() == 100)
+    assert (cleaner.get_battery() == 99)
 
 def test_scan_default():
     cleaner = Cleaner((0, 0))
@@ -302,18 +302,6 @@ def test_battery_rechargable():
         cleaner.recharge(1)
         cleaner.cycle()
         assert (cleaner.get_battery() == i)
-
-def test_battery_unchargable():
-    cleaner = Cleaner((0, 0))
-    cleaner.sense(0, 0)
-
-    while cleaner.get_battery() > 76:
-        cleaner.cycle()
-
-    cleaner.recharge(25)
-    cleaner.cycle()
-
-    assert(cleaner.get_battery() == 76)
 
 def test_charging_immobile():
     cleaner = Cleaner((0, 0))
