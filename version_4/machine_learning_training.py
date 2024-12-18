@@ -24,7 +24,7 @@ class MachineLearningTraining:
         )
 
         self.__train_classifier(KNeighborsClassifier(n_neighbors=3), questions, answers, x_test, y_test)
-        self.__train_classifier(MLPClassifier(max_iter=500), questions, answers, x_test, y_test)
+        self.__train_classifier(MLPClassifier(max_iter=750), questions, answers, x_test, y_test)
 
     def __train_classifier(self, classifier, questions, answers, x_test, y_test):
         model = classifier.fit(questions, answers)
