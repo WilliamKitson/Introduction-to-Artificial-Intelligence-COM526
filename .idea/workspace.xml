@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="machine_learning_training.py redefined">
-      <change beforePath="$PROJECT_DIR$/version_4/machine_learning_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_4/machine_learning_training.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="machine_learning_training.py redefined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,15 +171,7 @@
       <workItem from="1734440820007" duration="14672000" />
       <workItem from="1734527976335" duration="1593000" />
       <workItem from="1734535428831" duration="127000" />
-      <workItem from="1734535582521" duration="4497000" />
-    </task>
-    <task id="LOCAL-00219" summary="cleaner.py redefined">
-      <option name="closed" value="true" />
-      <created>1734108909945</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1734108909945</updated>
+      <workItem from="1734535582521" duration="4874000" />
     </task>
     <task id="LOCAL-00220" summary="cleaner.py redefined">
       <option name="closed" value="true" />
@@ -567,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734540008974</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="machine_learning_training.py redefined">
+      <option name="closed" value="true" />
+      <created>1734540224263</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1734540224263</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +615,7 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734532116121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_cleaning.coverage" NAME="fuzzy_cleaning Coverage Results" MODIFIED="1733830248524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$Pathfinder.coverage" NAME="Pathfinder Coverage Results" MODIFIED="1731949178042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734539976907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734540428806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$pathfinder.coverage" NAME="pathfinder Coverage Results" MODIFIED="1734014334276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1734103750196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$machine_learning_training.coverage" NAME="machine_learning_training Coverage Results" MODIFIED="1734539503984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />

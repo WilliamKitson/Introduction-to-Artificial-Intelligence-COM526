@@ -66,3 +66,12 @@ class MachineLearningTraining:
             )
 
         return output
+
+    def get_best_model(self):
+        best_model = self.__evaluated_models[0]
+
+        for i in self.__evaluated_models:
+            if i[2] > best_model[2]:
+                best_model = i
+
+        return best_model[0]
