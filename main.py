@@ -12,4 +12,6 @@ with open("COM526_map.txt", 'r') as file:
 #DemonstrationVersion2(file_content).execute()
 #DemonstrationVersion3(file_content).execute()
 
-MachineLearningTraining("version_4/dataset.csv", "target").train()
+training = MachineLearningTraining("version_4/dataset.csv", "target")
+training.train()
+training.render_evaluation()

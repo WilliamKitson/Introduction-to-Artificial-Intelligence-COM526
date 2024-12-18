@@ -4,12 +4,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import *
 import pandas as pd
+# USE PICKLE TO SAVE TRAINED MODEL
 
 class MachineLearningTraining:
     def __init__(self, dataset, answer_column):
         self.__data = pd.read_csv(dataset)
         self.__answer_column = answer_column
-        self.__evaluation = []
+        self.__evaluated_models = []
 
     def train(self):
         questions = self.__data.drop([self.__answer_column], axis=1)
@@ -25,8 +26,24 @@ class MachineLearningTraining:
         nearest_neighbour_model = nearest_neighbour.fit(questions, answers)
         nearest_neighbour_prediction = nearest_neighbour_model.predict(x_test)
 
-        print(f"Accuracy is {accuracy_score(y_test, nearest_neighbour_prediction)}")
-        print(f"Recall is {recall_score(y_test, nearest_neighbour_prediction, average='macro')}")
-        print(f"Precision is {precision_score(y_test, nearest_neighbour_prediction, average='macro')}")
-        print(f"F1-Score is {f1_score(y_test, nearest_neighbour_prediction, average='macro')}")
-        print(f"MCC is {matthews_corrcoef(y_test, nearest_neighbour_prediction)}")
+        nearest_neighbour_evaluation = (
+            accuracy_score(y_test, nearest_neighbour_prediction),
+            recall_score(y_test, nearest_neighbour_prediction, average='macro'),
+            precision_score(y_test, nearest_neighbour_prediction, average='macro'),
+            f1_score(y_test, nearest_neighbour_prediction, average='macro'),
+            matthews_corrcoef(y_test, nearest_neighbour_prediction)
+        )
+
+        nearest_neighbour_total = 0
+
+        for i in nearest_neighbour_evaluation:
+            nearest_neighbour_total += i
+
+        self.__evaluated_models.append((
+            nearest_neighbour_model,
+            nearest_neighbour_evaluation,
+            nearest_neighbour_total
+        ))
+
+    def render_evaluation(self):
+        print(self.__evaluated_models)
