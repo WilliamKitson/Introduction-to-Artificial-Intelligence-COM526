@@ -3,7 +3,6 @@
 from version_1.demonstration_version_1 import DemonstrationVersion1
 from version_2.demonstration_version_2 import DemonstrationVersion2
 from version_3.demonstration_version_3 import DemonstrationVersion3
-from version_4.machine_learning_training import MachineLearningTraining
 
 with open("COM526_map.txt", 'r') as file:
     file_content = file.read()
@@ -12,9 +11,21 @@ with open("COM526_map.txt", 'r') as file:
 #DemonstrationVersion2(file_content).execute()
 #DemonstrationVersion3(file_content).execute()
 
-training = MachineLearningTraining("version_4/dataset.csv", "target")
-training.train()
-model = training.get_best_model()
+from version_4.machine_learning_training import MachineLearningTraining
+import pickle
+
+def train_model():
+    training = MachineLearningTraining("version_4/dataset.csv", "target")
+    training.train()
+    print(training.render_evaluation())
+
+    with open('model.pkl','wb') as f:
+        pickle.dump(training.get_best_model(), f)
+
+#train_model()
+
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 scan_data = [[
     -1.2332742655295212,
@@ -25,5 +36,4 @@ scan_data = [[
     -4.3400370105057515
 ]]
 
-print(training.render_evaluation())
 print(model.predict(scan_data))
