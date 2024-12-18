@@ -14,10 +14,9 @@ with open("COM526_map.txt", 'r') as file:
 from version_4.machine_learning_training import MachineLearningTraining
 from version_4.model import Model
 
-
-training = MachineLearningTraining("version_4/dataset.csv", "target")
-training.train()
-#training.save_best_model()
+#training = MachineLearningTraining("version_4/dataset.csv", "target")
+#training.train()
+#training.save_best_model("model.pkl")
 #print(training.render_evaluation())
 
 scan_data = [[

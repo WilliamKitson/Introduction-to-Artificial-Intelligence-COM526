@@ -76,6 +76,6 @@ class MachineLearningTraining:
 
         return best_model[0]
 
-    def save_best_model(self):
-        with open('model.pkl', 'wb') as f:
+    def save_best_model(self, filepath):
+        with open(filepath, "wb") as f:
             pickle.dump(self.get_best_model(), f)
