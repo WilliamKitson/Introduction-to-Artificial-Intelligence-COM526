@@ -2,18 +2,27 @@
 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import *
 import pandas as pd
 
-data = pd.read_csv("dataset.csv")
+class MachineLearningTraining:
+    def __init__(self, dataset, answer_column):
+        self.__data = pd.read_csv(dataset)
+        self.__answer_column = answer_column
+        self.__evaluation = []
 
-X = data.drop(["target"], axis=1)
-y = data["target"]
+    def train(self):
+        questions = self.__data.drop([self.__answer_column], axis=1)
+        answers = self.__data[self.__answer_column]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+        x_train, x_test, y_train, y_test = train_test_split(questions, answers, test_size=0.2)
 
-neigh = KNeighborsClassifier(n_neighbors=3)
-knn_model = neigh.fit(X, y)
-knn_pred = knn_model.predict(X_test)
+        neigh = KNeighborsClassifier(n_neighbors=3)
+        knn_model = neigh.fit(questions, answers)
+        knn_pred = knn_model.predict(x_test)
 
-print(f"KNN accuracy is {accuracy_score(y_test, knn_pred)}")
+        print(f"Accuracy is {accuracy_score(y_test, knn_pred)}")
+        print(f"Recall is {recall_score(y_test, knn_pred, average='macro')}")
+        print(f"Precision is {precision_score(y_test, knn_pred, average='macro')}")
+        print(f"F1-Score is {f1_score(y_test, knn_pred, average='macro')}")
+        print(f"MCC is {matthews_corrcoef(y_test, knn_pred)}")
