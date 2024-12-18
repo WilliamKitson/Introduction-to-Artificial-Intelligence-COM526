@@ -1,6 +1,7 @@
 #  Copyright (c) 2024. William E. Kitson
 
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import *
 import pandas as pd
@@ -23,6 +24,7 @@ class MachineLearningTraining:
         )
 
         self.__train_nearest_neighbour(questions, answers, x_test, y_test)
+        self.__train_decision_tree(questions, answers, x_test, y_test)
 
     def __train_nearest_neighbour(self, questions, answers, x_test, y_test):
         nearest_neighbour = KNeighborsClassifier(n_neighbors=3)
@@ -48,6 +50,32 @@ class MachineLearningTraining:
             nearest_neighbour_model,
             nearest_neighbour_evaluation,
             nearest_neighbour_total
+        ))
+
+    def __train_decision_tree(self, questions, answers, x_test, y_test):
+        decision_tree = DecisionTreeClassifier()
+        decision_tree_model = decision_tree.fit(questions, answers)
+        decision_tree_prediction = decision_tree_model.predict(x_test)
+
+        decision_tree_evaluation = (
+            accuracy_score(y_test, decision_tree_prediction),
+            recall_score(y_test, decision_tree_prediction, average='macro'),
+            precision_score(y_test, decision_tree_prediction, average='macro'),
+            f1_score(y_test, decision_tree_prediction, average='macro'),
+            matthews_corrcoef(y_test, decision_tree_prediction)
+        )
+
+        decision_tree_total = 0
+
+        for i in decision_tree_evaluation:
+            decision_tree_total += i
+
+        decision_tree_total /= len(decision_tree_evaluation)
+
+        self.__evaluated_models.append((
+            decision_tree_model,
+            decision_tree_evaluation,
+            decision_tree_total
         ))
 
     def render_evaluation(self):
