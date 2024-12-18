@@ -16,5 +16,14 @@ training = MachineLearningTraining("version_4/dataset.csv", "target")
 training.train()
 model = training.get_best_model()
 
+scan_data = [[
+    -1.2332742655295212,
+    2.758632998977856,
+    0.47467562379722095,
+    5.915661330860918,
+    0.2574279551555407,
+    -4.3400370105057515
+]]
+
 print(training.render_evaluation())
-print(model)
+print(model.predict(scan_data))
