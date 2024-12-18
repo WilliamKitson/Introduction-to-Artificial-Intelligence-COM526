@@ -1,7 +1,7 @@
 #  Copyright (c) 2024. William E. Kitson
 
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import *
 import pandas as pd
@@ -24,7 +24,7 @@ class MachineLearningTraining:
         )
 
         self.__train_classifier(KNeighborsClassifier(n_neighbors=3), questions, answers, x_test, y_test)
-        self.__train_classifier(DecisionTreeClassifier(), questions, answers, x_test, y_test)
+        self.__train_classifier(MLPClassifier(), questions, answers, x_test, y_test)
 
     def __train_classifier(self, classifier, questions, answers, x_test, y_test):
         model = classifier.fit(questions, answers)
