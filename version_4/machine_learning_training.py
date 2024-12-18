@@ -42,6 +42,8 @@ class MachineLearningTraining:
         for i in nearest_neighbour_evaluation:
             nearest_neighbour_total += i
 
+        nearest_neighbour_total /= len(nearest_neighbour_evaluation)
+
         self.__evaluated_models.append((
             nearest_neighbour_model,
             nearest_neighbour_evaluation,
