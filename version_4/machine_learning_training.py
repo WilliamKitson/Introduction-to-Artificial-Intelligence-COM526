@@ -15,14 +15,18 @@ class MachineLearningTraining:
         questions = self.__data.drop([self.__answer_column], axis=1)
         answers = self.__data[self.__answer_column]
 
-        x_train, x_test, y_train, y_test = train_test_split(questions, answers, test_size=0.2)
+        x_train, x_test, y_train, y_test = train_test_split(
+            questions,
+            answers,
+            test_size=0.2
+        )
 
-        neigh = KNeighborsClassifier(n_neighbors=3)
-        knn_model = neigh.fit(questions, answers)
-        knn_pred = knn_model.predict(x_test)
+        nearest_neighbour = KNeighborsClassifier(n_neighbors=3)
+        nearest_neighbour_model = nearest_neighbour.fit(questions, answers)
+        nearest_neighbour_prediction = nearest_neighbour_model.predict(x_test)
 
-        print(f"Accuracy is {accuracy_score(y_test, knn_pred)}")
-        print(f"Recall is {recall_score(y_test, knn_pred, average='macro')}")
-        print(f"Precision is {precision_score(y_test, knn_pred, average='macro')}")
-        print(f"F1-Score is {f1_score(y_test, knn_pred, average='macro')}")
-        print(f"MCC is {matthews_corrcoef(y_test, knn_pred)}")
+        print(f"Accuracy is {accuracy_score(y_test, nearest_neighbour_prediction)}")
+        print(f"Recall is {recall_score(y_test, nearest_neighbour_prediction, average='macro')}")
+        print(f"Precision is {precision_score(y_test, nearest_neighbour_prediction, average='macro')}")
+        print(f"F1-Score is {f1_score(y_test, nearest_neighbour_prediction, average='macro')}")
+        print(f"MCC is {matthews_corrcoef(y_test, nearest_neighbour_prediction)}")
