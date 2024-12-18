@@ -22,6 +22,9 @@ class MachineLearningTraining:
             test_size=0.2
         )
 
+        self.__train_nearest_neighbour(questions, answers, x_test, y_test)
+
+    def __train_nearest_neighbour(self, questions, answers, x_test, y_test):
         nearest_neighbour = KNeighborsClassifier(n_neighbors=3)
         nearest_neighbour_model = nearest_neighbour.fit(questions, answers)
         nearest_neighbour_prediction = nearest_neighbour_model.predict(x_test)
