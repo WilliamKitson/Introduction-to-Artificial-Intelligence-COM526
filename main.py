@@ -1,14 +1,14 @@
 #  Copyright (c) 2024. William E. Kitson
 
-from version_1.demonstration_version_1 import DemonstrationVersion1
+from version_1.demonstration import Demonstration
 from version_2.demonstration_version_2 import DemonstrationVersion2
 from version_3.demonstration_version_3 import DemonstrationVersion3
 
 with open("maps/COM526_map_simple.txt", 'r') as file:
     file_content = file.read()
 
-#DemonstrationVersion1(file_content).execute()
-#DemonstrationVersion2(file_content).execute()
+Demonstration(file_content).execute()
+DemonstrationVersion2(file_content).execute()
 DemonstrationVersion3(file_content).execute()
 
 DemonstrationVersion3(file_content).test_fuzzy_logic()
