@@ -23,59 +23,32 @@ class MachineLearningTraining:
             test_size=0.2
         )
 
-        self.__train_nearest_neighbour(questions, answers, x_test, y_test)
-        self.__train_decision_tree(questions, answers, x_test, y_test)
+        self.__train_classifier(KNeighborsClassifier(n_neighbors=3), questions, answers, x_test, y_test)
+        self.__train_classifier(DecisionTreeClassifier(), questions, answers, x_test, y_test)
 
-    def __train_nearest_neighbour(self, questions, answers, x_test, y_test):
-        nearest_neighbour = KNeighborsClassifier(n_neighbors=3)
-        nearest_neighbour_model = nearest_neighbour.fit(questions, answers)
-        nearest_neighbour_prediction = nearest_neighbour_model.predict(x_test)
+    def __train_classifier(self, classifier, questions, answers, x_test, y_test):
+        model = classifier.fit(questions, answers)
+        prediction = model.predict(x_test)
 
-        nearest_neighbour_evaluation = (
-            accuracy_score(y_test, nearest_neighbour_prediction),
-            recall_score(y_test, nearest_neighbour_prediction, average='macro'),
-            precision_score(y_test, nearest_neighbour_prediction, average='macro'),
-            f1_score(y_test, nearest_neighbour_prediction, average='macro'),
-            matthews_corrcoef(y_test, nearest_neighbour_prediction)
+        evaluation = (
+            accuracy_score(y_test, prediction),
+            recall_score(y_test, prediction, average='macro'),
+            precision_score(y_test, prediction, average='macro'),
+            f1_score(y_test, prediction, average='macro'),
+            matthews_corrcoef(y_test, prediction)
         )
 
-        nearest_neighbour_total = 0
+        total = 0
 
-        for i in nearest_neighbour_evaluation:
-            nearest_neighbour_total += i
+        for i in evaluation:
+            total += i
 
-        nearest_neighbour_total /= len(nearest_neighbour_evaluation)
-
-        self.__evaluated_models.append((
-            nearest_neighbour_model,
-            nearest_neighbour_evaluation,
-            nearest_neighbour_total
-        ))
-
-    def __train_decision_tree(self, questions, answers, x_test, y_test):
-        decision_tree = DecisionTreeClassifier()
-        decision_tree_model = decision_tree.fit(questions, answers)
-        decision_tree_prediction = decision_tree_model.predict(x_test)
-
-        decision_tree_evaluation = (
-            accuracy_score(y_test, decision_tree_prediction),
-            recall_score(y_test, decision_tree_prediction, average='macro'),
-            precision_score(y_test, decision_tree_prediction, average='macro'),
-            f1_score(y_test, decision_tree_prediction, average='macro'),
-            matthews_corrcoef(y_test, decision_tree_prediction)
-        )
-
-        decision_tree_total = 0
-
-        for i in decision_tree_evaluation:
-            decision_tree_total += i
-
-        decision_tree_total /= len(decision_tree_evaluation)
+        total /= len(evaluation)
 
         self.__evaluated_models.append((
-            decision_tree_model,
-            decision_tree_evaluation,
-            decision_tree_total
+            model,
+            evaluation,
+            total
         ))
 
     def render_evaluation(self):
