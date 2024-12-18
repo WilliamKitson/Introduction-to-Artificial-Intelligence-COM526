@@ -46,4 +46,17 @@ class MachineLearningTraining:
         ))
 
     def render_evaluation(self):
-        print(self.__evaluated_models)
+        output = ""
+
+        for i in self.__evaluated_models:
+            output += (
+                f"model: {i[0]}\n"
+                f"accuracy: {i[1][0]}\n"
+                f"recall: {i[1][1]}\n"
+                f"precision: {i[1][2]}\n"
+                f"f1: {i[1][3]}\n"
+                f"matthews: {i[1][4]}\n"
+                f"total: {i[2]}\n\n"
+            )
+
+        return output

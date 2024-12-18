@@ -14,4 +14,4 @@ with open("COM526_map.txt", 'r') as file:
 
 training = MachineLearningTraining("version_4/dataset.csv", "target")
 training.train()
-training.render_evaluation()
+print(training.render_evaluation())
