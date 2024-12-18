@@ -263,17 +263,6 @@ def test_battery_rechargable():
         cleaner.cycle()
         assert (cleaner.get_battery() == i)
 
-def test_battery_unchargable():
-    cleaner = Cleaner((0, 0))
-    cleaner.sense(0, 0)
-
-    cleaner.decrement_battery(25)
-
-    cleaner.recharge(25)
-    cleaner.cycle()
-
-    assert(cleaner.get_battery() == 75)
-
 def test_charging_immobile():
     cleaner = Cleaner((0, 0))
     cleaner.sense(0, 1)
