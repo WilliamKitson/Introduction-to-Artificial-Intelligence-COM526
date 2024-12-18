@@ -14,15 +14,10 @@ with open("COM526_map.txt", 'r') as file:
 from version_4.machine_learning_training import MachineLearningTraining
 import pickle
 
-def train_model():
-    training = MachineLearningTraining("version_4/dataset.csv", "target")
-    training.train()
-    print(training.render_evaluation())
-
-    with open('model.pkl','wb') as f:
-        pickle.dump(training.get_best_model(), f)
-
-#train_model()
+training = MachineLearningTraining("version_4/dataset.csv", "target")
+training.train()
+#training.save_best_model()
+#print(training.render_evaluation())
 
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)

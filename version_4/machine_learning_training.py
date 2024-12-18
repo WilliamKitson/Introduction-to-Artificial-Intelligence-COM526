@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import *
 import pandas as pd
-# USE PICKLE TO SAVE TRAINED MODEL
+import pickle
 
 class MachineLearningTraining:
     def __init__(self, dataset, answer_column):
@@ -75,3 +75,7 @@ class MachineLearningTraining:
                 best_model = i
 
         return best_model[0]
+
+    def save_best_model(self):
+        with open('model.pkl', 'wb') as f:
+            pickle.dump(self.get_best_model(), f)
