@@ -4,7 +4,7 @@ from version_1.demonstration_version_1 import DemonstrationVersion1
 from version_2.demonstration_version_2 import DemonstrationVersion2
 from version_3.demonstration_version_3 import DemonstrationVersion3
 
-with open("COM526_map.txt", 'r') as file:
+with open("assets/COM526_map.txt", 'r') as file:
     file_content = file.read()
 
 #DemonstrationVersion1(file_content).execute()
@@ -14,9 +14,9 @@ with open("COM526_map.txt", 'r') as file:
 from version_4.machine_learning_training import MachineLearningTraining
 from version_4.model import Model
 
-training = MachineLearningTraining("version_4/dataset.csv", "target")
+training = MachineLearningTraining("assets/dataset.csv", "target")
 training.train()
-training.save_best_model("model.pkl")
+training.save_best_model("assets/model.pkl")
 print(training.render_evaluation())
 
 scan_data = [[
@@ -28,4 +28,4 @@ scan_data = [[
     2.2591519295020803
 ]]
 
-print(Model("model.pkl").predict(scan_data))
+print(Model("assets/model.pkl").predict(scan_data))
