@@ -12,15 +12,13 @@ with open("COM526_map.txt", 'r') as file:
 #DemonstrationVersion3(file_content).execute()
 
 from version_4.machine_learning_training import MachineLearningTraining
-import pickle
+from version_4.model import Model
+
 
 training = MachineLearningTraining("version_4/dataset.csv", "target")
 training.train()
 #training.save_best_model()
 #print(training.render_evaluation())
-
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
 
 scan_data = [[
     -1.2332742655295212,
@@ -31,4 +29,4 @@ scan_data = [[
     -4.3400370105057515
 ]]
 
-print(model.predict(scan_data))
+print(Model("model.pkl").predict(scan_data))
