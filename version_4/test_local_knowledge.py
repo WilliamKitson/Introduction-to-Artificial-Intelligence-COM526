@@ -163,3 +163,20 @@ def test_prioritise_dirt():
     for i in range(1, 9):
         assert(local_knowledge.get_priority() == (i, i))
         local_knowledge.update_free((i, i), 0)
+
+def test_explored_debris():
+    local_knowledge = LocalKnowledge()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            local_knowledge.add_debris((i, j))
+            local_knowledge.explore((i, j))
+            assert(local_knowledge.get_node((i, j)) == "d")
+
+def test_unexplored_debris():
+    local_knowledge = LocalKnowledge()
+
+    for i in range(1, 10):
+        for j in range(1, 10):
+            local_knowledge.add_debris((i, j))
+            assert(local_knowledge.get_node((i, j)) == "?")

@@ -14,6 +14,9 @@ class LocalKnowledge:
     def add_charger(self, position):
         self.__nodes.append((position[0], position[1], 0, "u"))
 
+    def add_debris(self, position):
+        self.__nodes.append((position[0], position[1], 0, "d"))
+
     def update_free(self, position, dirt):
         if self.get_node(position) in ("x", "u"):
             return
