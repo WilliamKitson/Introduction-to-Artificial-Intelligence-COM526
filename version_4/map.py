@@ -16,10 +16,14 @@ class Map:
 
             self.__data.append(randomised_row)
 
-        with open(readings_filepath, 'r') as file:
-            readings_data = json.load(file)
+        try:
+            with open(readings_filepath, 'r') as file:
+                readings_data = json.load(file)
 
-        print(readings_data)
+            print(readings_data)
+
+        except FileNotFoundError:
+            return
 
     def get_width(self):
         return len(self.__data[0])
