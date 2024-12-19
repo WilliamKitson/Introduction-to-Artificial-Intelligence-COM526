@@ -149,3 +149,24 @@ def test_invalid_render():
 
             assert(render.get_render((i, j)) == " ")
             index += 1
+
+def test_scan_data():
+    map_data = ("0000000000\n"
+                "0000000000\n"
+                "0000000000\n")
+
+    loaded_map = Map(map_data)
+
+    for i in range(0, loaded_map.get_width()):
+        for j in range(0, loaded_map.get_height()):
+            scan_data = [[
+                float(i + j),
+                float(i + j),
+                float(i + j),
+                float(i + j),
+                float(i + j),
+                float(i + j)
+            ]]
+
+            loaded_map.set_geometry((i, j), scan_data)
+            assert(loaded_map.get_geometry((i, j)) == scan_data)

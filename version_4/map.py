@@ -5,6 +5,7 @@ import random
 class Map:
     def __init__(self, data):
         self.__data = []
+        self.__geometry = []
 
         for row in iter(data.splitlines()):
             randomised_row = ""
@@ -67,3 +68,11 @@ class Map:
                 new_row += row[i]
 
         self.__data[position[1]] = new_row
+
+    def set_geometry(self, position, geometry):
+        self.__geometry.append((position, geometry))
+
+    def get_geometry(self, position):
+        for i in self.__geometry:
+            if i[0] == position:
+                return i[1]
