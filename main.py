@@ -8,9 +8,15 @@ from version_4.demonstration_version_4 import DemonstrationVersion4
 with open("assets/COM526_map.txt", 'r') as file:
     file_content = file.read()
 
-#DemonstrationVersion1(file_content).execute()
-#DemonstrationVersion2(file_content).execute()
-#DemonstrationVersion3(file_content).execute()
+version_1 = DemonstrationVersion1(file_content)
+#version_1.execute()
+
+version_2 = DemonstrationVersion2(file_content)
+#version_2.execute()
+
+version_3 = DemonstrationVersion3(file_content)
+#version_3.execute()
+#version_3.test_fuzzy_logic()
 
 version_4 = DemonstrationVersion4(file_content, "assets/dataset.csv")
 version_4.execute()
