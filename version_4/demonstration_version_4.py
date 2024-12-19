@@ -9,9 +9,10 @@ from version_4.fuzzy_fan import FuzzyFan
 from version_4.fuzzy_battery import FuzzyBattery
 from version_4.fuzzy_cleaning import FuzzyCleaning
 from version_4.machine_learning_training import MachineLearningTraining
+from version_4.model import Model
 
 class DemonstrationVersion4:
-    def __init__(self, map_data, dataset_filepath):
+    def __init__(self, map_data, dataset_filepath, model_filepath):
         self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
@@ -22,6 +23,7 @@ class DemonstrationVersion4:
         self.__fuzzy_battery = FuzzyBattery()
         self.__fuzzy_cleaning = FuzzyCleaning()
         self.__training = MachineLearningTraining(dataset_filepath, "target")
+        self.__model = Model(model_filepath)
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
@@ -45,6 +47,17 @@ class DemonstrationVersion4:
             self.__local_knowledge.add_charger(position)
 
     def execute(self):
+        scan_data = [[
+            0.17075740533434242,
+            -2.3105003225690215,
+            1.0080232257946202,
+            -0.6514677667048898,
+            -0.07564270121366325,
+            2.2591519295020803
+        ]]
+
+        print(self.__model.predict(scan_data))
+
         while self.__execute_condition():
             self.__sense()
             self.__cycle()

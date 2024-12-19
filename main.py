@@ -18,19 +18,11 @@ version_3 = DemonstrationVersion3(file_content)
 #version_3.execute()
 #version_3.test_fuzzy_logic()
 
-version_4 = DemonstrationVersion4(file_content, "assets/dataset.csv")
+version_4 = DemonstrationVersion4(
+    file_content,
+    "assets/dataset.csv",
+    "assets/model.pkl"
+)
+
 version_4.execute()
 #version_4.retrain_model("assets/model.pkl")
-
-from version_4.model import Model
-
-scan_data = [[
-    0.17075740533434242,
-    -2.3105003225690215,
-    1.0080232257946202,
-    -0.6514677667048898,
-    -0.07564270121366325,
-    2.2591519295020803
-]]
-
-print(Model("assets/model.pkl").predict(scan_data))
