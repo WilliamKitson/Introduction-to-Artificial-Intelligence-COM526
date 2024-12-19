@@ -17,13 +17,13 @@ class DemonstrationVersion4:
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
         self.__local_knowledge = LocalKnowledge()
-        self.__load_local_knowledge()
         self.__pathfinder = Pathfinder()
         self.__fuzzy_fan = FuzzyFan()
         self.__fuzzy_battery = FuzzyBattery()
         self.__fuzzy_cleaning = FuzzyCleaning()
         self.__training = MachineLearningTraining(dataset_filepath, "target")
         self.__model = Model(model_filepath)
+        self.__load_local_knowledge()
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
@@ -221,7 +221,8 @@ class DemonstrationVersion4:
             f"\nlast path: {self.__pathfinder.get_path()}"
             f"\nfan speed: {self.__fuzzy_fan.get_fan_speed()}"
             f"\nbattery drain: {self.__fuzzy_battery.get_battery_drain()}"
-            f"\ncleaning rate: {self.__fuzzy_cleaning.get_cleaning_rate()}\n"
+            f"\ncleaning rate: {self.__fuzzy_cleaning.get_cleaning_rate()}"
+            f"\nscan prediction: {self.__model.predict(self.__map.get_geometry(self.__cleaner.get_scan_position))}\n"
         )
 
     def test_fuzzy_logic(self):

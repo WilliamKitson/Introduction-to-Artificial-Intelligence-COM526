@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="map.py redefined">
-      <change beforePath="$PROJECT_DIR$/version_4/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_4/map.py" afterDir="false" />
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="local_knowledge.py redefined">
+      <change beforePath="$PROJECT_DIR$/version_4/demonstration_version_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/version_4/demonstration_version_4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,44 +46,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_cleaner.test_battery_default_charge.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_cleaner.test_battery_turn_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_map.test_get_start.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in main.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_charger.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_cleaner.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_local_knowledge.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_map.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_pathfinder.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Pathfinder.executor&quot;: &quot;Run&quot;,
-    &quot;Python.charger.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cleaner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.demonstration_version_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fuzzy_cleaning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fuzzy_fan.executor&quot;: &quot;Run&quot;,
-    &quot;Python.machine_learning_training.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.map.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pathfinder.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.version1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/willi/PycharmProjects/4kitsw10_COM526_1/version_3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_cleaner.test_battery_default_charge.executor": "Run",
+    "Python tests.Python tests for test_cleaner.test_battery_turn_left.executor": "Run",
+    "Python tests.Python tests for test_map.test_get_start.executor": "Run",
+    "Python tests.Python tests in main.py.executor": "Run",
+    "Python tests.Python tests in test_charger.py.executor": "Run",
+    "Python tests.Python tests in test_cleaner.py.executor": "Run",
+    "Python tests.Python tests in test_local_knowledge.py.executor": "Run",
+    "Python tests.Python tests in test_map.py.executor": "Run",
+    "Python tests.Python tests in test_pathfinder.py.executor": "Run",
+    "Python tests.Python tests in tests.py.executor": "Run",
+    "Python.Pathfinder.executor": "Run",
+    "Python.charger.executor": "Run",
+    "Python.cleaner.executor": "Run",
+    "Python.demonstration_version_2.executor": "Run",
+    "Python.demonstration_version_4.executor": "Run",
+    "Python.fuzzy_cleaning.executor": "Run",
+    "Python.fuzzy_fan.executor": "Run",
+    "Python.machine_learning_training.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.map.executor": "Run",
+    "Python.pathfinder.executor": "Debug",
+    "Python.temp.executor": "Run",
+    "Python.version1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/willi/PycharmProjects/4kitsw10_COM526_1/version_3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "copyright",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\willi\PycharmProjects\4kitsw10_COM526_1\version_3" />
@@ -176,30 +177,6 @@
       <workItem from="1734535582521" duration="4874000" />
       <workItem from="1734540503647" duration="4733000" />
       <workItem from="1734611741777" duration="3843000" />
-    </task>
-    <task id="LOCAL-00235" summary="demonstration_version_2.py redefined">
-      <option name="closed" value="true" />
-      <created>1734287727822</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1734287727822</updated>
-    </task>
-    <task id="LOCAL-00236" summary="demonstration_version_2.py redefined">
-      <option name="closed" value="true" />
-      <created>1734287954205</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1734287954205</updated>
-    </task>
-    <task id="LOCAL-00237" summary="map.py redefined">
-      <option name="closed" value="true" />
-      <created>1734444622552</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1734444622552</updated>
     </task>
     <task id="LOCAL-00238" summary="map.py redefined">
       <option name="closed" value="true" />
@@ -569,7 +546,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734625964044</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="map.py redefined">
+      <option name="closed" value="true" />
+      <created>1734626682485</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1734626682485</updated>
+    </task>
+    <task id="LOCAL-00285" summary="map.py redefined">
+      <option name="closed" value="true" />
+      <created>1734626816293</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1734626816293</updated>
+    </task>
+    <task id="LOCAL-00286" summary="local_knowledge.py redefined">
+      <option name="closed" value="true" />
+      <created>1734627057022</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1734627057022</updated>
+    </task>
+    <option name="localTasksCounter" value="287" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,17 +610,18 @@
     <MESSAGE value="main.py redefined" />
     <MESSAGE value="machine_learning_training.py redefined" />
     <MESSAGE value="assets directory defined" />
-    <MESSAGE value="local_knowledge.py redefined" />
     <MESSAGE value="demonstration_version_4.py redefined" />
     <MESSAGE value="map.py redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="map.py redefined" />
+    <MESSAGE value="local_knowledge.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="local_knowledge.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1734626255216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734625576500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734627042963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_cleaning.coverage" NAME="fuzzy_cleaning Coverage Results" MODIFIED="1733830248524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$Pathfinder.coverage" NAME="Pathfinder Coverage Results" MODIFIED="1731949178042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734626315224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$demonstration_version_4.coverage" NAME="demonstration_version_4 Coverage Results" MODIFIED="1734627333120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734627382138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$pathfinder.coverage" NAME="pathfinder Coverage Results" MODIFIED="1734014334276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1734103750196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$machine_learning_training.coverage" NAME="machine_learning_training Coverage Results" MODIFIED="1734539503984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
