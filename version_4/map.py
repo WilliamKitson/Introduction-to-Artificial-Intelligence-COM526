@@ -5,17 +5,21 @@ import json
 
 class Map:
     def __init__(self, map_data, readings_filepath):
-        self.__data = []
+        self.__map_data = []
+        self.__load_map(map_data)
         self.__geometry = []
+        self.__load_geometry(readings_filepath)
 
+    def __load_map(self, map_data):
         for row in iter(map_data.splitlines()):
             randomised_row = ""
 
             for character in row:
                 randomised_row += character.replace(" ", str(random.randrange(0, 9)))
 
-            self.__data.append(randomised_row)
+            self.__map_data.append(randomised_row)
 
+    def __load_geometry(self, readings_filepath):
         try:
             with open(readings_filepath, 'r') as file:
                 readings_data = json.load(file)
@@ -26,16 +30,16 @@ class Map:
             return
 
     def get_width(self):
-        return len(self.__data[0])
+        return len(self.__map_data[0])
 
     def get_height(self):
-        return len(self.__data)
+        return len(self.__map_data)
 
     def get_start(self):
         return self.__get_character_coordinates("^")
 
     def __get_character_coordinates(self, character):
-        for y, row in enumerate(self.__data):
+        for y, row in enumerate(self.__map_data):
             for x, column in enumerate(row):
                 if column == character:
                     return x, y
@@ -44,10 +48,10 @@ class Map:
         return self.__get_character_coordinates("u")
 
     def get_blocked(self, position):
-        return int(self.__data[position[1]][position[0]] not in ["x", "u"])
+        return int(self.__map_data[position[1]][position[0]] not in ["x", "u"])
 
     def get_dirt(self, position):
-        dirt = self.__data[position[1]][position[0]]
+        dirt = self.__map_data[position[1]][position[0]]
 
         if dirt in ["x", "^", "u"]:
             return 0
@@ -59,7 +63,7 @@ class Map:
             return 0
 
     def get_render(self, position):
-        render = self.__data[position[1]][position[0]]
+        render = self.__map_data[position[1]][position[0]]
 
         if render == "x":
             return render
@@ -67,7 +71,7 @@ class Map:
         return " "
 
     def set_dirt(self, position, cleaned):
-        row = self.__data[position[1]]
+        row = self.__map_data[position[1]]
         new_row = ""
 
         for i in range(len(row)):
@@ -77,7 +81,7 @@ class Map:
             else:
                 new_row += row[i]
 
-        self.__data[position[1]] = new_row
+        self.__map_data[position[1]] = new_row
 
     def set_geometry(self, position, geometry):
         self.__geometry.append((position, geometry))
