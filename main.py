@@ -3,13 +3,15 @@
 from version_1.demonstration_version_1 import DemonstrationVersion1
 from version_2.demonstration_version_2 import DemonstrationVersion2
 from version_3.demonstration_version_3 import DemonstrationVersion3
+from version_4.demonstration_version_4 import DemonstrationVersion4
 
 with open("assets/COM526_map.txt", 'r') as file:
     file_content = file.read()
 
 #DemonstrationVersion1(file_content).execute()
 #DemonstrationVersion2(file_content).execute()
-DemonstrationVersion3(file_content).execute()
+#DemonstrationVersion3(file_content).execute()
+DemonstrationVersion4(file_content).execute()
 
 from version_4.machine_learning_training import MachineLearningTraining
 from version_4.model import Model
