@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="assets directory defined">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0ba92c5f-aa8c-4efe-8660-3780c028ce22" name="Changes" comment="local_knowledge.py redefined" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,15 +173,7 @@
       <workItem from="1734535428831" duration="127000" />
       <workItem from="1734535582521" duration="4874000" />
       <workItem from="1734540503647" duration="4733000" />
-      <workItem from="1734611741777" duration="1365000" />
-    </task>
-    <task id="LOCAL-00229" summary="local_knowledge.py redefined">
-      <option name="closed" value="true" />
-      <created>1734273791224</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1734273791224</updated>
+      <workItem from="1734611741777" duration="3843000" />
     </task>
     <task id="LOCAL-00230" summary="local_knowledge.py redefined">
       <option name="closed" value="true" />
@@ -569,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734546607262</updated>
     </task>
-    <option name="localTasksCounter" value="278" />
+    <task id="LOCAL-00278" summary="local_knowledge.py redefined">
+      <option name="closed" value="true" />
+      <created>1734615255778</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1734615255778</updated>
+    </task>
+    <option name="localTasksCounter" value="279" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +596,6 @@
     <MESSAGE value="main redefined" />
     <MESSAGE value="map.py redefined" />
     <MESSAGE value="demonstration_version_2.py redefined" />
-    <MESSAGE value="local_knowledge.py redefined" />
     <MESSAGE value="version3 imported" />
     <MESSAGE value="cleaner.py redefined" />
     <MESSAGE value="dirt ints now floats" />
@@ -612,21 +609,22 @@
     <MESSAGE value="main.py redefined" />
     <MESSAGE value="machine_learning_training.py redefined" />
     <MESSAGE value="assets directory defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="assets directory defined" />
+    <MESSAGE value="local_knowledge.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="local_knowledge.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$map.coverage" NAME="map Coverage Results" MODIFIED="1734016052247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734532116121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$.coverage" NAME=" Coverage Results" MODIFIED="1734615508252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_cleaning.coverage" NAME="fuzzy_cleaning Coverage Results" MODIFIED="1733830248524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$Pathfinder.coverage" NAME="Pathfinder Coverage Results" MODIFIED="1731949178042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734546581275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$main.coverage" NAME="main Coverage Results" MODIFIED="1734615525460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$pathfinder.coverage" NAME="pathfinder Coverage Results" MODIFIED="1734014334276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$cleaner.coverage" NAME="cleaner Coverage Results" MODIFIED="1734103750196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$machine_learning_training.coverage" NAME="machine_learning_training Coverage Results" MODIFIED="1734539503984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_4" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$temp.coverage" NAME="temp Coverage Results" MODIFIED="1733926324793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$fuzzy_fan.coverage" NAME="fuzzy_fan Coverage Results" MODIFIED="1734005818934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_3" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$charger.coverage" NAME="charger Coverage Results" MODIFIED="1731247862507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$demonstration_version_2.coverage" NAME="demonstration_version_2 Coverage Results" MODIFIED="1734106673791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$demonstration_version_2.coverage" NAME="demonstration_version_2 Coverage Results" MODIFIED="1734615151023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_2" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM526_1$version1.coverage" NAME="version1 Coverage Results" MODIFIED="1731939884362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/version_1" />
   </component>
 </project>
