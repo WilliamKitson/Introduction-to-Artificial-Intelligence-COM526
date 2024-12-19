@@ -8,9 +8,10 @@ from version_4.pathfinder import Pathfinder
 from version_4.fuzzy_fan import FuzzyFan
 from version_4.fuzzy_battery import FuzzyBattery
 from version_4.fuzzy_cleaning import FuzzyCleaning
+from version_4.machine_learning_training import MachineLearningTraining
 
 class DemonstrationVersion4:
-    def __init__(self, map_data):
+    def __init__(self, map_data, dataset_filepath):
         self.__map = Map(map_data)
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
@@ -20,6 +21,7 @@ class DemonstrationVersion4:
         self.__fuzzy_fan = FuzzyFan()
         self.__fuzzy_battery = FuzzyBattery()
         self.__fuzzy_cleaning = FuzzyCleaning()
+        self.__training = MachineLearningTraining(dataset_filepath, "target")
 
     def __load_local_knowledge(self):
         for x in range(0, self.__map.get_width()):
@@ -213,3 +215,8 @@ class DemonstrationVersion4:
         self.__fuzzy_fan.test()
         self.__fuzzy_battery.test()
         self.__fuzzy_cleaning.test()
+
+    def retrain_model(self, model_filepath):
+        self.__training.train()
+        self.__training.save_best_model(model_filepath)
+        print(self.__training.render_evaluation())
