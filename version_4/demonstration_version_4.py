@@ -12,8 +12,8 @@ from version_4.machine_learning_training import MachineLearningTraining
 from version_4.model import Model
 
 class DemonstrationVersion4:
-    def __init__(self, map_data, dataset_filepath, model_filepath):
-        self.__map = Map(map_data)
+    def __init__(self, map_data, readings_filepath, dataset_filepath, model_filepath):
+        self.__map = Map(map_data, readings_filepath)
         self.__cleaner = Cleaner(self.__map.get_start())
         self.__charger = Charger(self.__map.get_charger())
         self.__local_knowledge = LocalKnowledge()

@@ -1,19 +1,25 @@
 #  Copyright (c) 2024. William E. Kitson
 
 import random
+import json
 
 class Map:
-    def __init__(self, data):
+    def __init__(self, map_data, readings_filepath):
         self.__data = []
         self.__geometry = []
 
-        for row in iter(data.splitlines()):
+        for row in iter(map_data.splitlines()):
             randomised_row = ""
 
             for character in row:
                 randomised_row += character.replace(" ", str(random.randrange(0, 9)))
 
             self.__data.append(randomised_row)
+
+        with open(readings_filepath, 'r') as file:
+            readings_data = json.load(file)
+
+        print(readings_data)
 
     def get_width(self):
         return len(self.__data[0])
