@@ -24,7 +24,9 @@ class Map:
             with open(readings_filepath, 'r') as file:
                 readings_data = json.load(file)
 
-            print(readings_data)
+            for i in readings_data:
+                print(i)
+                print(readings_data[i])
 
         except FileNotFoundError:
             return
