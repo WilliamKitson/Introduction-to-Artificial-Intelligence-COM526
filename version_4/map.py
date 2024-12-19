@@ -7,7 +7,7 @@ class Map:
     def __init__(self, map_data, readings_filepath):
         self.__map_data = []
         self.__load_map(map_data)
-        self.__geometry = []
+        self.__geometry_data = []
         self.__load_geometry(readings_filepath)
 
     def __load_map(self, map_data):
@@ -25,8 +25,10 @@ class Map:
                 readings_data = json.load(file)
 
             for i in readings_data:
-                print(i)
-                print(readings_data[i])
+                self.__geometry_data.append((
+                    i,
+                    readings_data[i]
+                ))
 
         except FileNotFoundError:
             return
@@ -86,9 +88,9 @@ class Map:
         self.__map_data[position[1]] = new_row
 
     def set_geometry(self, position, geometry):
-        self.__geometry.append((position, geometry))
+        self.__geometry_data.append((position, geometry))
 
     def get_geometry(self, position):
-        for i in self.__geometry:
+        for i in self.__geometry_data:
             if i[0] == position:
                 return i[1]
