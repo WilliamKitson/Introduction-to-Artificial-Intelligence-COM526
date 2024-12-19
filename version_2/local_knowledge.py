@@ -55,8 +55,11 @@ class LocalKnowledge:
         free_nodes = []
 
         for i in self.__nodes:
-            if i[3] not in ("x", "u"):
+            if self.get_node((i[0], i[1])) not in ("x", "u", "?"):
                 free_nodes.append(i)
+
+        if len(free_nodes) == 0:
+            return None
 
         dirtiest_free = free_nodes[0]
 

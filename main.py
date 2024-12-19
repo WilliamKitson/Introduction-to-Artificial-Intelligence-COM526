@@ -8,16 +8,16 @@ with open("assets/COM526_map.txt", 'r') as file:
     file_content = file.read()
 
 #DemonstrationVersion1(file_content).execute()
-#DemonstrationVersion2(file_content).execute()
+DemonstrationVersion2(file_content).execute()
 #DemonstrationVersion3(file_content).execute()
 
 from version_4.machine_learning_training import MachineLearningTraining
 from version_4.model import Model
 
-training = MachineLearningTraining("assets/dataset.csv", "target")
-training.train()
-training.save_best_model("assets/model.pkl")
-print(training.render_evaluation())
+#training = MachineLearningTraining("assets/dataset.csv", "target")
+#training.train()
+#training.save_best_model("assets/model.pkl")
+#print(training.render_evaluation())
 
 scan_data = [[
     0.17075740533434242,
