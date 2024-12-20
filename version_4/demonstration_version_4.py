@@ -47,9 +47,13 @@ class DemonstrationVersion4:
             self.__local_knowledge.add_charger(position)
 
     def execute(self):
+        data = []
+
         for i in range(0, self.__map.get_width()):
             for j in range(0, self.__map.get_height()):
-                print(self.__map.get_geometry((i, j)))
+                data.append(self.__map.get_geometry((i, j)))
+
+        print([x for x in data if x is not None] )
 
         while self.__execute_condition():
             self.__sense()
