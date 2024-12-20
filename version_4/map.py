@@ -92,5 +92,5 @@ class Map:
 
     def get_geometry(self, position):
         for i in self.__geometry_data:
-            if i[0] == position:
+            if i[0] == str(position):
                 return i[1]

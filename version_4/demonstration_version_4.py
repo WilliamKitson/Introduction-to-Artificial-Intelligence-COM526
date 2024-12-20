@@ -47,16 +47,9 @@ class DemonstrationVersion4:
             self.__local_knowledge.add_charger(position)
 
     def execute(self):
-        scan_data = [[
-            0.17075740533434242,
-            -2.3105003225690215,
-            1.0080232257946202,
-            -0.6514677667048898,
-            -0.07564270121366325,
-            2.2591519295020803
-        ]]
-
-        print(self.__model.predict(scan_data))
+        for i in range(0, self.__map.get_width()):
+            for j in range(0, self.__map.get_height()):
+                print(self.__map.get_geometry((i, j)))
 
         while self.__execute_condition():
             self.__sense()
