@@ -53,7 +53,7 @@ class DemonstrationVersion4:
             for j in range(0, self.__map.get_height()):
                 data.append(self.__map.get_geometry((i, j)))
 
-        print([x for x in data if x is not None] )
+        print(self.__model.predict([x for x in data if x is not None]))
 
         while self.__execute_condition():
             self.__sense()
