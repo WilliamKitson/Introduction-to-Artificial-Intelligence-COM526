@@ -9,13 +9,13 @@ with open("assets/COM526_map.txt", 'r') as file:
     map_data = file.read()
 
 version_1 = DemonstrationVersion1(map_data)
-#version_1.execute()
+version_1.execute()
 
 version_2 = DemonstrationVersion2(map_data)
-#version_2.execute()
+version_2.execute()
 
 version_3 = DemonstrationVersion3(map_data)
-#version_3.execute()
+version_3.execute()
 #version_3.test_fuzzy_logic()
 
 version_4 = DemonstrationVersion4(
