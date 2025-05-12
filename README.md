@@ -22,4 +22,3 @@ This project was developed at Solent University.
 
 ## Why
 This project was developed to demonstrate my skills at developing introductory level AI systems, including Intelligent Agents, Pathfinding, Fuzzy Logic, and Machine Learning. This project is the foundation for my future third year AI assessment. I received a First for this assessment (75/100).
-![image](https://github.com/user-attachments/assets/475de01f-1c2b-4702-a985-119e3d1f61a9)
